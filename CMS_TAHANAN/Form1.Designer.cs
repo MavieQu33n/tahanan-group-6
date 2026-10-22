@@ -50,7 +50,16 @@
             this.pnlWelcome = new System.Windows.Forms.Panel();
             this.lblSectionTitle = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblWelcomeSubtitle = new System.Windows.Forms.Label();
+            this.tlpStats = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlTotalPlots = new System.Windows.Forms.Panel();
+            this.pnlOccupiedPlots = new System.Windows.Forms.Panel();
+            this.pnlReservations = new System.Windows.Forms.Panel();
+            this.pnlTransactions = new System.Windows.Forms.Panel();
+            this.lblTotalPlotsTitle = new System.Windows.Forms.Label();
+            this.lblTotalPlotsValue = new System.Windows.Forms.Label();
+            this.lblTotalPlotsDescription = new System.Windows.Forms.Label();
+            this.lblOccupiedPlots = new System.Windows.Forms.Label();
             this.tlpRoot.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.tlpWorkspace.SuspendLayout();
@@ -59,6 +68,9 @@
             this.pnlFooter.SuspendLayout();
             this.tlpDashboard.SuspendLayout();
             this.pnlWelcome.SuspendLayout();
+            this.tlpStats.SuspendLayout();
+            this.pnlTotalPlots.SuspendLayout();
+            this.pnlOccupiedPlots.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpRoot
@@ -324,6 +336,7 @@
             this.tlpDashboard.ColumnCount = 1;
             this.tlpDashboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpDashboard.Controls.Add(this.pnlWelcome, 0, 0);
+            this.tlpDashboard.Controls.Add(this.tlpStats, 0, 1);
             this.tlpDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpDashboard.Location = new System.Drawing.Point(16, 16);
             this.tlpDashboard.Margin = new System.Windows.Forms.Padding(0);
@@ -338,7 +351,7 @@
             // 
             // pnlWelcome
             // 
-            this.pnlWelcome.Controls.Add(this.label1);
+            this.pnlWelcome.Controls.Add(this.lblWelcomeSubtitle);
             this.pnlWelcome.Controls.Add(this.lblWelcome);
             this.pnlWelcome.Controls.Add(this.lblSectionTitle);
             this.pnlWelcome.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -372,14 +385,129 @@
             this.lblWelcome.TabIndex = 1;
             this.lblWelcome.Text = "Welcome, Admin";
             // 
-            // label1
+            // lblWelcomeSubtitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 89);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 19);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.lblWelcomeSubtitle.AutoSize = true;
+            this.lblWelcomeSubtitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblWelcomeSubtitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcomeSubtitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(110)))));
+            this.lblWelcomeSubtitle.Location = new System.Drawing.Point(2, 62);
+            this.lblWelcomeSubtitle.Name = "lblWelcomeSubtitle";
+            this.lblWelcomeSubtitle.Size = new System.Drawing.Size(443, 20);
+            this.lblWelcomeSubtitle.TabIndex = 2;
+            this.lblWelcomeSubtitle.Text = "A thoughtful overview of your cemetery records and daily activity.";
+            // 
+            // tlpStats
+            // 
+            this.tlpStats.ColumnCount = 4;
+            this.tlpStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpStats.Controls.Add(this.pnlTransactions, 3, 0);
+            this.tlpStats.Controls.Add(this.pnlReservations, 2, 0);
+            this.tlpStats.Controls.Add(this.pnlOccupiedPlots, 1, 0);
+            this.tlpStats.Controls.Add(this.pnlTotalPlots, 0, 0);
+            this.tlpStats.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpStats.Location = new System.Drawing.Point(20, 121);
+            this.tlpStats.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpStats.Name = "tlpStats";
+            this.tlpStats.RowCount = 1;
+            this.tlpStats.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpStats.Size = new System.Drawing.Size(744, 135);
+            this.tlpStats.TabIndex = 1;
+            // 
+            // pnlTotalPlots
+            // 
+            this.pnlTotalPlots.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
+            this.pnlTotalPlots.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTotalPlots.Controls.Add(this.lblTotalPlotsDescription);
+            this.pnlTotalPlots.Controls.Add(this.lblTotalPlotsValue);
+            this.pnlTotalPlots.Controls.Add(this.lblTotalPlotsTitle);
+            this.pnlTotalPlots.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTotalPlots.Location = new System.Drawing.Point(5, 4);
+            this.pnlTotalPlots.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.pnlTotalPlots.Name = "pnlTotalPlots";
+            this.pnlTotalPlots.Size = new System.Drawing.Size(176, 127);
+            this.pnlTotalPlots.TabIndex = 0;
+            // 
+            // pnlOccupiedPlots
+            // 
+            this.pnlOccupiedPlots.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
+            this.pnlOccupiedPlots.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlOccupiedPlots.Controls.Add(this.lblOccupiedPlots);
+            this.pnlOccupiedPlots.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlOccupiedPlots.Location = new System.Drawing.Point(191, 4);
+            this.pnlOccupiedPlots.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.pnlOccupiedPlots.Name = "pnlOccupiedPlots";
+            this.pnlOccupiedPlots.Size = new System.Drawing.Size(176, 127);
+            this.pnlOccupiedPlots.TabIndex = 1;
+            // 
+            // pnlReservations
+            // 
+            this.pnlReservations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
+            this.pnlReservations.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlReservations.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlReservations.Location = new System.Drawing.Point(377, 4);
+            this.pnlReservations.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.pnlReservations.Name = "pnlReservations";
+            this.pnlReservations.Size = new System.Drawing.Size(176, 127);
+            this.pnlReservations.TabIndex = 2;
+            // 
+            // pnlTransactions
+            // 
+            this.pnlTransactions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
+            this.pnlTransactions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTransactions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTransactions.Location = new System.Drawing.Point(563, 4);
+            this.pnlTransactions.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.pnlTransactions.Name = "pnlTransactions";
+            this.pnlTransactions.Size = new System.Drawing.Size(176, 127);
+            this.pnlTransactions.TabIndex = 3;
+            // 
+            // lblTotalPlotsTitle
+            // 
+            this.lblTotalPlotsTitle.AutoSize = true;
+            this.lblTotalPlotsTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPlotsTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            this.lblTotalPlotsTitle.Location = new System.Drawing.Point(12, 12);
+            this.lblTotalPlotsTitle.Name = "lblTotalPlotsTitle";
+            this.lblTotalPlotsTitle.Size = new System.Drawing.Size(120, 20);
+            this.lblTotalPlotsTitle.TabIndex = 0;
+            this.lblTotalPlotsTitle.Text = "Total Burial Plots";
+            // 
+            // lblTotalPlotsValue
+            // 
+            this.lblTotalPlotsValue.AutoSize = true;
+            this.lblTotalPlotsValue.Font = new System.Drawing.Font("Georgia", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPlotsValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            this.lblTotalPlotsValue.Location = new System.Drawing.Point(12, 38);
+            this.lblTotalPlotsValue.Name = "lblTotalPlotsValue";
+            this.lblTotalPlotsValue.Size = new System.Drawing.Size(71, 43);
+            this.lblTotalPlotsValue.TabIndex = 1;
+            this.lblTotalPlotsValue.Text = "00";
+            // 
+            // lblTotalPlotsDescription
+            // 
+            this.lblTotalPlotsDescription.AutoSize = true;
+            this.lblTotalPlotsDescription.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPlotsDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
+            this.lblTotalPlotsDescription.Location = new System.Drawing.Point(12, 82);
+            this.lblTotalPlotsDescription.Name = "lblTotalPlotsDescription";
+            this.lblTotalPlotsDescription.Size = new System.Drawing.Size(100, 17);
+            this.lblTotalPlotsDescription.TabIndex = 2;
+            this.lblTotalPlotsDescription.Text = "View all plots →";
+            // 
+            // lblOccupiedPlots
+            // 
+            this.lblOccupiedPlots.AutoSize = true;
+            this.lblOccupiedPlots.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOccupiedPlots.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            this.lblOccupiedPlots.Location = new System.Drawing.Point(12, 12);
+            this.lblOccupiedPlots.Name = "lblOccupiedPlots";
+            this.lblOccupiedPlots.Size = new System.Drawing.Size(108, 20);
+            this.lblOccupiedPlots.TabIndex = 1;
+            this.lblOccupiedPlots.Text = "Occupied Plots";
             // 
             // frmDashboard
             // 
@@ -406,6 +534,11 @@
             this.tlpDashboard.ResumeLayout(false);
             this.pnlWelcome.ResumeLayout(false);
             this.pnlWelcome.PerformLayout();
+            this.tlpStats.ResumeLayout(false);
+            this.pnlTotalPlots.ResumeLayout(false);
+            this.pnlTotalPlots.PerformLayout();
+            this.pnlOccupiedPlots.ResumeLayout(false);
+            this.pnlOccupiedPlots.PerformLayout();
             this.ResumeLayout(false);
 
 		}
@@ -434,7 +567,16 @@
         private System.Windows.Forms.Panel pnlWelcome;
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Label lblSectionTitle;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblWelcomeSubtitle;
+        private System.Windows.Forms.TableLayoutPanel tlpStats;
+        private System.Windows.Forms.Panel pnlTransactions;
+        private System.Windows.Forms.Panel pnlReservations;
+        private System.Windows.Forms.Panel pnlOccupiedPlots;
+        private System.Windows.Forms.Panel pnlTotalPlots;
+        private System.Windows.Forms.Label lblTotalPlotsValue;
+        private System.Windows.Forms.Label lblTotalPlotsTitle;
+        private System.Windows.Forms.Label lblTotalPlotsDescription;
+        private System.Windows.Forms.Label lblOccupiedPlots;
     }
 }
 
