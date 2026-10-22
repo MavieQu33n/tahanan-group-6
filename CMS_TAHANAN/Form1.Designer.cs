@@ -1,6 +1,6 @@
 ﻿namespace CMS_TAHANAN
 {
-	partial class Form1
+	partial class frmDashboard
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,13 +28,413 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Text = "Form1";
+            this.tlpRoot = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.lblLogo = new System.Windows.Forms.Label();
+            this.lblSubtitle = new System.Windows.Forms.Label();
+            this.tlpWorkspace = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.btnDashboard = new System.Windows.Forms.Button();
+            this.btnBurialPlots = new System.Windows.Forms.Button();
+            this.btnClassification = new System.Windows.Forms.Button();
+            this.btnReservations = new System.Windows.Forms.Button();
+            this.btnFamilies = new System.Windows.Forms.Button();
+            this.btnMaintenance = new System.Windows.Forms.Button();
+            this.btnPayments = new System.Windows.Forms.Button();
+            this.btnReports = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
+            this.pnlDashboard = new System.Windows.Forms.Panel();
+            this.pnlFooter = new System.Windows.Forms.Panel();
+            this.lblFooter = new System.Windows.Forms.Label();
+            this.tlpDashboard = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlWelcome = new System.Windows.Forms.Panel();
+            this.lblSectionTitle = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tlpRoot.SuspendLayout();
+            this.pnlHeader.SuspendLayout();
+            this.tlpWorkspace.SuspendLayout();
+            this.pnlSidebar.SuspendLayout();
+            this.pnlDashboard.SuspendLayout();
+            this.pnlFooter.SuspendLayout();
+            this.tlpDashboard.SuspendLayout();
+            this.pnlWelcome.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // tlpRoot
+            // 
+            this.tlpRoot.ColumnCount = 1;
+            this.tlpRoot.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpRoot.Controls.Add(this.pnlHeader, 0, 0);
+            this.tlpRoot.Controls.Add(this.tlpWorkspace, 0, 1);
+            this.tlpRoot.Controls.Add(this.pnlFooter, 0, 2);
+            this.tlpRoot.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpRoot.Location = new System.Drawing.Point(0, 0);
+            this.tlpRoot.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpRoot.Name = "tlpRoot";
+            this.tlpRoot.RowCount = 3;
+            this.tlpRoot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tlpRoot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpRoot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tlpRoot.Size = new System.Drawing.Size(1006, 633);
+            this.tlpRoot.TabIndex = 0;
+            // 
+            // pnlHeader
+            // 
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(62)))), ((int)(((byte)(50)))));
+            this.pnlHeader.Controls.Add(this.lblSubtitle);
+            this.pnlHeader.Controls.Add(this.lblLogo);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.pnlHeader.Size = new System.Drawing.Size(1006, 60);
+            this.pnlHeader.TabIndex = 0;
+            // 
+            // lblLogo
+            // 
+            this.lblLogo.AutoSize = true;
+            this.lblLogo.Font = new System.Drawing.Font("Georgia", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogo.ForeColor = System.Drawing.Color.White;
+            this.lblLogo.Location = new System.Drawing.Point(20, 4);
+            this.lblLogo.Name = "lblLogo";
+            this.lblLogo.Size = new System.Drawing.Size(224, 43);
+            this.lblLogo.TabIndex = 0;
+            this.lblLogo.Text = "TAHANAN";
+            // 
+            // lblSubtitle
+            // 
+            this.lblSubtitle.AutoSize = true;
+            this.lblSubtitle.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubtitle.ForeColor = System.Drawing.Color.White;
+            this.lblSubtitle.Location = new System.Drawing.Point(22, 36);
+            this.lblSubtitle.Name = "lblSubtitle";
+            this.lblSubtitle.Size = new System.Drawing.Size(223, 17);
+            this.lblSubtitle.TabIndex = 1;
+            this.lblSubtitle.Text = "CEMETERY MANAGEMENT SYSTEM";
+            // 
+            // tlpWorkspace
+            // 
+            this.tlpWorkspace.ColumnCount = 2;
+            this.tlpWorkspace.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 190F));
+            this.tlpWorkspace.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpWorkspace.Controls.Add(this.pnlSidebar, 0, 0);
+            this.tlpWorkspace.Controls.Add(this.pnlDashboard, 1, 0);
+            this.tlpWorkspace.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpWorkspace.Location = new System.Drawing.Point(0, 60);
+            this.tlpWorkspace.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpWorkspace.Name = "tlpWorkspace";
+            this.tlpWorkspace.RowCount = 1;
+            this.tlpWorkspace.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpWorkspace.Size = new System.Drawing.Size(1006, 543);
+            this.tlpWorkspace.TabIndex = 1;
+            // 
+            // pnlSidebar
+            // 
+            this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(62)))), ((int)(((byte)(50)))));
+            this.pnlSidebar.Controls.Add(this.btnSettings);
+            this.pnlSidebar.Controls.Add(this.btnReports);
+            this.pnlSidebar.Controls.Add(this.btnPayments);
+            this.pnlSidebar.Controls.Add(this.btnMaintenance);
+            this.pnlSidebar.Controls.Add(this.btnFamilies);
+            this.pnlSidebar.Controls.Add(this.btnReservations);
+            this.pnlSidebar.Controls.Add(this.btnClassification);
+            this.pnlSidebar.Controls.Add(this.btnBurialPlots);
+            this.pnlSidebar.Controls.Add(this.btnDashboard);
+            this.pnlSidebar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlSidebar.Location = new System.Drawing.Point(0, 0);
+            this.pnlSidebar.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlSidebar.Name = "pnlSidebar";
+            this.pnlSidebar.Padding = new System.Windows.Forms.Padding(12, 20, 10, 10);
+            this.pnlSidebar.Size = new System.Drawing.Size(190, 543);
+            this.pnlSidebar.TabIndex = 0;
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDashboard.Location = new System.Drawing.Point(10, 50);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(170, 34);
+            this.btnDashboard.TabIndex = 0;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.UseVisualStyleBackColor = false;
+            // 
+            // btnBurialPlots
+            // 
+            this.btnBurialPlots.BackColor = System.Drawing.Color.Transparent;
+            this.btnBurialPlots.FlatAppearance.BorderSize = 0;
+            this.btnBurialPlots.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBurialPlots.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBurialPlots.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnBurialPlots.Location = new System.Drawing.Point(10, 134);
+            this.btnBurialPlots.Name = "btnBurialPlots";
+            this.btnBurialPlots.Size = new System.Drawing.Size(170, 34);
+            this.btnBurialPlots.TabIndex = 1;
+            this.btnBurialPlots.Text = "Burial Plots";
+            this.btnBurialPlots.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBurialPlots.UseVisualStyleBackColor = false;
+            // 
+            // btnClassification
+            // 
+            this.btnClassification.BackColor = System.Drawing.Color.Transparent;
+            this.btnClassification.FlatAppearance.BorderSize = 0;
+            this.btnClassification.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClassification.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClassification.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnClassification.Location = new System.Drawing.Point(10, 92);
+            this.btnClassification.Name = "btnClassification";
+            this.btnClassification.Size = new System.Drawing.Size(170, 34);
+            this.btnClassification.TabIndex = 2;
+            this.btnClassification.Text = "Grave Classification";
+            this.btnClassification.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClassification.UseVisualStyleBackColor = false;
+            // 
+            // btnReservations
+            // 
+            this.btnReservations.BackColor = System.Drawing.Color.Transparent;
+            this.btnReservations.FlatAppearance.BorderSize = 0;
+            this.btnReservations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReservations.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservations.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnReservations.Location = new System.Drawing.Point(10, 176);
+            this.btnReservations.Name = "btnReservations";
+            this.btnReservations.Size = new System.Drawing.Size(170, 34);
+            this.btnReservations.TabIndex = 3;
+            this.btnReservations.Text = "Reservations";
+            this.btnReservations.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReservations.UseVisualStyleBackColor = false;
+            // 
+            // btnFamilies
+            // 
+            this.btnFamilies.BackColor = System.Drawing.Color.Transparent;
+            this.btnFamilies.FlatAppearance.BorderSize = 0;
+            this.btnFamilies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFamilies.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFamilies.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnFamilies.Location = new System.Drawing.Point(10, 218);
+            this.btnFamilies.Name = "btnFamilies";
+            this.btnFamilies.Size = new System.Drawing.Size(170, 34);
+            this.btnFamilies.TabIndex = 4;
+            this.btnFamilies.Text = "Families & Ownership";
+            this.btnFamilies.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFamilies.UseVisualStyleBackColor = false;
+            // 
+            // btnMaintenance
+            // 
+            this.btnMaintenance.BackColor = System.Drawing.Color.Transparent;
+            this.btnMaintenance.FlatAppearance.BorderSize = 0;
+            this.btnMaintenance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaintenance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaintenance.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnMaintenance.Location = new System.Drawing.Point(10, 260);
+            this.btnMaintenance.Name = "btnMaintenance";
+            this.btnMaintenance.Size = new System.Drawing.Size(170, 34);
+            this.btnMaintenance.TabIndex = 5;
+            this.btnMaintenance.Text = "Maintenance Requests";
+            this.btnMaintenance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMaintenance.UseVisualStyleBackColor = false;
+            // 
+            // btnPayments
+            // 
+            this.btnPayments.BackColor = System.Drawing.Color.Transparent;
+            this.btnPayments.FlatAppearance.BorderSize = 0;
+            this.btnPayments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayments.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayments.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPayments.Location = new System.Drawing.Point(10, 302);
+            this.btnPayments.Name = "btnPayments";
+            this.btnPayments.Size = new System.Drawing.Size(170, 34);
+            this.btnPayments.TabIndex = 6;
+            this.btnPayments.Text = "Payments & Transactions";
+            this.btnPayments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPayments.UseVisualStyleBackColor = false;
+            // 
+            // btnReports
+            // 
+            this.btnReports.BackColor = System.Drawing.Color.Transparent;
+            this.btnReports.FlatAppearance.BorderSize = 0;
+            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReports.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReports.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnReports.Location = new System.Drawing.Point(10, 344);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Size = new System.Drawing.Size(170, 34);
+            this.btnReports.TabIndex = 7;
+            this.btnReports.Text = "Reports";
+            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReports.UseVisualStyleBackColor = false;
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.BackColor = System.Drawing.Color.Transparent;
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSettings.Location = new System.Drawing.Point(10, 386);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(170, 34);
+            this.btnSettings.TabIndex = 8;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSettings.UseVisualStyleBackColor = false;
+            // 
+            // pnlDashboard
+            // 
+            this.pnlDashboard.Controls.Add(this.tlpDashboard);
+            this.pnlDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlDashboard.Location = new System.Drawing.Point(190, 0);
+            this.pnlDashboard.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlDashboard.Name = "pnlDashboard";
+            this.pnlDashboard.Padding = new System.Windows.Forms.Padding(16);
+            this.pnlDashboard.Size = new System.Drawing.Size(816, 543);
+            this.pnlDashboard.TabIndex = 1;
+            // 
+            // pnlFooter
+            // 
+            this.pnlFooter.Controls.Add(this.lblFooter);
+            this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlFooter.Location = new System.Drawing.Point(0, 603);
+            this.pnlFooter.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlFooter.Name = "pnlFooter";
+            this.pnlFooter.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.pnlFooter.Size = new System.Drawing.Size(1006, 30);
+            this.pnlFooter.TabIndex = 2;
+            // 
+            // lblFooter
+            // 
+            this.lblFooter.AutoSize = true;
+            this.lblFooter.BackColor = System.Drawing.Color.Transparent;
+            this.lblFooter.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFooter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            this.lblFooter.Location = new System.Drawing.Point(15, 8);
+            this.lblFooter.Name = "lblFooter";
+            this.lblFooter.Size = new System.Drawing.Size(309, 17);
+            this.lblFooter.TabIndex = 0;
+            this.lblFooter.Text = "© 2026 TAHANAN - Cemetery Management System";
+            // 
+            // tlpDashboard
+            // 
+            this.tlpDashboard.ColumnCount = 1;
+            this.tlpDashboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpDashboard.Controls.Add(this.pnlWelcome, 0, 0);
+            this.tlpDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDashboard.Location = new System.Drawing.Point(16, 16);
+            this.tlpDashboard.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpDashboard.Name = "tlpDashboard";
+            this.tlpDashboard.Padding = new System.Windows.Forms.Padding(20, 16, 20, 12);
+            this.tlpDashboard.RowCount = 3;
+            this.tlpDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 105F));
+            this.tlpDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 135F));
+            this.tlpDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpDashboard.Size = new System.Drawing.Size(784, 511);
+            this.tlpDashboard.TabIndex = 0;
+            // 
+            // pnlWelcome
+            // 
+            this.pnlWelcome.Controls.Add(this.label1);
+            this.pnlWelcome.Controls.Add(this.lblWelcome);
+            this.pnlWelcome.Controls.Add(this.lblSectionTitle);
+            this.pnlWelcome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlWelcome.Location = new System.Drawing.Point(20, 16);
+            this.pnlWelcome.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlWelcome.Name = "pnlWelcome";
+            this.pnlWelcome.Size = new System.Drawing.Size(744, 105);
+            this.pnlWelcome.TabIndex = 0;
+            // 
+            // lblSectionTitle
+            // 
+            this.lblSectionTitle.AutoSize = true;
+            this.lblSectionTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblSectionTitle.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSectionTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
+            this.lblSectionTitle.Location = new System.Drawing.Point(4, 0);
+            this.lblSectionTitle.Name = "lblSectionTitle";
+            this.lblSectionTitle.Size = new System.Drawing.Size(160, 17);
+            this.lblSectionTitle.TabIndex = 0;
+            this.lblSectionTitle.Text = "DASHBOARD OVERVIEW";
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
+            this.lblWelcome.Font = new System.Drawing.Font("Georgia", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            this.lblWelcome.Location = new System.Drawing.Point(0, 18);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(375, 46);
+            this.lblWelcome.TabIndex = 1;
+            this.lblWelcome.Text = "Welcome, Admin";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(36, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 19);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "label1";
+            // 
+            // frmDashboard
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
+            this.ClientSize = new System.Drawing.Size(1006, 633);
+            this.Controls.Add(this.tlpRoot);
+            this.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1024, 680);
+            this.Name = "frmDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "TAHANAN";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.tlpRoot.ResumeLayout(false);
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
+            this.tlpWorkspace.ResumeLayout(false);
+            this.pnlSidebar.ResumeLayout(false);
+            this.pnlDashboard.ResumeLayout(false);
+            this.pnlFooter.ResumeLayout(false);
+            this.pnlFooter.PerformLayout();
+            this.tlpDashboard.ResumeLayout(false);
+            this.pnlWelcome.ResumeLayout(false);
+            this.pnlWelcome.PerformLayout();
+            this.ResumeLayout(false);
+
 		}
 
-		#endregion
-	}
+        #endregion
+
+        private System.Windows.Forms.TableLayoutPanel tlpRoot;
+        private System.Windows.Forms.Panel pnlHeader;
+        private System.Windows.Forms.Label lblSubtitle;
+        private System.Windows.Forms.Label lblLogo;
+        private System.Windows.Forms.TableLayoutPanel tlpWorkspace;
+        private System.Windows.Forms.Panel pnlSidebar;
+        private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Button btnReports;
+        private System.Windows.Forms.Button btnPayments;
+        private System.Windows.Forms.Button btnMaintenance;
+        private System.Windows.Forms.Button btnFamilies;
+        private System.Windows.Forms.Button btnReservations;
+        private System.Windows.Forms.Button btnClassification;
+        private System.Windows.Forms.Button btnBurialPlots;
+        private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Panel pnlDashboard;
+        private System.Windows.Forms.Label lblFooter;
+        private System.Windows.Forms.Panel pnlFooter;
+        private System.Windows.Forms.TableLayoutPanel tlpDashboard;
+        private System.Windows.Forms.Panel pnlWelcome;
+        private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Label lblSectionTitle;
+        private System.Windows.Forms.Label label1;
+    }
 }
 

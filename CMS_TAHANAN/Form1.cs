@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace CMS_TAHANAN
 {
-	public partial class Form1 : Form
+	public partial class frmDashboard : Form
 	{
-		public Form1()
+		public frmDashboard()
 		{
 			InitializeComponent();
 		}
-	}
+    }
 }
