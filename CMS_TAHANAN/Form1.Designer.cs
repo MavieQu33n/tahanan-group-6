@@ -175,6 +175,7 @@
             // btnSettings
             // 
             this.btnSettings.BackColor = System.Drawing.Color.Transparent;
+            this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSettings.FlatAppearance.BorderSize = 0;
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -190,6 +191,7 @@
             // btnReports
             // 
             this.btnReports.BackColor = System.Drawing.Color.Transparent;
+            this.btnReports.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReports.FlatAppearance.BorderSize = 0;
             this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReports.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -205,6 +207,7 @@
             // btnPayments
             // 
             this.btnPayments.BackColor = System.Drawing.Color.Transparent;
+            this.btnPayments.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPayments.FlatAppearance.BorderSize = 0;
             this.btnPayments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPayments.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -220,6 +223,7 @@
             // btnMaintenance
             // 
             this.btnMaintenance.BackColor = System.Drawing.Color.Transparent;
+            this.btnMaintenance.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMaintenance.FlatAppearance.BorderSize = 0;
             this.btnMaintenance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaintenance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -235,6 +239,7 @@
             // btnFamilies
             // 
             this.btnFamilies.BackColor = System.Drawing.Color.Transparent;
+            this.btnFamilies.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFamilies.FlatAppearance.BorderSize = 0;
             this.btnFamilies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFamilies.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -250,6 +255,7 @@
             // btnReservations
             // 
             this.btnReservations.BackColor = System.Drawing.Color.Transparent;
+            this.btnReservations.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReservations.FlatAppearance.BorderSize = 0;
             this.btnReservations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReservations.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -265,6 +271,7 @@
             // btnClassification
             // 
             this.btnClassification.BackColor = System.Drawing.Color.Transparent;
+            this.btnClassification.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClassification.FlatAppearance.BorderSize = 0;
             this.btnClassification.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClassification.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -280,6 +287,7 @@
             // btnBurialPlots
             // 
             this.btnBurialPlots.BackColor = System.Drawing.Color.Transparent;
+            this.btnBurialPlots.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBurialPlots.FlatAppearance.BorderSize = 0;
             this.btnBurialPlots.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBurialPlots.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -295,6 +303,7 @@
             // btnDashboard
             // 
             this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
+            this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDashboard.FlatAppearance.BorderSize = 0;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
