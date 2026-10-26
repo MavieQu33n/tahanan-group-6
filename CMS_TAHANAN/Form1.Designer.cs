@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpRoot = new System.Windows.Forms.TableLayoutPanel();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblSubtitle = new System.Windows.Forms.Label();
@@ -51,8 +52,16 @@
             this.lblSectionTitle = new System.Windows.Forms.Label();
             this.tlpStats = new System.Windows.Forms.TableLayoutPanel();
             this.pnlTransactions = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbltransactionValue = new System.Windows.Forms.Label();
+            this.pnlTransaction = new System.Windows.Forms.Label();
             this.pnlReservations = new System.Windows.Forms.Panel();
+            this.lblReservationsDescription = new System.Windows.Forms.Label();
+            this.lblReservationValue = new System.Windows.Forms.Label();
+            this.pnlReservation = new System.Windows.Forms.Label();
             this.pnlOccupiedPlots = new System.Windows.Forms.Panel();
+            this.lblOccupiedDescription = new System.Windows.Forms.Label();
+            this.lblTotalOccupeidPlotsValue = new System.Windows.Forms.Label();
             this.lblOccupiedPlots = new System.Windows.Forms.Label();
             this.pnlTotalPlots = new System.Windows.Forms.Panel();
             this.lblTotalPlotsDescription = new System.Windows.Forms.Label();
@@ -60,14 +69,18 @@
             this.lblTotalPlotsTitle = new System.Windows.Forms.Label();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.lblFooter = new System.Windows.Forms.Label();
-            this.lblTotalOccupeidPlotsValue = new System.Windows.Forms.Label();
-            this.lblOccupiedDescription = new System.Windows.Forms.Label();
-            this.pnlReservation = new System.Windows.Forms.Label();
-            this.lblReservationValue = new System.Windows.Forms.Label();
-            this.pnlTransaction = new System.Windows.Forms.Label();
-            this.lbltransactionValue = new System.Windows.Forms.Label();
-            this.lblReservationsDescription = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.tlpLowerDashboard = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlRecentRecords = new System.Windows.Forms.Panel();
+            this.lblActivityLabel = new System.Windows.Forms.Label();
+            this.lblRecentTitle = new System.Windows.Forms.Label();
+            this.lblRecentSubtitle = new System.Windows.Forms.Label();
+            this.txtSearchRecords = new System.Windows.Forms.TextBox();
+            this.dgvRecentRecords = new System.Windows.Forms.DataGridView();
+            this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAction = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlpRoot.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.tlpWorkspace.SuspendLayout();
@@ -81,6 +94,9 @@
             this.pnlOccupiedPlots.SuspendLayout();
             this.pnlTotalPlots.SuspendLayout();
             this.pnlFooter.SuspendLayout();
+            this.tlpLowerDashboard.SuspendLayout();
+            this.pnlRecentRecords.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecentRecords)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpRoot
@@ -333,6 +349,7 @@
             this.tlpDashboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpDashboard.Controls.Add(this.pnlWelcome, 0, 0);
             this.tlpDashboard.Controls.Add(this.tlpStats, 0, 1);
+            this.tlpDashboard.Controls.Add(this.tlpLowerDashboard, 0, 2);
             this.tlpDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpDashboard.Location = new System.Drawing.Point(16, 16);
             this.tlpDashboard.Margin = new System.Windows.Forms.Padding(0);
@@ -427,6 +444,39 @@
             this.pnlTransactions.Size = new System.Drawing.Size(176, 127);
             this.pnlTransactions.TabIndex = 3;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
+            this.label1.Location = new System.Drawing.Point(12, 82);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 17);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "This month";
+            // 
+            // lbltransactionValue
+            // 
+            this.lbltransactionValue.AutoSize = true;
+            this.lbltransactionValue.Font = new System.Drawing.Font("Georgia", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltransactionValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            this.lbltransactionValue.Location = new System.Drawing.Point(12, 38);
+            this.lbltransactionValue.Name = "lbltransactionValue";
+            this.lbltransactionValue.Size = new System.Drawing.Size(71, 43);
+            this.lbltransactionValue.TabIndex = 6;
+            this.lbltransactionValue.Text = "00";
+            // 
+            // pnlTransaction
+            // 
+            this.pnlTransaction.AutoSize = true;
+            this.pnlTransaction.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlTransaction.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            this.pnlTransaction.Location = new System.Drawing.Point(12, 12);
+            this.pnlTransaction.Name = "pnlTransaction";
+            this.pnlTransaction.Size = new System.Drawing.Size(139, 20);
+            this.pnlTransaction.TabIndex = 6;
+            this.pnlTransaction.Text = "Recent Transactions";
+            // 
             // pnlReservations
             // 
             this.pnlReservations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
@@ -441,6 +491,39 @@
             this.pnlReservations.Size = new System.Drawing.Size(176, 127);
             this.pnlReservations.TabIndex = 2;
             // 
+            // lblReservationsDescription
+            // 
+            this.lblReservationsDescription.AutoSize = true;
+            this.lblReservationsDescription.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReservationsDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
+            this.lblReservationsDescription.Location = new System.Drawing.Point(12, 82);
+            this.lblReservationsDescription.Name = "lblReservationsDescription";
+            this.lblReservationsDescription.Size = new System.Drawing.Size(97, 17);
+            this.lblReservationsDescription.TabIndex = 6;
+            this.lblReservationsDescription.Text = "Pending & Active";
+            // 
+            // lblReservationValue
+            // 
+            this.lblReservationValue.AutoSize = true;
+            this.lblReservationValue.Font = new System.Drawing.Font("Georgia", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReservationValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            this.lblReservationValue.Location = new System.Drawing.Point(12, 38);
+            this.lblReservationValue.Name = "lblReservationValue";
+            this.lblReservationValue.Size = new System.Drawing.Size(71, 43);
+            this.lblReservationValue.TabIndex = 5;
+            this.lblReservationValue.Text = "00";
+            // 
+            // pnlReservation
+            // 
+            this.pnlReservation.AutoSize = true;
+            this.pnlReservation.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlReservation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            this.pnlReservation.Location = new System.Drawing.Point(12, 12);
+            this.pnlReservation.Name = "pnlReservation";
+            this.pnlReservation.Size = new System.Drawing.Size(92, 20);
+            this.pnlReservation.TabIndex = 0;
+            this.pnlReservation.Text = "Reservations";
+            // 
             // pnlOccupiedPlots
             // 
             this.pnlOccupiedPlots.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
@@ -454,6 +537,29 @@
             this.pnlOccupiedPlots.Name = "pnlOccupiedPlots";
             this.pnlOccupiedPlots.Size = new System.Drawing.Size(176, 127);
             this.pnlOccupiedPlots.TabIndex = 1;
+            // 
+            // lblOccupiedDescription
+            // 
+            this.lblOccupiedDescription.AutoSize = true;
+            this.lblOccupiedDescription.BackColor = System.Drawing.Color.Transparent;
+            this.lblOccupiedDescription.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOccupiedDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
+            this.lblOccupiedDescription.Location = new System.Drawing.Point(12, 82);
+            this.lblOccupiedDescription.Name = "lblOccupiedDescription";
+            this.lblOccupiedDescription.Size = new System.Drawing.Size(72, 17);
+            this.lblOccupiedDescription.TabIndex = 4;
+            this.lblOccupiedDescription.Text = "0% of total";
+            // 
+            // lblTotalOccupeidPlotsValue
+            // 
+            this.lblTotalOccupeidPlotsValue.AutoSize = true;
+            this.lblTotalOccupeidPlotsValue.Font = new System.Drawing.Font("Georgia", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalOccupeidPlotsValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            this.lblTotalOccupeidPlotsValue.Location = new System.Drawing.Point(12, 38);
+            this.lblTotalOccupeidPlotsValue.Name = "lblTotalOccupeidPlotsValue";
+            this.lblTotalOccupeidPlotsValue.Size = new System.Drawing.Size(71, 43);
+            this.lblTotalOccupeidPlotsValue.TabIndex = 3;
+            this.lblTotalOccupeidPlotsValue.Text = "00";
             // 
             // lblOccupiedPlots
             // 
@@ -536,94 +642,159 @@
             this.lblFooter.TabIndex = 0;
             this.lblFooter.Text = "© 2026 TAHANAN - Cemetery Management System";
             // 
-            // lblTotalOccupeidPlotsValue
+            // tlpLowerDashboard
             // 
-            this.lblTotalOccupeidPlotsValue.AutoSize = true;
-            this.lblTotalOccupeidPlotsValue.Font = new System.Drawing.Font("Georgia", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalOccupeidPlotsValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
-            this.lblTotalOccupeidPlotsValue.Location = new System.Drawing.Point(12, 38);
-            this.lblTotalOccupeidPlotsValue.Name = "lblTotalOccupeidPlotsValue";
-            this.lblTotalOccupeidPlotsValue.Size = new System.Drawing.Size(71, 43);
-            this.lblTotalOccupeidPlotsValue.TabIndex = 3;
-            this.lblTotalOccupeidPlotsValue.Text = "00";
+            this.tlpLowerDashboard.ColumnCount = 2;
+            this.tlpLowerDashboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68F));
+            this.tlpLowerDashboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32F));
+            this.tlpLowerDashboard.Controls.Add(this.pnlRecentRecords, 0, 0);
+            this.tlpLowerDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpLowerDashboard.Location = new System.Drawing.Point(20, 256);
+            this.tlpLowerDashboard.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpLowerDashboard.Name = "tlpLowerDashboard";
+            this.tlpLowerDashboard.RowCount = 1;
+            this.tlpLowerDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpLowerDashboard.Size = new System.Drawing.Size(744, 243);
+            this.tlpLowerDashboard.TabIndex = 2;
             // 
-            // lblOccupiedDescription
+            // pnlRecentRecords
             // 
-            this.lblOccupiedDescription.AutoSize = true;
-            this.lblOccupiedDescription.BackColor = System.Drawing.Color.Transparent;
-            this.lblOccupiedDescription.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOccupiedDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
-            this.lblOccupiedDescription.Location = new System.Drawing.Point(12, 82);
-            this.lblOccupiedDescription.Name = "lblOccupiedDescription";
-            this.lblOccupiedDescription.Size = new System.Drawing.Size(72, 17);
-            this.lblOccupiedDescription.TabIndex = 4;
-            this.lblOccupiedDescription.Text = "0% of total";
+            this.pnlRecentRecords.Controls.Add(this.dgvRecentRecords);
+            this.pnlRecentRecords.Controls.Add(this.txtSearchRecords);
+            this.pnlRecentRecords.Controls.Add(this.lblRecentSubtitle);
+            this.pnlRecentRecords.Controls.Add(this.lblRecentTitle);
+            this.pnlRecentRecords.Controls.Add(this.lblActivityLabel);
+            this.pnlRecentRecords.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlRecentRecords.Location = new System.Drawing.Point(0, 8);
+            this.pnlRecentRecords.Margin = new System.Windows.Forms.Padding(0, 8, 8, 0);
+            this.pnlRecentRecords.Name = "pnlRecentRecords";
+            this.pnlRecentRecords.Padding = new System.Windows.Forms.Padding(12);
+            this.pnlRecentRecords.Size = new System.Drawing.Size(497, 235);
+            this.pnlRecentRecords.TabIndex = 0;
             // 
-            // pnlReservation
+            // lblActivityLabel
             // 
-            this.pnlReservation.AutoSize = true;
-            this.pnlReservation.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlReservation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
-            this.pnlReservation.Location = new System.Drawing.Point(12, 12);
-            this.pnlReservation.Name = "pnlReservation";
-            this.pnlReservation.Size = new System.Drawing.Size(92, 20);
-            this.pnlReservation.TabIndex = 0;
-            this.pnlReservation.Text = "Reservations";
+            this.lblActivityLabel.AutoSize = true;
+            this.lblActivityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.lblActivityLabel.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActivityLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
+            this.lblActivityLabel.Location = new System.Drawing.Point(12, 12);
+            this.lblActivityLabel.Name = "lblActivityLabel";
+            this.lblActivityLabel.Size = new System.Drawing.Size(96, 17);
+            this.lblActivityLabel.TabIndex = 0;
+            this.lblActivityLabel.Text = "ACTIVITY LOG";
             // 
-            // lblReservationValue
+            // lblRecentTitle
             // 
-            this.lblReservationValue.AutoSize = true;
-            this.lblReservationValue.Font = new System.Drawing.Font("Georgia", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReservationValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
-            this.lblReservationValue.Location = new System.Drawing.Point(12, 38);
-            this.lblReservationValue.Name = "lblReservationValue";
-            this.lblReservationValue.Size = new System.Drawing.Size(71, 43);
-            this.lblReservationValue.TabIndex = 5;
-            this.lblReservationValue.Text = "00";
+            this.lblRecentTitle.AutoSize = true;
+            this.lblRecentTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblRecentTitle.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecentTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            this.lblRecentTitle.Location = new System.Drawing.Point(12, 30);
+            this.lblRecentTitle.Name = "lblRecentTitle";
+            this.lblRecentTitle.Size = new System.Drawing.Size(223, 35);
+            this.lblRecentTitle.TabIndex = 1;
+            this.lblRecentTitle.Text = "Recent Records";
             // 
-            // pnlTransaction
+            // lblRecentSubtitle
             // 
-            this.pnlTransaction.AutoSize = true;
-            this.pnlTransaction.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlTransaction.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
-            this.pnlTransaction.Location = new System.Drawing.Point(12, 12);
-            this.pnlTransaction.Name = "pnlTransaction";
-            this.pnlTransaction.Size = new System.Drawing.Size(139, 20);
-            this.pnlTransaction.TabIndex = 6;
-            this.pnlTransaction.Text = "Recent Transactions";
+            this.lblRecentSubtitle.AutoSize = true;
+            this.lblRecentSubtitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblRecentSubtitle.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecentSubtitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
+            this.lblRecentSubtitle.Location = new System.Drawing.Point(12, 62);
+            this.lblRecentSubtitle.Name = "lblRecentSubtitle";
+            this.lblRecentSubtitle.Size = new System.Drawing.Size(294, 17);
+            this.lblRecentSubtitle.TabIndex = 2;
+            this.lblRecentSubtitle.Text = "A record of the moments and details that matter.";
             // 
-            // lbltransactionValue
+            // txtSearchRecords
             // 
-            this.lbltransactionValue.AutoSize = true;
-            this.lbltransactionValue.Font = new System.Drawing.Font("Georgia", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltransactionValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
-            this.lbltransactionValue.Location = new System.Drawing.Point(12, 38);
-            this.lbltransactionValue.Name = "lbltransactionValue";
-            this.lbltransactionValue.Size = new System.Drawing.Size(71, 43);
-            this.lbltransactionValue.TabIndex = 6;
-            this.lbltransactionValue.Text = "00";
+            this.txtSearchRecords.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchRecords.Location = new System.Drawing.Point(12, 94);
+            this.txtSearchRecords.Name = "txtSearchRecords";
+            this.txtSearchRecords.Size = new System.Drawing.Size(230, 27);
+            this.txtSearchRecords.TabIndex = 3;
             // 
-            // lblReservationsDescription
+            // dgvRecentRecords
             // 
-            this.lblReservationsDescription.AutoSize = true;
-            this.lblReservationsDescription.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReservationsDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
-            this.lblReservationsDescription.Location = new System.Drawing.Point(12, 82);
-            this.lblReservationsDescription.Name = "lblReservationsDescription";
-            this.lblReservationsDescription.Size = new System.Drawing.Size(97, 17);
-            this.lblReservationsDescription.TabIndex = 6;
-            this.lblReservationsDescription.Text = "Pending & Active";
+            this.dgvRecentRecords.AllowUserToAddRows = false;
+            this.dgvRecentRecords.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvRecentRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRecentRecords.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
+            this.dgvRecentRecords.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRecentRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvRecentRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRecentRecords.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colDate,
+            this.colName,
+            this.colType,
+            this.colStatus,
+            this.colAction});
+            this.dgvRecentRecords.EnableHeadersVisualStyles = false;
+            this.dgvRecentRecords.Location = new System.Drawing.Point(12, 132);
+            this.dgvRecentRecords.Name = "dgvRecentRecords";
+            this.dgvRecentRecords.ReadOnly = true;
+            this.dgvRecentRecords.RowHeadersVisible = false;
+            this.dgvRecentRecords.RowHeadersWidth = 51;
+            this.dgvRecentRecords.RowTemplate.Height = 24;
+            this.dgvRecentRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvRecentRecords.Size = new System.Drawing.Size(520, 300);
+            this.dgvRecentRecords.TabIndex = 4;
             // 
-            // label1
+            // colDate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
-            this.label1.Location = new System.Drawing.Point(12, 82);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 17);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "This month";
+            this.colDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colDate.HeaderText = "Date";
+            this.colDate.MinimumWidth = 6;
+            this.colDate.Name = "colDate";
+            this.colDate.ReadOnly = true;
+            this.colDate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colName
+            // 
+            this.colName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colName.HeaderText = "Name";
+            this.colName.MinimumWidth = 6;
+            this.colName.Name = "colName";
+            this.colName.ReadOnly = true;
+            this.colName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colType
+            // 
+            this.colType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colType.HeaderText = "Type";
+            this.colType.MinimumWidth = 6;
+            this.colType.Name = "colType";
+            this.colType.ReadOnly = true;
+            this.colType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colStatus
+            // 
+            this.colStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colStatus.HeaderText = "Status";
+            this.colStatus.MinimumWidth = 6;
+            this.colStatus.Name = "colStatus";
+            this.colStatus.ReadOnly = true;
+            this.colStatus.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colAction
+            // 
+            this.colAction.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colAction.HeaderText = "Action";
+            this.colAction.MinimumWidth = 6;
+            this.colAction.Name = "colAction";
+            this.colAction.ReadOnly = true;
+            this.colAction.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // frmDashboard
             // 
@@ -659,6 +830,10 @@
             this.pnlTotalPlots.PerformLayout();
             this.pnlFooter.ResumeLayout(false);
             this.pnlFooter.PerformLayout();
+            this.tlpLowerDashboard.ResumeLayout(false);
+            this.pnlRecentRecords.ResumeLayout(false);
+            this.pnlRecentRecords.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecentRecords)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -705,6 +880,18 @@
         private System.Windows.Forms.Label lbltransactionValue;
         private System.Windows.Forms.Label lblReservationsDescription;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel tlpLowerDashboard;
+        private System.Windows.Forms.Panel pnlRecentRecords;
+        private System.Windows.Forms.Label lblActivityLabel;
+        private System.Windows.Forms.Label lblRecentSubtitle;
+        private System.Windows.Forms.Label lblRecentTitle;
+        private System.Windows.Forms.TextBox txtSearchRecords;
+        private System.Windows.Forms.DataGridView dgvRecentRecords;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAction;
     }
 }
 
