@@ -28,7 +28,8 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpRoot = new System.Windows.Forms.TableLayoutPanel();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblSubtitle = new System.Windows.Forms.Label();
@@ -81,6 +82,16 @@
             this.colType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAction = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tlpRightColumn = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlMemorialCard = new System.Windows.Forms.Panel();
+            this.pnlQuickActions = new System.Windows.Forms.Panel();
+            this.tlpMemorialContent = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlMemorialInfo = new System.Windows.Forms.Panel();
+            this.lblTodayLocation = new System.Windows.Forms.Label();
+            this.lblMemorialDate = new System.Windows.Forms.Label();
+            this.lblMemorialTime = new System.Windows.Forms.Label();
+            this.picMemorial = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tlpRoot.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.tlpWorkspace.SuspendLayout();
@@ -97,6 +108,11 @@
             this.tlpLowerDashboard.SuspendLayout();
             this.pnlRecentRecords.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecentRecords)).BeginInit();
+            this.tlpRightColumn.SuspendLayout();
+            this.pnlMemorialCard.SuspendLayout();
+            this.tlpMemorialContent.SuspendLayout();
+            this.pnlMemorialInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMemorial)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpRoot
@@ -232,7 +248,7 @@
             this.btnPayments.Name = "btnPayments";
             this.btnPayments.Size = new System.Drawing.Size(170, 34);
             this.btnPayments.TabIndex = 6;
-            this.btnPayments.Text = "Payments & Transactions";
+            this.btnPayments.Text = "Payments && Transactions";
             this.btnPayments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPayments.UseVisualStyleBackColor = false;
             // 
@@ -264,7 +280,7 @@
             this.btnFamilies.Name = "btnFamilies";
             this.btnFamilies.Size = new System.Drawing.Size(170, 34);
             this.btnFamilies.TabIndex = 4;
-            this.btnFamilies.Text = "Families & Ownership";
+            this.btnFamilies.Text = "Families && Ownership";
             this.btnFamilies.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFamilies.UseVisualStyleBackColor = false;
             // 
@@ -648,12 +664,15 @@
             this.tlpLowerDashboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68F));
             this.tlpLowerDashboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32F));
             this.tlpLowerDashboard.Controls.Add(this.pnlRecentRecords, 0, 0);
+            this.tlpLowerDashboard.Controls.Add(this.tlpRightColumn, 1, 0);
             this.tlpLowerDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpLowerDashboard.Location = new System.Drawing.Point(20, 256);
             this.tlpLowerDashboard.Margin = new System.Windows.Forms.Padding(0);
             this.tlpLowerDashboard.Name = "tlpLowerDashboard";
             this.tlpLowerDashboard.RowCount = 1;
             this.tlpLowerDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpLowerDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpLowerDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpLowerDashboard.Size = new System.Drawing.Size(744, 243);
             this.tlpLowerDashboard.TabIndex = 2;
             // 
@@ -725,14 +744,14 @@
             this.dgvRecentRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRecentRecords.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
             this.dgvRecentRecords.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRecentRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRecentRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvRecentRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRecentRecords.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colDate,
@@ -748,7 +767,7 @@
             this.dgvRecentRecords.RowHeadersWidth = 51;
             this.dgvRecentRecords.RowTemplate.Height = 24;
             this.dgvRecentRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRecentRecords.Size = new System.Drawing.Size(520, 300);
+            this.dgvRecentRecords.Size = new System.Drawing.Size(520, 340);
             this.dgvRecentRecords.TabIndex = 4;
             // 
             // colDate
@@ -796,6 +815,120 @@
             this.colAction.ReadOnly = true;
             this.colAction.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // tlpRightColumn
+            // 
+            this.tlpRightColumn.ColumnCount = 1;
+            this.tlpRightColumn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpRightColumn.Controls.Add(this.pnlMemorialCard, 0, 0);
+            this.tlpRightColumn.Controls.Add(this.pnlQuickActions, 0, 1);
+            this.tlpRightColumn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpRightColumn.Location = new System.Drawing.Point(508, 3);
+            this.tlpRightColumn.Name = "tlpRightColumn";
+            this.tlpRightColumn.RowCount = 2;
+            this.tlpRightColumn.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tlpRightColumn.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tlpRightColumn.Size = new System.Drawing.Size(233, 237);
+            this.tlpRightColumn.TabIndex = 1;
+            // 
+            // pnlMemorialCard
+            // 
+            this.pnlMemorialCard.Controls.Add(this.tlpMemorialContent);
+            this.pnlMemorialCard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMemorialCard.Location = new System.Drawing.Point(3, 3);
+            this.pnlMemorialCard.Name = "pnlMemorialCard";
+            this.pnlMemorialCard.Size = new System.Drawing.Size(227, 136);
+            this.pnlMemorialCard.TabIndex = 0;
+            // 
+            // pnlQuickActions
+            // 
+            this.pnlQuickActions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlQuickActions.Location = new System.Drawing.Point(3, 145);
+            this.pnlQuickActions.Name = "pnlQuickActions";
+            this.pnlQuickActions.Size = new System.Drawing.Size(227, 89);
+            this.pnlQuickActions.TabIndex = 1;
+            // 
+            // tlpMemorialContent
+            // 
+            this.tlpMemorialContent.ColumnCount = 1;
+            this.tlpMemorialContent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpMemorialContent.Controls.Add(this.picMemorial, 0, 1);
+            this.tlpMemorialContent.Controls.Add(this.pnlMemorialInfo, 0, 0);
+            this.tlpMemorialContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpMemorialContent.Location = new System.Drawing.Point(0, 0);
+            this.tlpMemorialContent.Name = "tlpMemorialContent";
+            this.tlpMemorialContent.RowCount = 2;
+            this.tlpMemorialContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.tlpMemorialContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpMemorialContent.Size = new System.Drawing.Size(227, 136);
+            this.tlpMemorialContent.TabIndex = 0;
+            // 
+            // pnlMemorialInfo
+            // 
+            this.pnlMemorialInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
+            this.pnlMemorialInfo.Controls.Add(this.lblMemorialTime);
+            this.pnlMemorialInfo.Controls.Add(this.lblMemorialDate);
+            this.pnlMemorialInfo.Controls.Add(this.lblTodayLocation);
+            this.pnlMemorialInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMemorialInfo.Location = new System.Drawing.Point(0, 0);
+            this.pnlMemorialInfo.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlMemorialInfo.Name = "pnlMemorialInfo";
+            this.pnlMemorialInfo.Padding = new System.Windows.Forms.Padding(12, 4, 8, 4);
+            this.pnlMemorialInfo.Size = new System.Drawing.Size(227, 85);
+            this.pnlMemorialInfo.TabIndex = 0;
+            // 
+            // lblTodayLocation
+            // 
+            this.lblTodayLocation.AutoSize = true;
+            this.lblTodayLocation.BackColor = System.Drawing.Color.Transparent;
+            this.lblTodayLocation.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTodayLocation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
+            this.lblTodayLocation.Location = new System.Drawing.Point(12, 5);
+            this.lblTodayLocation.Name = "lblTodayLocation";
+            this.lblTodayLocation.Size = new System.Drawing.Size(104, 17);
+            this.lblTodayLocation.TabIndex = 0;
+            this.lblTodayLocation.Text = "Today in Davao";
+            // 
+            // lblMemorialDate
+            // 
+            this.lblMemorialDate.AutoSize = true;
+            this.lblMemorialDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblMemorialDate.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMemorialDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            this.lblMemorialDate.Location = new System.Drawing.Point(12, 25);
+            this.lblMemorialDate.Name = "lblMemorialDate";
+            this.lblMemorialDate.Size = new System.Drawing.Size(112, 21);
+            this.lblMemorialDate.TabIndex = 1;
+            this.lblMemorialDate.Text = "-, - 00, 0000";
+            // 
+            // lblMemorialTime
+            // 
+            this.lblMemorialTime.AutoSize = true;
+            this.lblMemorialTime.BackColor = System.Drawing.Color.Transparent;
+            this.lblMemorialTime.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMemorialTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            this.lblMemorialTime.Location = new System.Drawing.Point(12, 52);
+            this.lblMemorialTime.Name = "lblMemorialTime";
+            this.lblMemorialTime.Size = new System.Drawing.Size(133, 32);
+            this.lblMemorialTime.TabIndex = 2;
+            this.lblMemorialTime.Text = "00:00 --";
+            // 
+            // picMemorial
+            // 
+            this.picMemorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
+            this.picMemorial.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picMemorial.Image = global::CMS_TAHANAN.Properties.Resources.Serene_Hillside_Memorial_Garden;
+            this.picMemorial.Location = new System.Drawing.Point(0, 85);
+            this.picMemorial.Margin = new System.Windows.Forms.Padding(0);
+            this.picMemorial.Name = "picMemorial";
+            this.picMemorial.Size = new System.Drawing.Size(227, 51);
+            this.picMemorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMemorial.TabIndex = 2;
+            this.picMemorial.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -810,6 +943,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TAHANAN";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.tlpRoot.ResumeLayout(false);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
@@ -834,6 +968,12 @@
             this.pnlRecentRecords.ResumeLayout(false);
             this.pnlRecentRecords.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecentRecords)).EndInit();
+            this.tlpRightColumn.ResumeLayout(false);
+            this.pnlMemorialCard.ResumeLayout(false);
+            this.tlpMemorialContent.ResumeLayout(false);
+            this.pnlMemorialInfo.ResumeLayout(false);
+            this.pnlMemorialInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMemorial)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -892,6 +1032,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colType;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAction;
+        private System.Windows.Forms.TableLayoutPanel tlpRightColumn;
+        private System.Windows.Forms.Panel pnlMemorialCard;
+        private System.Windows.Forms.TableLayoutPanel tlpMemorialContent;
+        private System.Windows.Forms.Panel pnlMemorialInfo;
+        private System.Windows.Forms.Panel pnlQuickActions;
+        private System.Windows.Forms.Label lblMemorialTime;
+        private System.Windows.Forms.Label lblMemorialDate;
+        private System.Windows.Forms.Label lblTodayLocation;
+        private System.Windows.Forms.PictureBox picMemorial;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
