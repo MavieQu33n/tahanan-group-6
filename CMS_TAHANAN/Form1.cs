@@ -8,47 +8,60 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
+using System.Threading;
 
 namespace CMS_TAHANAN
 {
 	public partial class frmDashboard : Form
 	{
+        private readonly TrustedClock trustedClock = new TrustedClock();
+        private readonly System.Windows.Forms.Timer clockTimer = new System.Windows.Forms.Timer();
+        private static readonly TimeZoneInfo PhilippineTimeZone = TimeZoneInfo.CreateCustomTimeZone(
+            "Philippine Standard Time", TimeSpan.FromHours(8), "Philippine Standard Time", "Philippine Standard Time");
+
 		public frmDashboard()
 		{
 			InitializeComponent();
-
-            timer1.Interval = 1000;
-            timer1.Tick += timer1_Tick;
-
+            clockTimer.Interval = 1000;
+            clockTimer.Tick += ClockTimer_Tick;
+            FormClosed += frmDashboard_FormClosed;
         }
 
         private async void frmDashboard_Load(object sender, EventArgs e)
         {
-            lblMemorialDate.Text = "Syncing...";
-            lblMemorialTime.Text = "--:-- --";
+            lblTodayLocation.Text = "Today in Davao";
+            lblMemorialDate.Text = "Synchronizing...";
+            lblMemorialTime.Text = "Please wait";
 
-            bool ok = await TrustedClock.SyncAsync();
-
-            if (!ok)
+            if (await trustedClock.SynchronizeAsync(CancellationToken.None))
             {
-                lblMemorialDate.Text = "No internet connection";
-                lblMemorialTime.Text = "--:-- --";
+                UpdateClockDisplay();
+                clockTimer.Start();
             }
-
-            timer1.Start();
+            else
+            {
+                lblMemorialDate.Text = "Time unavailable";
+                lblMemorialTime.Text = "No connection";
+            }
         }
-        private async void timer1_Tick(object sender, EventArgs e)
-        {
-            if (!TrustedClock.IsSynced)
-            {
-                // retry quietly if the first sync failed
-                await TrustedClock.SyncAsync();
-                return;
-            }
 
-            DateTime now = TrustedClock.DavaoNow;
-            lblMemorialDate.Text = now.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture);
-            lblMemorialTime.Text = now.ToString("hh:mm tt", CultureInfo.InvariantCulture);
+        private void ClockTimer_Tick(object sender, EventArgs e)
+        {
+            UpdateClockDisplay();
+        }
+
+        private void UpdateClockDisplay()
+        {
+            DateTime davaoTime = TimeZoneInfo.ConvertTimeFromUtc(trustedClock.Now, PhilippineTimeZone);
+            lblMemorialDate.Text = davaoTime.ToString("dddd, MMMM dd, yyyy", CultureInfo.InvariantCulture);
+            lblMemorialTime.Text = davaoTime.ToString("hh:mm:ss tt", CultureInfo.InvariantCulture);
+        }
+
+        private void frmDashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            clockTimer.Stop();
+            clockTimer.Dispose();
+            trustedClock.Dispose();
         }
     }
 }

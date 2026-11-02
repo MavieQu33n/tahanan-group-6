@@ -28,8 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpRoot = new System.Windows.Forms.TableLayoutPanel();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblSubtitle = new System.Windows.Forms.Label();
@@ -68,30 +67,29 @@
             this.lblTotalPlotsDescription = new System.Windows.Forms.Label();
             this.lblTotalPlotsValue = new System.Windows.Forms.Label();
             this.lblTotalPlotsTitle = new System.Windows.Forms.Label();
-            this.pnlFooter = new System.Windows.Forms.Panel();
-            this.lblFooter = new System.Windows.Forms.Label();
             this.tlpLowerDashboard = new System.Windows.Forms.TableLayoutPanel();
             this.pnlRecentRecords = new System.Windows.Forms.Panel();
-            this.lblActivityLabel = new System.Windows.Forms.Label();
-            this.lblRecentTitle = new System.Windows.Forms.Label();
-            this.lblRecentSubtitle = new System.Windows.Forms.Label();
-            this.txtSearchRecords = new System.Windows.Forms.TextBox();
             this.dgvRecentRecords = new System.Windows.Forms.DataGridView();
             this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAction = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSearchRecords = new System.Windows.Forms.TextBox();
+            this.lblRecentSubtitle = new System.Windows.Forms.Label();
+            this.lblRecentTitle = new System.Windows.Forms.Label();
+            this.lblActivityLabel = new System.Windows.Forms.Label();
             this.tlpRightColumn = new System.Windows.Forms.TableLayoutPanel();
             this.pnlMemorialCard = new System.Windows.Forms.Panel();
-            this.pnlQuickActions = new System.Windows.Forms.Panel();
             this.tlpMemorialContent = new System.Windows.Forms.TableLayoutPanel();
-            this.pnlMemorialInfo = new System.Windows.Forms.Panel();
-            this.lblTodayLocation = new System.Windows.Forms.Label();
-            this.lblMemorialDate = new System.Windows.Forms.Label();
-            this.lblMemorialTime = new System.Windows.Forms.Label();
             this.picMemorial = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pnlMemorialInfo = new System.Windows.Forms.Panel();
+            this.lblMemorialTime = new System.Windows.Forms.Label();
+            this.lblMemorialDate = new System.Windows.Forms.Label();
+            this.lblTodayLocation = new System.Windows.Forms.Label();
+            this.pnlQuickActions = new System.Windows.Forms.Panel();
+            this.pnlFooter = new System.Windows.Forms.Panel();
+            this.lblFooter = new System.Windows.Forms.Label();
             this.tlpRoot.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.tlpWorkspace.SuspendLayout();
@@ -104,15 +102,15 @@
             this.pnlReservations.SuspendLayout();
             this.pnlOccupiedPlots.SuspendLayout();
             this.pnlTotalPlots.SuspendLayout();
-            this.pnlFooter.SuspendLayout();
             this.tlpLowerDashboard.SuspendLayout();
             this.pnlRecentRecords.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecentRecords)).BeginInit();
             this.tlpRightColumn.SuspendLayout();
             this.pnlMemorialCard.SuspendLayout();
             this.tlpMemorialContent.SuspendLayout();
-            this.pnlMemorialInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMemorial)).BeginInit();
+            this.pnlMemorialInfo.SuspendLayout();
+            this.pnlFooter.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpRoot
@@ -635,29 +633,6 @@
             this.lblTotalPlotsTitle.TabIndex = 0;
             this.lblTotalPlotsTitle.Text = "Total Burial Plots";
             // 
-            // pnlFooter
-            // 
-            this.pnlFooter.Controls.Add(this.lblFooter);
-            this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlFooter.Location = new System.Drawing.Point(0, 603);
-            this.pnlFooter.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.pnlFooter.Size = new System.Drawing.Size(1006, 30);
-            this.pnlFooter.TabIndex = 2;
-            // 
-            // lblFooter
-            // 
-            this.lblFooter.AutoSize = true;
-            this.lblFooter.BackColor = System.Drawing.Color.Transparent;
-            this.lblFooter.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFooter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
-            this.lblFooter.Location = new System.Drawing.Point(15, 8);
-            this.lblFooter.Name = "lblFooter";
-            this.lblFooter.Size = new System.Drawing.Size(282, 15);
-            this.lblFooter.TabIndex = 0;
-            this.lblFooter.Text = "© 2026 TAHANAN - Cemetery Management System";
-            // 
             // tlpLowerDashboard
             // 
             this.tlpLowerDashboard.ColumnCount = 2;
@@ -671,8 +646,8 @@
             this.tlpLowerDashboard.Name = "tlpLowerDashboard";
             this.tlpLowerDashboard.RowCount = 1;
             this.tlpLowerDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpLowerDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpLowerDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpLowerDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 243F));
+            this.tlpLowerDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 243F));
             this.tlpLowerDashboard.Size = new System.Drawing.Size(744, 243);
             this.tlpLowerDashboard.TabIndex = 2;
             // 
@@ -691,50 +666,6 @@
             this.pnlRecentRecords.Size = new System.Drawing.Size(497, 235);
             this.pnlRecentRecords.TabIndex = 0;
             // 
-            // lblActivityLabel
-            // 
-            this.lblActivityLabel.AutoSize = true;
-            this.lblActivityLabel.BackColor = System.Drawing.Color.Transparent;
-            this.lblActivityLabel.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActivityLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
-            this.lblActivityLabel.Location = new System.Drawing.Point(12, 12);
-            this.lblActivityLabel.Name = "lblActivityLabel";
-            this.lblActivityLabel.Size = new System.Drawing.Size(96, 17);
-            this.lblActivityLabel.TabIndex = 0;
-            this.lblActivityLabel.Text = "ACTIVITY LOG";
-            // 
-            // lblRecentTitle
-            // 
-            this.lblRecentTitle.AutoSize = true;
-            this.lblRecentTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblRecentTitle.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecentTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
-            this.lblRecentTitle.Location = new System.Drawing.Point(12, 30);
-            this.lblRecentTitle.Name = "lblRecentTitle";
-            this.lblRecentTitle.Size = new System.Drawing.Size(223, 35);
-            this.lblRecentTitle.TabIndex = 1;
-            this.lblRecentTitle.Text = "Recent Records";
-            // 
-            // lblRecentSubtitle
-            // 
-            this.lblRecentSubtitle.AutoSize = true;
-            this.lblRecentSubtitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblRecentSubtitle.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecentSubtitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
-            this.lblRecentSubtitle.Location = new System.Drawing.Point(12, 62);
-            this.lblRecentSubtitle.Name = "lblRecentSubtitle";
-            this.lblRecentSubtitle.Size = new System.Drawing.Size(294, 17);
-            this.lblRecentSubtitle.TabIndex = 2;
-            this.lblRecentSubtitle.Text = "A record of the moments and details that matter.";
-            // 
-            // txtSearchRecords
-            // 
-            this.txtSearchRecords.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchRecords.Location = new System.Drawing.Point(12, 94);
-            this.txtSearchRecords.Name = "txtSearchRecords";
-            this.txtSearchRecords.Size = new System.Drawing.Size(230, 27);
-            this.txtSearchRecords.TabIndex = 3;
-            // 
             // dgvRecentRecords
             // 
             this.dgvRecentRecords.AllowUserToAddRows = false;
@@ -744,14 +675,14 @@
             this.dgvRecentRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRecentRecords.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
             this.dgvRecentRecords.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRecentRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRecentRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvRecentRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRecentRecords.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colDate,
@@ -815,6 +746,50 @@
             this.colAction.ReadOnly = true;
             this.colAction.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // txtSearchRecords
+            // 
+            this.txtSearchRecords.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchRecords.Location = new System.Drawing.Point(12, 94);
+            this.txtSearchRecords.Name = "txtSearchRecords";
+            this.txtSearchRecords.Size = new System.Drawing.Size(230, 27);
+            this.txtSearchRecords.TabIndex = 3;
+            // 
+            // lblRecentSubtitle
+            // 
+            this.lblRecentSubtitle.AutoSize = true;
+            this.lblRecentSubtitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblRecentSubtitle.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecentSubtitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
+            this.lblRecentSubtitle.Location = new System.Drawing.Point(12, 62);
+            this.lblRecentSubtitle.Name = "lblRecentSubtitle";
+            this.lblRecentSubtitle.Size = new System.Drawing.Size(294, 17);
+            this.lblRecentSubtitle.TabIndex = 2;
+            this.lblRecentSubtitle.Text = "A record of the moments and details that matter.";
+            // 
+            // lblRecentTitle
+            // 
+            this.lblRecentTitle.AutoSize = true;
+            this.lblRecentTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblRecentTitle.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecentTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            this.lblRecentTitle.Location = new System.Drawing.Point(12, 30);
+            this.lblRecentTitle.Name = "lblRecentTitle";
+            this.lblRecentTitle.Size = new System.Drawing.Size(223, 35);
+            this.lblRecentTitle.TabIndex = 1;
+            this.lblRecentTitle.Text = "Recent Records";
+            // 
+            // lblActivityLabel
+            // 
+            this.lblActivityLabel.AutoSize = true;
+            this.lblActivityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.lblActivityLabel.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActivityLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
+            this.lblActivityLabel.Location = new System.Drawing.Point(12, 12);
+            this.lblActivityLabel.Name = "lblActivityLabel";
+            this.lblActivityLabel.Size = new System.Drawing.Size(86, 15);
+            this.lblActivityLabel.TabIndex = 0;
+            this.lblActivityLabel.Text = "ACTIVITY LOG";
+            // 
             // tlpRightColumn
             // 
             this.tlpRightColumn.ColumnCount = 1;
@@ -839,14 +814,6 @@
             this.pnlMemorialCard.Size = new System.Drawing.Size(227, 136);
             this.pnlMemorialCard.TabIndex = 0;
             // 
-            // pnlQuickActions
-            // 
-            this.pnlQuickActions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlQuickActions.Location = new System.Drawing.Point(3, 145);
-            this.pnlQuickActions.Name = "pnlQuickActions";
-            this.pnlQuickActions.Size = new System.Drawing.Size(227, 89);
-            this.pnlQuickActions.TabIndex = 1;
-            // 
             // tlpMemorialContent
             // 
             this.tlpMemorialContent.ColumnCount = 1;
@@ -862,6 +829,19 @@
             this.tlpMemorialContent.Size = new System.Drawing.Size(227, 136);
             this.tlpMemorialContent.TabIndex = 0;
             // 
+            // picMemorial
+            // 
+            this.picMemorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
+            this.picMemorial.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picMemorial.Image = global::CMS_TAHANAN.Properties.Resources.Serene_Hillside_Memorial_Garden;
+            this.picMemorial.Location = new System.Drawing.Point(0, 85);
+            this.picMemorial.Margin = new System.Windows.Forms.Padding(0);
+            this.picMemorial.Name = "picMemorial";
+            this.picMemorial.Size = new System.Drawing.Size(227, 51);
+            this.picMemorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMemorial.TabIndex = 2;
+            this.picMemorial.TabStop = false;
+            // 
             // pnlMemorialInfo
             // 
             this.pnlMemorialInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
@@ -876,17 +856,17 @@
             this.pnlMemorialInfo.Size = new System.Drawing.Size(227, 85);
             this.pnlMemorialInfo.TabIndex = 0;
             // 
-            // lblTodayLocation
+            // lblMemorialTime
             // 
-            this.lblTodayLocation.AutoSize = true;
-            this.lblTodayLocation.BackColor = System.Drawing.Color.Transparent;
-            this.lblTodayLocation.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTodayLocation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
-            this.lblTodayLocation.Location = new System.Drawing.Point(12, 5);
-            this.lblTodayLocation.Name = "lblTodayLocation";
-            this.lblTodayLocation.Size = new System.Drawing.Size(104, 17);
-            this.lblTodayLocation.TabIndex = 0;
-            this.lblTodayLocation.Text = "Today in Davao";
+            this.lblMemorialTime.AutoSize = true;
+            this.lblMemorialTime.BackColor = System.Drawing.Color.Transparent;
+            this.lblMemorialTime.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMemorialTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            this.lblMemorialTime.Location = new System.Drawing.Point(12, 52);
+            this.lblMemorialTime.Name = "lblMemorialTime";
+            this.lblMemorialTime.Size = new System.Drawing.Size(133, 32);
+            this.lblMemorialTime.TabIndex = 2;
+            this.lblMemorialTime.Text = "00:00 --";
             // 
             // lblMemorialDate
             // 
@@ -900,34 +880,48 @@
             this.lblMemorialDate.TabIndex = 1;
             this.lblMemorialDate.Text = "-, - 00, 0000";
             // 
-            // lblMemorialTime
+            // lblTodayLocation
             // 
-            this.lblMemorialTime.AutoSize = true;
-            this.lblMemorialTime.BackColor = System.Drawing.Color.Transparent;
-            this.lblMemorialTime.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMemorialTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
-            this.lblMemorialTime.Location = new System.Drawing.Point(12, 52);
-            this.lblMemorialTime.Name = "lblMemorialTime";
-            this.lblMemorialTime.Size = new System.Drawing.Size(133, 32);
-            this.lblMemorialTime.TabIndex = 2;
-            this.lblMemorialTime.Text = "00:00 --";
+            this.lblTodayLocation.AutoSize = true;
+            this.lblTodayLocation.BackColor = System.Drawing.Color.Transparent;
+            this.lblTodayLocation.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTodayLocation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
+            this.lblTodayLocation.Location = new System.Drawing.Point(12, 5);
+            this.lblTodayLocation.Name = "lblTodayLocation";
+            this.lblTodayLocation.Size = new System.Drawing.Size(90, 15);
+            this.lblTodayLocation.TabIndex = 0;
+            this.lblTodayLocation.Text = "Today in Davao";
             // 
-            // picMemorial
+            // pnlQuickActions
             // 
-            this.picMemorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
-            this.picMemorial.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picMemorial.Image = global::CMS_TAHANAN.Properties.Resources.Serene_Hillside_Memorial_Garden;
-            this.picMemorial.Location = new System.Drawing.Point(0, 85);
-            this.picMemorial.Margin = new System.Windows.Forms.Padding(0);
-            this.picMemorial.Name = "picMemorial";
-            this.picMemorial.Size = new System.Drawing.Size(227, 51);
-            this.picMemorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMemorial.TabIndex = 2;
-            this.picMemorial.TabStop = false;
+            this.pnlQuickActions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlQuickActions.Location = new System.Drawing.Point(3, 145);
+            this.pnlQuickActions.Name = "pnlQuickActions";
+            this.pnlQuickActions.Size = new System.Drawing.Size(227, 89);
+            this.pnlQuickActions.TabIndex = 1;
             // 
-            // timer1
+            // pnlFooter
             // 
-            this.timer1.Interval = 1000;
+            this.pnlFooter.Controls.Add(this.lblFooter);
+            this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlFooter.Location = new System.Drawing.Point(0, 603);
+            this.pnlFooter.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlFooter.Name = "pnlFooter";
+            this.pnlFooter.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.pnlFooter.Size = new System.Drawing.Size(1006, 30);
+            this.pnlFooter.TabIndex = 2;
+            // 
+            // lblFooter
+            // 
+            this.lblFooter.AutoSize = true;
+            this.lblFooter.BackColor = System.Drawing.Color.Transparent;
+            this.lblFooter.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFooter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            this.lblFooter.Location = new System.Drawing.Point(15, 8);
+            this.lblFooter.Name = "lblFooter";
+            this.lblFooter.Size = new System.Drawing.Size(282, 15);
+            this.lblFooter.TabIndex = 0;
+            this.lblFooter.Text = "© 2026 TAHANAN - Cemetery Management System";
             // 
             // frmDashboard
             // 
@@ -962,8 +956,6 @@
             this.pnlOccupiedPlots.PerformLayout();
             this.pnlTotalPlots.ResumeLayout(false);
             this.pnlTotalPlots.PerformLayout();
-            this.pnlFooter.ResumeLayout(false);
-            this.pnlFooter.PerformLayout();
             this.tlpLowerDashboard.ResumeLayout(false);
             this.pnlRecentRecords.ResumeLayout(false);
             this.pnlRecentRecords.PerformLayout();
@@ -971,9 +963,11 @@
             this.tlpRightColumn.ResumeLayout(false);
             this.pnlMemorialCard.ResumeLayout(false);
             this.tlpMemorialContent.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picMemorial)).EndInit();
             this.pnlMemorialInfo.ResumeLayout(false);
             this.pnlMemorialInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMemorial)).EndInit();
+            this.pnlFooter.ResumeLayout(false);
+            this.pnlFooter.PerformLayout();
             this.ResumeLayout(false);
 
 		}
@@ -1041,7 +1035,6 @@
         private System.Windows.Forms.Label lblMemorialDate;
         private System.Windows.Forms.Label lblTodayLocation;
         private System.Windows.Forms.PictureBox picMemorial;
-        private System.Windows.Forms.Timer timer1;
     }
 }
 
