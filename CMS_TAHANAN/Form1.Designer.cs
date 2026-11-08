@@ -28,7 +28,9 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpRoot = new System.Windows.Forms.TableLayoutPanel();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblSubtitle = new System.Windows.Forms.Label();
@@ -52,7 +54,7 @@
             this.lblSectionTitle = new System.Windows.Forms.Label();
             this.tlpStats = new System.Windows.Forms.TableLayoutPanel();
             this.pnlTransactions = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTransactionsDescription = new System.Windows.Forms.Label();
             this.lbltransactionValue = new System.Windows.Forms.Label();
             this.pnlTransaction = new System.Windows.Forms.Label();
             this.pnlReservations = new System.Windows.Forms.Panel();
@@ -88,6 +90,49 @@
             this.lblMemorialDate = new System.Windows.Forms.Label();
             this.lblTodayLocation = new System.Windows.Forms.Label();
             this.pnlQuickActions = new System.Windows.Forms.Panel();
+            this.pnlBurialPlotsPage = new System.Windows.Forms.Panel();
+            this.tlpBurialRoot = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlBPHeader = new System.Windows.Forms.Panel();
+            this.lblBPSubtitle = new System.Windows.Forms.Label();
+            this.btnAddBurialPlot = new System.Windows.Forms.Button();
+            this.lblBPTitle = new System.Windows.Forms.Label();
+            this.lblBPSection = new System.Windows.Forms.Label();
+            this.tlpBPStats = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlBPTotal = new System.Windows.Forms.Panel();
+            this.lblBPTotalDescription = new System.Windows.Forms.Label();
+            this.lblBPTotalValue = new System.Windows.Forms.Label();
+            this.lblBPTotalTitle = new System.Windows.Forms.Label();
+            this.pnlBPAvailable = new System.Windows.Forms.Panel();
+            this.lblBPAvailableDescription = new System.Windows.Forms.Label();
+            this.lblBPAvailableValue = new System.Windows.Forms.Label();
+            this.lblBPAvailableTitle = new System.Windows.Forms.Label();
+            this.pnlBPOccupied = new System.Windows.Forms.Panel();
+            this.lblBPOccupiedDescription = new System.Windows.Forms.Label();
+            this.lblBPOccupiedValue = new System.Windows.Forms.Label();
+            this.lblBPOccupiedTitle = new System.Windows.Forms.Label();
+            this.pnlBPReserved = new System.Windows.Forms.Panel();
+            this.lblBPReservedDescription = new System.Windows.Forms.Label();
+            this.lblBPReservedValue = new System.Windows.Forms.Label();
+            this.lblBPReservedTitle = new System.Windows.Forms.Label();
+            this.pnlBPFilters = new System.Windows.Forms.Panel();
+            this.cmbPlotSection = new System.Windows.Forms.ComboBox();
+            this.cmbPlotType = new System.Windows.Forms.ComboBox();
+            this.lblMoreFilters = new System.Windows.Forms.Label();
+            this.btnReservedFilter = new System.Windows.Forms.Button();
+            this.btnOccupiedFilter = new System.Windows.Forms.Button();
+            this.btnAvailableFilter = new System.Windows.Forms.Button();
+            this.btnAllStatus = new System.Windows.Forms.Button();
+            this.lblStatusFilter = new System.Windows.Forms.Label();
+            this.txtPlotSearch = new System.Windows.Forms.TextBox();
+            this.pnlBPRegistry = new System.Windows.Forms.Panel();
+            this.dgvBurialPlots = new System.Windows.Forms.DataGridView();
+            this.colPlotID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSection = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPlotType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colOccupant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDateRegistered = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colActions = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.lblFooter = new System.Windows.Forms.Label();
             this.tlpRoot.SuspendLayout();
@@ -110,6 +155,17 @@
             this.tlpMemorialContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMemorial)).BeginInit();
             this.pnlMemorialInfo.SuspendLayout();
+            this.pnlBurialPlotsPage.SuspendLayout();
+            this.tlpBurialRoot.SuspendLayout();
+            this.pnlBPHeader.SuspendLayout();
+            this.tlpBPStats.SuspendLayout();
+            this.pnlBPTotal.SuspendLayout();
+            this.pnlBPAvailable.SuspendLayout();
+            this.pnlBPOccupied.SuspendLayout();
+            this.pnlBPReserved.SuspendLayout();
+            this.pnlBPFilters.SuspendLayout();
+            this.pnlBPRegistry.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBurialPlots)).BeginInit();
             this.pnlFooter.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -306,7 +362,7 @@
             this.btnClassification.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClassification.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClassification.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnClassification.Location = new System.Drawing.Point(10, 92);
+            this.btnClassification.Location = new System.Drawing.Point(10, 134);
             this.btnClassification.Name = "btnClassification";
             this.btnClassification.Size = new System.Drawing.Size(170, 34);
             this.btnClassification.TabIndex = 2;
@@ -322,13 +378,14 @@
             this.btnBurialPlots.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBurialPlots.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBurialPlots.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnBurialPlots.Location = new System.Drawing.Point(10, 134);
+            this.btnBurialPlots.Location = new System.Drawing.Point(10, 92);
             this.btnBurialPlots.Name = "btnBurialPlots";
             this.btnBurialPlots.Size = new System.Drawing.Size(170, 34);
             this.btnBurialPlots.TabIndex = 1;
             this.btnBurialPlots.Text = "Burial Plots";
             this.btnBurialPlots.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBurialPlots.UseVisualStyleBackColor = false;
+            this.btnBurialPlots.Click += new System.EventHandler(this.btnBurialPlots_Click);
             // 
             // btnDashboard
             // 
@@ -345,10 +402,12 @@
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // pnlDashboard
             // 
             this.pnlDashboard.Controls.Add(this.tlpDashboard);
+            this.pnlDashboard.Controls.Add(this.pnlBurialPlotsPage);
             this.pnlDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDashboard.Location = new System.Drawing.Point(190, 0);
             this.pnlDashboard.Margin = new System.Windows.Forms.Padding(0);
@@ -356,6 +415,7 @@
             this.pnlDashboard.Padding = new System.Windows.Forms.Padding(16);
             this.pnlDashboard.Size = new System.Drawing.Size(816, 543);
             this.pnlDashboard.TabIndex = 1;
+            this.pnlDashboard.Visible = false;
             // 
             // tlpDashboard
             // 
@@ -448,7 +508,7 @@
             // 
             this.pnlTransactions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
             this.pnlTransactions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlTransactions.Controls.Add(this.label1);
+            this.pnlTransactions.Controls.Add(this.lblTransactionsDescription);
             this.pnlTransactions.Controls.Add(this.lbltransactionValue);
             this.pnlTransactions.Controls.Add(this.pnlTransaction);
             this.pnlTransactions.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -458,16 +518,16 @@
             this.pnlTransactions.Size = new System.Drawing.Size(176, 127);
             this.pnlTransactions.TabIndex = 3;
             // 
-            // label1
+            // lblTransactionsDescription
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
-            this.label1.Location = new System.Drawing.Point(12, 82);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 17);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "This month";
+            this.lblTransactionsDescription.AutoSize = true;
+            this.lblTransactionsDescription.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransactionsDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
+            this.lblTransactionsDescription.Location = new System.Drawing.Point(12, 82);
+            this.lblTransactionsDescription.Name = "lblTransactionsDescription";
+            this.lblTransactionsDescription.Size = new System.Drawing.Size(72, 17);
+            this.lblTransactionsDescription.TabIndex = 7;
+            this.lblTransactionsDescription.Text = "This month";
             // 
             // lbltransactionValue
             // 
@@ -675,14 +735,14 @@
             this.dgvRecentRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRecentRecords.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
             this.dgvRecentRecords.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRecentRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRecentRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRecentRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRecentRecords.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colDate,
@@ -900,6 +960,600 @@
             this.pnlQuickActions.Size = new System.Drawing.Size(227, 89);
             this.pnlQuickActions.TabIndex = 1;
             // 
+            // pnlBurialPlotsPage
+            // 
+            this.pnlBurialPlotsPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(234)))));
+            this.pnlBurialPlotsPage.Controls.Add(this.tlpBurialRoot);
+            this.pnlBurialPlotsPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBurialPlotsPage.Location = new System.Drawing.Point(16, 16);
+            this.pnlBurialPlotsPage.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlBurialPlotsPage.Name = "pnlBurialPlotsPage";
+            this.pnlBurialPlotsPage.Size = new System.Drawing.Size(784, 511);
+            this.pnlBurialPlotsPage.TabIndex = 1;
+            this.pnlBurialPlotsPage.Visible = false;
+            // 
+            // tlpBurialRoot
+            // 
+            this.tlpBurialRoot.ColumnCount = 1;
+            this.tlpBurialRoot.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpBurialRoot.Controls.Add(this.pnlBPHeader, 0, 0);
+            this.tlpBurialRoot.Controls.Add(this.tlpBPStats, 0, 1);
+            this.tlpBurialRoot.Controls.Add(this.pnlBPFilters, 0, 2);
+            this.tlpBurialRoot.Controls.Add(this.pnlBPRegistry, 0, 3);
+            this.tlpBurialRoot.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpBurialRoot.Location = new System.Drawing.Point(0, 0);
+            this.tlpBurialRoot.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpBurialRoot.Name = "tlpBurialRoot";
+            this.tlpBurialRoot.RowCount = 4;
+            this.tlpBurialRoot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 92F));
+            this.tlpBurialRoot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 92F));
+            this.tlpBurialRoot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 94F));
+            this.tlpBurialRoot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpBurialRoot.Size = new System.Drawing.Size(784, 511);
+            this.tlpBurialRoot.TabIndex = 0;
+            // 
+            // pnlBPHeader
+            // 
+            this.pnlBPHeader.Controls.Add(this.lblBPSubtitle);
+            this.pnlBPHeader.Controls.Add(this.btnAddBurialPlot);
+            this.pnlBPHeader.Controls.Add(this.lblBPTitle);
+            this.pnlBPHeader.Controls.Add(this.lblBPSection);
+            this.pnlBPHeader.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBPHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlBPHeader.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlBPHeader.Name = "pnlBPHeader";
+            this.pnlBPHeader.Size = new System.Drawing.Size(784, 92);
+            this.pnlBPHeader.TabIndex = 0;
+            // 
+            // lblBPSubtitle
+            // 
+            this.lblBPSubtitle.AutoSize = true;
+            this.lblBPSubtitle.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBPSubtitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(139)))), ((int)(((byte)(124)))));
+            this.lblBPSubtitle.Location = new System.Drawing.Point(2, 61);
+            this.lblBPSubtitle.Name = "lblBPSubtitle";
+            this.lblBPSubtitle.Size = new System.Drawing.Size(522, 17);
+            this.lblBPSubtitle.TabIndex = 2;
+            this.lblBPSubtitle.Text = "Manage cemetery plot records, track availability status, and review occupant allo" +
+    "cations.";
+            // 
+            // btnAddBurialPlot
+            // 
+            this.btnAddBurialPlot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddBurialPlot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(48)))), ((int)(((byte)(57)))));
+            this.btnAddBurialPlot.FlatAppearance.BorderSize = 0;
+            this.btnAddBurialPlot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddBurialPlot.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddBurialPlot.ForeColor = System.Drawing.Color.White;
+            this.btnAddBurialPlot.Location = new System.Drawing.Point(661, 16);
+            this.btnAddBurialPlot.Name = "btnAddBurialPlot";
+            this.btnAddBurialPlot.Size = new System.Drawing.Size(120, 34);
+            this.btnAddBurialPlot.TabIndex = 1;
+            this.btnAddBurialPlot.Text = "+ Add Burial Plot";
+            this.btnAddBurialPlot.UseVisualStyleBackColor = false;
+            // 
+            // lblBPTitle
+            // 
+            this.lblBPTitle.AutoSize = true;
+            this.lblBPTitle.Font = new System.Drawing.Font("Georgia", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBPTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            this.lblBPTitle.Location = new System.Drawing.Point(0, 18);
+            this.lblBPTitle.Name = "lblBPTitle";
+            this.lblBPTitle.Size = new System.Drawing.Size(238, 48);
+            this.lblBPTitle.TabIndex = 1;
+            this.lblBPTitle.Text = "Burial Plots";
+            // 
+            // lblBPSection
+            // 
+            this.lblBPSection.AutoSize = true;
+            this.lblBPSection.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBPSection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(111)))), ((int)(((byte)(83)))));
+            this.lblBPSection.Location = new System.Drawing.Point(0, 2);
+            this.lblBPSection.Name = "lblBPSection";
+            this.lblBPSection.Size = new System.Drawing.Size(139, 15);
+            this.lblBPSection.TabIndex = 0;
+            this.lblBPSection.Text = "\t— CEMETERY REGISTRY";
+            // 
+            // tlpBPStats
+            // 
+            this.tlpBPStats.ColumnCount = 4;
+            this.tlpBPStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpBPStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpBPStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpBPStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpBPStats.Controls.Add(this.pnlBPTotal, 0, 0);
+            this.tlpBPStats.Controls.Add(this.pnlBPAvailable, 1, 0);
+            this.tlpBPStats.Controls.Add(this.pnlBPOccupied, 2, 0);
+            this.tlpBPStats.Controls.Add(this.pnlBPReserved, 3, 0);
+            this.tlpBPStats.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpBPStats.Location = new System.Drawing.Point(0, 92);
+            this.tlpBPStats.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpBPStats.Name = "tlpBPStats";
+            this.tlpBPStats.RowCount = 1;
+            this.tlpBPStats.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpBPStats.Size = new System.Drawing.Size(784, 92);
+            this.tlpBPStats.TabIndex = 1;
+            // 
+            // pnlBPTotal
+            // 
+            this.pnlBPTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.pnlBPTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlBPTotal.Controls.Add(this.lblBPTotalDescription);
+            this.pnlBPTotal.Controls.Add(this.lblBPTotalValue);
+            this.pnlBPTotal.Controls.Add(this.lblBPTotalTitle);
+            this.pnlBPTotal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBPTotal.Location = new System.Drawing.Point(4, 3);
+            this.pnlBPTotal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pnlBPTotal.Name = "pnlBPTotal";
+            this.pnlBPTotal.Padding = new System.Windows.Forms.Padding(10, 8, 8, 5);
+            this.pnlBPTotal.Size = new System.Drawing.Size(188, 86);
+            this.pnlBPTotal.TabIndex = 0;
+            // 
+            // lblBPTotalDescription
+            // 
+            this.lblBPTotalDescription.AutoSize = true;
+            this.lblBPTotalDescription.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBPTotalDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(139)))), ((int)(((byte)(124)))));
+            this.lblBPTotalDescription.Location = new System.Drawing.Point(10, 60);
+            this.lblBPTotalDescription.Name = "lblBPTotalDescription";
+            this.lblBPTotalDescription.Size = new System.Drawing.Size(76, 15);
+            this.lblBPTotalDescription.TabIndex = 2;
+            this.lblBPTotalDescription.Text = "All 4 sections";
+            // 
+            // lblBPTotalValue
+            // 
+            this.lblBPTotalValue.AutoSize = true;
+            this.lblBPTotalValue.Font = new System.Drawing.Font("Georgia", 19.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBPTotalValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            this.lblBPTotalValue.Location = new System.Drawing.Point(10, 27);
+            this.lblBPTotalValue.Name = "lblBPTotalValue";
+            this.lblBPTotalValue.Size = new System.Drawing.Size(37, 38);
+            this.lblBPTotalValue.TabIndex = 1;
+            this.lblBPTotalValue.Text = "0";
+            // 
+            // lblBPTotalTitle
+            // 
+            this.lblBPTotalTitle.AutoSize = true;
+            this.lblBPTotalTitle.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBPTotalTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(110)))));
+            this.lblBPTotalTitle.Location = new System.Drawing.Point(10, 9);
+            this.lblBPTotalTitle.Name = "lblBPTotalTitle";
+            this.lblBPTotalTitle.Size = new System.Drawing.Size(82, 15);
+            this.lblBPTotalTitle.TabIndex = 0;
+            this.lblBPTotalTitle.Text = "TOTAL PLOTS";
+            // 
+            // pnlBPAvailable
+            // 
+            this.pnlBPAvailable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.pnlBPAvailable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlBPAvailable.Controls.Add(this.lblBPAvailableDescription);
+            this.pnlBPAvailable.Controls.Add(this.lblBPAvailableValue);
+            this.pnlBPAvailable.Controls.Add(this.lblBPAvailableTitle);
+            this.pnlBPAvailable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBPAvailable.Location = new System.Drawing.Point(200, 3);
+            this.pnlBPAvailable.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pnlBPAvailable.Name = "pnlBPAvailable";
+            this.pnlBPAvailable.Padding = new System.Windows.Forms.Padding(10, 8, 8, 5);
+            this.pnlBPAvailable.Size = new System.Drawing.Size(188, 86);
+            this.pnlBPAvailable.TabIndex = 1;
+            // 
+            // lblBPAvailableDescription
+            // 
+            this.lblBPAvailableDescription.AutoSize = true;
+            this.lblBPAvailableDescription.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBPAvailableDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(139)))), ((int)(((byte)(124)))));
+            this.lblBPAvailableDescription.Location = new System.Drawing.Point(10, 60);
+            this.lblBPAvailableDescription.Name = "lblBPAvailableDescription";
+            this.lblBPAvailableDescription.Size = new System.Drawing.Size(80, 15);
+            this.lblBPAvailableDescription.TabIndex = 3;
+            this.lblBPAvailableDescription.Text = "Ready for sale";
+            // 
+            // lblBPAvailableValue
+            // 
+            this.lblBPAvailableValue.AutoSize = true;
+            this.lblBPAvailableValue.Font = new System.Drawing.Font("Georgia", 19.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBPAvailableValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            this.lblBPAvailableValue.Location = new System.Drawing.Point(10, 27);
+            this.lblBPAvailableValue.Name = "lblBPAvailableValue";
+            this.lblBPAvailableValue.Size = new System.Drawing.Size(37, 38);
+            this.lblBPAvailableValue.TabIndex = 2;
+            this.lblBPAvailableValue.Text = "0";
+            // 
+            // lblBPAvailableTitle
+            // 
+            this.lblBPAvailableTitle.AutoSize = true;
+            this.lblBPAvailableTitle.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBPAvailableTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(110)))));
+            this.lblBPAvailableTitle.Location = new System.Drawing.Point(10, 9);
+            this.lblBPAvailableTitle.Name = "lblBPAvailableTitle";
+            this.lblBPAvailableTitle.Size = new System.Drawing.Size(106, 15);
+            this.lblBPAvailableTitle.TabIndex = 0;
+            this.lblBPAvailableTitle.Text = "AVAILABLE PLOTS";
+            // 
+            // pnlBPOccupied
+            // 
+            this.pnlBPOccupied.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.pnlBPOccupied.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlBPOccupied.Controls.Add(this.lblBPOccupiedDescription);
+            this.pnlBPOccupied.Controls.Add(this.lblBPOccupiedValue);
+            this.pnlBPOccupied.Controls.Add(this.lblBPOccupiedTitle);
+            this.pnlBPOccupied.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBPOccupied.Location = new System.Drawing.Point(396, 3);
+            this.pnlBPOccupied.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pnlBPOccupied.Name = "pnlBPOccupied";
+            this.pnlBPOccupied.Padding = new System.Windows.Forms.Padding(10, 8, 8, 5);
+            this.pnlBPOccupied.Size = new System.Drawing.Size(188, 86);
+            this.pnlBPOccupied.TabIndex = 2;
+            // 
+            // lblBPOccupiedDescription
+            // 
+            this.lblBPOccupiedDescription.AutoSize = true;
+            this.lblBPOccupiedDescription.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBPOccupiedDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(139)))), ((int)(((byte)(124)))));
+            this.lblBPOccupiedDescription.Location = new System.Drawing.Point(10, 60);
+            this.lblBPOccupiedDescription.Name = "lblBPOccupiedDescription";
+            this.lblBPOccupiedDescription.Size = new System.Drawing.Size(92, 15);
+            this.lblBPOccupiedDescription.TabIndex = 3;
+            this.lblBPOccupiedDescription.Text = "Deed confirmed";
+            // 
+            // lblBPOccupiedValue
+            // 
+            this.lblBPOccupiedValue.AutoSize = true;
+            this.lblBPOccupiedValue.Font = new System.Drawing.Font("Georgia", 19.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBPOccupiedValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            this.lblBPOccupiedValue.Location = new System.Drawing.Point(10, 27);
+            this.lblBPOccupiedValue.Name = "lblBPOccupiedValue";
+            this.lblBPOccupiedValue.Size = new System.Drawing.Size(37, 38);
+            this.lblBPOccupiedValue.TabIndex = 2;
+            this.lblBPOccupiedValue.Text = "0";
+            // 
+            // lblBPOccupiedTitle
+            // 
+            this.lblBPOccupiedTitle.AutoSize = true;
+            this.lblBPOccupiedTitle.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBPOccupiedTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(110)))));
+            this.lblBPOccupiedTitle.Location = new System.Drawing.Point(10, 9);
+            this.lblBPOccupiedTitle.Name = "lblBPOccupiedTitle";
+            this.lblBPOccupiedTitle.Size = new System.Drawing.Size(104, 15);
+            this.lblBPOccupiedTitle.TabIndex = 0;
+            this.lblBPOccupiedTitle.Text = "OCCUPIED PLOTS";
+            // 
+            // pnlBPReserved
+            // 
+            this.pnlBPReserved.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.pnlBPReserved.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlBPReserved.Controls.Add(this.lblBPReservedDescription);
+            this.pnlBPReserved.Controls.Add(this.lblBPReservedValue);
+            this.pnlBPReserved.Controls.Add(this.lblBPReservedTitle);
+            this.pnlBPReserved.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBPReserved.Location = new System.Drawing.Point(592, 3);
+            this.pnlBPReserved.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pnlBPReserved.Name = "pnlBPReserved";
+            this.pnlBPReserved.Padding = new System.Windows.Forms.Padding(10, 8, 8, 5);
+            this.pnlBPReserved.Size = new System.Drawing.Size(188, 86);
+            this.pnlBPReserved.TabIndex = 3;
+            // 
+            // lblBPReservedDescription
+            // 
+            this.lblBPReservedDescription.AutoSize = true;
+            this.lblBPReservedDescription.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBPReservedDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(139)))), ((int)(((byte)(124)))));
+            this.lblBPReservedDescription.Location = new System.Drawing.Point(10, 60);
+            this.lblBPReservedDescription.Name = "lblBPReservedDescription";
+            this.lblBPReservedDescription.Size = new System.Drawing.Size(72, 15);
+            this.lblBPReservedDescription.TabIndex = 3;
+            this.lblBPReservedDescription.Text = "Active holds";
+            // 
+            // lblBPReservedValue
+            // 
+            this.lblBPReservedValue.AutoSize = true;
+            this.lblBPReservedValue.Font = new System.Drawing.Font("Georgia", 19.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBPReservedValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            this.lblBPReservedValue.Location = new System.Drawing.Point(10, 27);
+            this.lblBPReservedValue.Name = "lblBPReservedValue";
+            this.lblBPReservedValue.Size = new System.Drawing.Size(37, 38);
+            this.lblBPReservedValue.TabIndex = 2;
+            this.lblBPReservedValue.Text = "0";
+            // 
+            // lblBPReservedTitle
+            // 
+            this.lblBPReservedTitle.AutoSize = true;
+            this.lblBPReservedTitle.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBPReservedTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(110)))));
+            this.lblBPReservedTitle.Location = new System.Drawing.Point(10, 9);
+            this.lblBPReservedTitle.Name = "lblBPReservedTitle";
+            this.lblBPReservedTitle.Size = new System.Drawing.Size(104, 15);
+            this.lblBPReservedTitle.TabIndex = 0;
+            this.lblBPReservedTitle.Text = "RESERVED PLOTS";
+            // 
+            // pnlBPFilters
+            // 
+            this.pnlBPFilters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.pnlBPFilters.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlBPFilters.Controls.Add(this.cmbPlotSection);
+            this.pnlBPFilters.Controls.Add(this.cmbPlotType);
+            this.pnlBPFilters.Controls.Add(this.lblMoreFilters);
+            this.pnlBPFilters.Controls.Add(this.btnReservedFilter);
+            this.pnlBPFilters.Controls.Add(this.btnOccupiedFilter);
+            this.pnlBPFilters.Controls.Add(this.btnAvailableFilter);
+            this.pnlBPFilters.Controls.Add(this.btnAllStatus);
+            this.pnlBPFilters.Controls.Add(this.lblStatusFilter);
+            this.pnlBPFilters.Controls.Add(this.txtPlotSearch);
+            this.pnlBPFilters.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBPFilters.Location = new System.Drawing.Point(4, 189);
+            this.pnlBPFilters.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlBPFilters.Name = "pnlBPFilters";
+            this.pnlBPFilters.Padding = new System.Windows.Forms.Padding(10);
+            this.pnlBPFilters.Size = new System.Drawing.Size(776, 84);
+            this.pnlBPFilters.TabIndex = 2;
+            // 
+            // cmbPlotSection
+            // 
+            this.cmbPlotSection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPlotSection.FormattingEnabled = true;
+            this.cmbPlotSection.Items.AddRange(new object[] {
+            "All Sections",
+            "",
+            "",
+            "",
+            "",
+            "Section A - St. Gabriel",
+            "",
+            "",
+            "",
+            "",
+            "Section B - St. Michael",
+            "",
+            "",
+            "",
+            "",
+            "Section C - St. Raphael",
+            "",
+            "",
+            "",
+            "",
+            "Section D - Holy Cross"});
+            this.cmbPlotSection.Location = new System.Drawing.Point(293, 44);
+            this.cmbPlotSection.Name = "cmbPlotSection";
+            this.cmbPlotSection.Size = new System.Drawing.Size(120, 27);
+            this.cmbPlotSection.TabIndex = 8;
+            // 
+            // cmbPlotType
+            // 
+            this.cmbPlotType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPlotType.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPlotType.FormattingEnabled = true;
+            this.cmbPlotType.Items.AddRange(new object[] {
+            "All Plot Types",
+            "",
+            "",
+            "",
+            "",
+            "Burial Plot",
+            "",
+            "",
+            "",
+            "",
+            "Family Plot",
+            "",
+            "",
+            "",
+            "",
+            "Standard Plot",
+            "",
+            "",
+            "",
+            "",
+            "Cremation Plot",
+            "",
+            "",
+            "",
+            "",
+            "Premium Garden"});
+            this.cmbPlotType.Location = new System.Drawing.Point(138, 44);
+            this.cmbPlotType.Name = "cmbPlotType";
+            this.cmbPlotType.Size = new System.Drawing.Size(148, 25);
+            this.cmbPlotType.TabIndex = 7;
+            // 
+            // lblMoreFilters
+            // 
+            this.lblMoreFilters.AutoSize = true;
+            this.lblMoreFilters.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMoreFilters.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(110)))));
+            this.lblMoreFilters.Location = new System.Drawing.Point(28, 55);
+            this.lblMoreFilters.Name = "lblMoreFilters";
+            this.lblMoreFilters.Size = new System.Drawing.Size(90, 15);
+            this.lblMoreFilters.TabIndex = 6;
+            this.lblMoreFilters.Text = "MORE FILTERS:";
+            // 
+            // btnReservedFilter
+            // 
+            this.btnReservedFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReservedFilter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReservedFilter.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservedFilter.Location = new System.Drawing.Point(80, 18);
+            this.btnReservedFilter.Name = "btnReservedFilter";
+            this.btnReservedFilter.Size = new System.Drawing.Size(80, 26);
+            this.btnReservedFilter.TabIndex = 5;
+            this.btnReservedFilter.Text = "Reserved 0";
+            this.btnReservedFilter.UseVisualStyleBackColor = true;
+            // 
+            // btnOccupiedFilter
+            // 
+            this.btnOccupiedFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOccupiedFilter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOccupiedFilter.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOccupiedFilter.Location = new System.Drawing.Point(168, 18);
+            this.btnOccupiedFilter.Name = "btnOccupiedFilter";
+            this.btnOccupiedFilter.Size = new System.Drawing.Size(80, 26);
+            this.btnOccupiedFilter.TabIndex = 4;
+            this.btnOccupiedFilter.Text = "Occupied 0";
+            this.btnOccupiedFilter.UseVisualStyleBackColor = true;
+            // 
+            // btnAvailableFilter
+            // 
+            this.btnAvailableFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAvailableFilter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAvailableFilter.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAvailableFilter.Location = new System.Drawing.Point(256, 18);
+            this.btnAvailableFilter.Name = "btnAvailableFilter";
+            this.btnAvailableFilter.Size = new System.Drawing.Size(80, 26);
+            this.btnAvailableFilter.TabIndex = 3;
+            this.btnAvailableFilter.Text = "Available 0";
+            this.btnAvailableFilter.UseVisualStyleBackColor = true;
+            // 
+            // btnAllStatus
+            // 
+            this.btnAllStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAllStatus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAllStatus.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAllStatus.Location = new System.Drawing.Point(340, 18);
+            this.btnAllStatus.Name = "btnAllStatus";
+            this.btnAllStatus.Size = new System.Drawing.Size(76, 26);
+            this.btnAllStatus.TabIndex = 2;
+            this.btnAllStatus.Text = "All (0)";
+            this.btnAllStatus.UseVisualStyleBackColor = true;
+            // 
+            // lblStatusFilter
+            // 
+            this.lblStatusFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblStatusFilter.AutoSize = true;
+            this.lblStatusFilter.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatusFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(110)))));
+            this.lblStatusFilter.Location = new System.Drawing.Point(596, 4);
+            this.lblStatusFilter.Name = "lblStatusFilter";
+            this.lblStatusFilter.Size = new System.Drawing.Size(164, 15);
+            this.lblStatusFilter.TabIndex = 1;
+            this.lblStatusFilter.Text = "FILTER BY CURRENT STATUS";
+            // 
+            // txtPlotSearch
+            // 
+            this.txtPlotSearch.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlotSearch.Location = new System.Drawing.Point(12, 12);
+            this.txtPlotSearch.Name = "txtPlotSearch";
+            this.txtPlotSearch.Size = new System.Drawing.Size(300, 25);
+            this.txtPlotSearch.TabIndex = 0;
+            // 
+            // pnlBPRegistry
+            // 
+            this.pnlBPRegistry.Controls.Add(this.dgvBurialPlots);
+            this.pnlBPRegistry.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBPRegistry.Location = new System.Drawing.Point(4, 283);
+            this.pnlBPRegistry.Margin = new System.Windows.Forms.Padding(4, 5, 4, 0);
+            this.pnlBPRegistry.Name = "pnlBPRegistry";
+            this.pnlBPRegistry.Size = new System.Drawing.Size(776, 228);
+            this.pnlBPRegistry.TabIndex = 3;
+            // 
+            // dgvBurialPlots
+            // 
+            this.dgvBurialPlots.AllowUserToAddRows = false;
+            this.dgvBurialPlots.AllowUserToDeleteRows = false;
+            this.dgvBurialPlots.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBurialPlots.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
+            this.dgvBurialPlots.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(111)))), ((int)(((byte)(99)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBurialPlots.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvBurialPlots.ColumnHeadersHeight = 32;
+            this.dgvBurialPlots.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvBurialPlots.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colPlotID,
+            this.colSection,
+            this.colPlotType,
+            this.colStatu,
+            this.colOccupant,
+            this.colDateRegistered,
+            this.colActions});
+            this.dgvBurialPlots.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBurialPlots.EnableHeadersVisualStyles = false;
+            this.dgvBurialPlots.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(223)))), ((int)(((byte)(212)))));
+            this.dgvBurialPlots.Location = new System.Drawing.Point(0, 0);
+            this.dgvBurialPlots.Margin = new System.Windows.Forms.Padding(0);
+            this.dgvBurialPlots.MultiSelect = false;
+            this.dgvBurialPlots.Name = "dgvBurialPlots";
+            this.dgvBurialPlots.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(231)))), ((int)(((byte)(222)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(223)))), ((int)(((byte)(222)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBurialPlots.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvBurialPlots.RowHeadersVisible = false;
+            this.dgvBurialPlots.RowHeadersWidth = 51;
+            this.dgvBurialPlots.RowTemplate.Height = 42;
+            this.dgvBurialPlots.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvBurialPlots.Size = new System.Drawing.Size(776, 228);
+            this.dgvBurialPlots.TabIndex = 0;
+            // 
+            // colPlotID
+            // 
+            this.colPlotID.FillWeight = 90F;
+            this.colPlotID.HeaderText = "PLOT ID";
+            this.colPlotID.MinimumWidth = 6;
+            this.colPlotID.Name = "colPlotID";
+            this.colPlotID.ReadOnly = true;
+            this.colPlotID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colSection
+            // 
+            this.colSection.FillWeight = 125F;
+            this.colSection.HeaderText = "SECTION & GRID";
+            this.colSection.MinimumWidth = 6;
+            this.colSection.Name = "colSection";
+            this.colSection.ReadOnly = true;
+            this.colSection.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colPlotType
+            // 
+            this.colPlotType.HeaderText = "PLOT TYPE";
+            this.colPlotType.MinimumWidth = 6;
+            this.colPlotType.Name = "colPlotType";
+            this.colPlotType.ReadOnly = true;
+            this.colPlotType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colStatu
+            // 
+            this.colStatu.FillWeight = 85F;
+            this.colStatu.HeaderText = "STATUS";
+            this.colStatu.MinimumWidth = 6;
+            this.colStatu.Name = "colStatu";
+            this.colStatu.ReadOnly = true;
+            this.colStatu.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colOccupant
+            // 
+            this.colOccupant.FillWeight = 125F;
+            this.colOccupant.HeaderText = "OCCUPANT / OWNER";
+            this.colOccupant.MinimumWidth = 6;
+            this.colOccupant.Name = "colOccupant";
+            this.colOccupant.ReadOnly = true;
+            this.colOccupant.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colDateRegistered
+            // 
+            this.colDateRegistered.FillWeight = 95F;
+            this.colDateRegistered.HeaderText = "DATE REGISTERED";
+            this.colDateRegistered.MinimumWidth = 6;
+            this.colDateRegistered.Name = "colDateRegistered";
+            this.colDateRegistered.ReadOnly = true;
+            this.colDateRegistered.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colActions
+            // 
+            this.colActions.FillWeight = 70F;
+            this.colActions.HeaderText = "ACTIONS";
+            this.colActions.MinimumWidth = 6;
+            this.colActions.Name = "colActions";
+            this.colActions.ReadOnly = true;
+            this.colActions.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // pnlFooter
             // 
             this.pnlFooter.Controls.Add(this.lblFooter);
@@ -937,7 +1591,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TAHANAN";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.tlpRoot.ResumeLayout(false);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
@@ -966,6 +1619,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.picMemorial)).EndInit();
             this.pnlMemorialInfo.ResumeLayout(false);
             this.pnlMemorialInfo.PerformLayout();
+            this.pnlBurialPlotsPage.ResumeLayout(false);
+            this.tlpBurialRoot.ResumeLayout(false);
+            this.pnlBPHeader.ResumeLayout(false);
+            this.pnlBPHeader.PerformLayout();
+            this.tlpBPStats.ResumeLayout(false);
+            this.pnlBPTotal.ResumeLayout(false);
+            this.pnlBPTotal.PerformLayout();
+            this.pnlBPAvailable.ResumeLayout(false);
+            this.pnlBPAvailable.PerformLayout();
+            this.pnlBPOccupied.ResumeLayout(false);
+            this.pnlBPOccupied.PerformLayout();
+            this.pnlBPReserved.ResumeLayout(false);
+            this.pnlBPReserved.PerformLayout();
+            this.pnlBPFilters.ResumeLayout(false);
+            this.pnlBPFilters.PerformLayout();
+            this.pnlBPRegistry.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBurialPlots)).EndInit();
             this.pnlFooter.ResumeLayout(false);
             this.pnlFooter.PerformLayout();
             this.ResumeLayout(false);
@@ -1013,7 +1683,7 @@
         private System.Windows.Forms.Label lblReservationValue;
         private System.Windows.Forms.Label lbltransactionValue;
         private System.Windows.Forms.Label lblReservationsDescription;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTransactionsDescription;
         private System.Windows.Forms.TableLayoutPanel tlpLowerDashboard;
         private System.Windows.Forms.Panel pnlRecentRecords;
         private System.Windows.Forms.Label lblActivityLabel;
@@ -1035,6 +1705,49 @@
         private System.Windows.Forms.Label lblMemorialDate;
         private System.Windows.Forms.Label lblTodayLocation;
         private System.Windows.Forms.PictureBox picMemorial;
+        private System.Windows.Forms.Panel pnlBurialPlotsPage;
+        private System.Windows.Forms.TableLayoutPanel tlpBurialRoot;
+        private System.Windows.Forms.Panel pnlBPHeader;
+        private System.Windows.Forms.Label lblBPTitle;
+        private System.Windows.Forms.Label lblBPSection;
+        private System.Windows.Forms.Label lblBPSubtitle;
+        private System.Windows.Forms.Button btnAddBurialPlot;
+        private System.Windows.Forms.TableLayoutPanel tlpBPStats;
+        private System.Windows.Forms.Panel pnlBPTotal;
+        private System.Windows.Forms.Panel pnlBPAvailable;
+        private System.Windows.Forms.Panel pnlBPOccupied;
+        private System.Windows.Forms.Panel pnlBPReserved;
+        private System.Windows.Forms.Label lblBPTotalDescription;
+        private System.Windows.Forms.Label lblBPTotalValue;
+        private System.Windows.Forms.Label lblBPTotalTitle;
+        private System.Windows.Forms.Label lblBPAvailableDescription;
+        private System.Windows.Forms.Label lblBPAvailableValue;
+        private System.Windows.Forms.Label lblBPAvailableTitle;
+        private System.Windows.Forms.Label lblBPOccupiedDescription;
+        private System.Windows.Forms.Label lblBPOccupiedValue;
+        private System.Windows.Forms.Label lblBPOccupiedTitle;
+        private System.Windows.Forms.Label lblBPReservedDescription;
+        private System.Windows.Forms.Label lblBPReservedValue;
+        private System.Windows.Forms.Label lblBPReservedTitle;
+        private System.Windows.Forms.Panel pnlBPFilters;
+        private System.Windows.Forms.TextBox txtPlotSearch;
+        private System.Windows.Forms.Button btnReservedFilter;
+        private System.Windows.Forms.Button btnOccupiedFilter;
+        private System.Windows.Forms.Button btnAvailableFilter;
+        private System.Windows.Forms.Button btnAllStatus;
+        private System.Windows.Forms.Label lblStatusFilter;
+        private System.Windows.Forms.ComboBox cmbPlotSection;
+        private System.Windows.Forms.ComboBox cmbPlotType;
+        private System.Windows.Forms.Label lblMoreFilters;
+        private System.Windows.Forms.Panel pnlBPRegistry;
+        private System.Windows.Forms.DataGridView dgvBurialPlots;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPlotID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSection;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPlotType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStatu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colOccupant;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDateRegistered;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colActions;
     }
 }
 
