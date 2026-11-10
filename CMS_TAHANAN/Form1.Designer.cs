@@ -28,7 +28,9 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpRoot = new System.Windows.Forms.TableLayoutPanel();
@@ -224,6 +226,41 @@
             this.lblCLS003Code = new System.Windows.Forms.Label();
             this.pnlCLS003Status = new System.Windows.Forms.Panel();
             this.lblCLS003Status = new System.Windows.Forms.Label();
+            this.pnlReservationsPage = new System.Windows.Forms.Panel();
+            this.tlpReservationsRoot = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlRSVHeader = new System.Windows.Forms.Panel();
+            this.lblRSVSection = new System.Windows.Forms.Label();
+            this.lblRSVTitle = new System.Windows.Forms.Label();
+            this.lblRSVSubtitle = new System.Windows.Forms.Label();
+            this.btnAddReservation = new System.Windows.Forms.Button();
+            this.tlpRSVStats = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlRSVTotal = new System.Windows.Forms.Panel();
+            this.pnlRSVPending = new System.Windows.Forms.Panel();
+            this.pnlRSVConfirmed = new System.Windows.Forms.Panel();
+            this.pnlRSVCancelled = new System.Windows.Forms.Panel();
+            this.lblRSVTotalTitle = new System.Windows.Forms.Label();
+            this.lblRSVTotalValue = new System.Windows.Forms.Label();
+            this.lblRSVTotalDescription = new System.Windows.Forms.Label();
+            this.lblRSVPendingTitle = new System.Windows.Forms.Label();
+            this.lblRSVPendingValue = new System.Windows.Forms.Label();
+            this.lblRSVPendingDescription = new System.Windows.Forms.Label();
+            this.lblRSVConfirmedTitle = new System.Windows.Forms.Label();
+            this.lblRSVConfirmedValue = new System.Windows.Forms.Label();
+            this.lblRSVConfirmedDescription = new System.Windows.Forms.Label();
+            this.lblRSVCancelledTitle = new System.Windows.Forms.Label();
+            this.lblRSVCancelledValue = new System.Windows.Forms.Label();
+            this.lblRSVCancelledDescription = new System.Windows.Forms.Label();
+            this.pnlRSVRegistry = new System.Windows.Forms.Panel();
+            this.txtReservationSearch = new System.Windows.Forms.TextBox();
+            this.cmbReservationStatus = new System.Windows.Forms.ComboBox();
+            this.dgvReservations = new System.Windows.Forms.DataGridView();
+            this.colReservationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colApplicantName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colReservedPlot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colReservedOn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colExpirationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colReservationStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colReservationActions = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlpRoot.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.tlpWorkspace.SuspendLayout();
@@ -270,6 +307,16 @@
             this.pnlCLS002Deed.SuspendLayout();
             this.pnlCLS003Deed.SuspendLayout();
             this.pnlCLS003Status.SuspendLayout();
+            this.pnlReservationsPage.SuspendLayout();
+            this.tlpReservationsRoot.SuspendLayout();
+            this.pnlRSVHeader.SuspendLayout();
+            this.tlpRSVStats.SuspendLayout();
+            this.pnlRSVTotal.SuspendLayout();
+            this.pnlRSVPending.SuspendLayout();
+            this.pnlRSVConfirmed.SuspendLayout();
+            this.pnlRSVCancelled.SuspendLayout();
+            this.pnlRSVRegistry.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReservations)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpRoot
@@ -456,6 +503,7 @@
             this.btnReservations.Text = "Reservations";
             this.btnReservations.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReservations.UseVisualStyleBackColor = false;
+            this.btnReservations.Click += new System.EventHandler(this.btnReservations_Click);
             // 
             // btnClassification
             // 
@@ -493,7 +541,7 @@
             // 
             // btnDashboard
             // 
-            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(134)))), ((int)(((byte)(117)))));
+            this.btnDashboard.BackColor = System.Drawing.Color.Transparent;
             this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDashboard.FlatAppearance.BorderSize = 0;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -510,6 +558,7 @@
             // 
             // pnlDashboard
             // 
+            this.pnlDashboard.Controls.Add(this.pnlReservationsPage);
             this.pnlDashboard.Controls.Add(this.pnlGraveClassificationPage);
             this.pnlDashboard.Controls.Add(this.pnlBurialPlotsPage);
             this.pnlDashboard.Controls.Add(this.tlpDashboard);
@@ -575,7 +624,7 @@
             this.btnAddClassification.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddClassification.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddClassification.ForeColor = System.Drawing.Color.White;
-            this.btnAddClassification.Location = new System.Drawing.Point(1107, 35);
+            this.btnAddClassification.Location = new System.Drawing.Point(1311, 41);
             this.btnAddClassification.Name = "btnAddClassification";
             this.btnAddClassification.Size = new System.Drawing.Size(190, 48);
             this.btnAddClassification.TabIndex = 3;
@@ -1399,14 +1448,14 @@
             this.dgvRecentRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRecentRecords.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
             this.dgvRecentRecords.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRecentRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRecentRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvRecentRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRecentRecords.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colDate,
@@ -1958,25 +2007,9 @@
             this.cmbPlotSection.FormattingEnabled = true;
             this.cmbPlotSection.Items.AddRange(new object[] {
             "All Sections",
-            "",
-            "",
-            "",
-            "",
             "Section A - St. Gabriel",
-            "",
-            "",
-            "",
-            "",
             "Section B - St. Michael",
-            "",
-            "",
-            "",
-            "",
             "Section C - St. Raphael",
-            "",
-            "",
-            "",
-            "",
             "Section D - Holy Cross"});
             this.cmbPlotSection.Location = new System.Drawing.Point(293, 44);
             this.cmbPlotSection.Name = "cmbPlotSection";
@@ -1990,30 +2023,10 @@
             this.cmbPlotType.FormattingEnabled = true;
             this.cmbPlotType.Items.AddRange(new object[] {
             "All Plot Types",
-            "",
-            "",
-            "",
-            "",
             "Burial Plot",
-            "",
-            "",
-            "",
-            "",
             "Family Plot",
-            "",
-            "",
-            "",
-            "",
             "Standard Plot",
-            "",
-            "",
-            "",
-            "",
             "Cremation Plot",
-            "",
-            "",
-            "",
-            "",
             "Premium Garden"});
             this.cmbPlotType.Location = new System.Drawing.Point(138, 44);
             this.cmbPlotType.Name = "cmbPlotType";
@@ -2116,14 +2129,14 @@
             this.dgvBurialPlots.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBurialPlots.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
             this.dgvBurialPlots.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(111)))), ((int)(((byte)(99)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBurialPlots.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(111)))), ((int)(((byte)(99)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBurialPlots.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvBurialPlots.ColumnHeadersHeight = 32;
             this.dgvBurialPlots.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvBurialPlots.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -2142,14 +2155,14 @@
             this.dgvBurialPlots.MultiSelect = false;
             this.dgvBurialPlots.Name = "dgvBurialPlots";
             this.dgvBurialPlots.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(231)))), ((int)(((byte)(222)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(223)))), ((int)(((byte)(222)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBurialPlots.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(231)))), ((int)(((byte)(222)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(223)))), ((int)(((byte)(222)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBurialPlots.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvBurialPlots.RowHeadersVisible = false;
             this.dgvBurialPlots.RowHeadersWidth = 51;
             this.dgvBurialPlots.RowTemplate.Height = 42;
@@ -2800,6 +2813,436 @@
             this.lblCLS003Status.Text = "● Active";
             this.lblCLS003Status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pnlReservationsPage
+            // 
+            this.pnlReservationsPage.AutoScroll = true;
+            this.pnlReservationsPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(234)))));
+            this.pnlReservationsPage.Controls.Add(this.tlpReservationsRoot);
+            this.pnlReservationsPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlReservationsPage.Location = new System.Drawing.Point(16, 16);
+            this.pnlReservationsPage.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlReservationsPage.Name = "pnlReservationsPage";
+            this.pnlReservationsPage.Padding = new System.Windows.Forms.Padding(20);
+            this.pnlReservationsPage.Size = new System.Drawing.Size(1702, 630);
+            this.pnlReservationsPage.TabIndex = 3;
+            this.pnlReservationsPage.Visible = false;
+            // 
+            // tlpReservationsRoot
+            // 
+            this.tlpReservationsRoot.ColumnCount = 1;
+            this.tlpReservationsRoot.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpReservationsRoot.Controls.Add(this.pnlRSVHeader, 0, 0);
+            this.tlpReservationsRoot.Controls.Add(this.tlpRSVStats, 0, 1);
+            this.tlpReservationsRoot.Controls.Add(this.pnlRSVRegistry, 0, 2);
+            this.tlpReservationsRoot.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlpReservationsRoot.Location = new System.Drawing.Point(20, 20);
+            this.tlpReservationsRoot.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpReservationsRoot.Name = "tlpReservationsRoot";
+            this.tlpReservationsRoot.RowCount = 3;
+            this.tlpReservationsRoot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 135F));
+            this.tlpReservationsRoot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 190F));
+            this.tlpReservationsRoot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 540F));
+            this.tlpReservationsRoot.Size = new System.Drawing.Size(1641, 865);
+            this.tlpReservationsRoot.TabIndex = 0;
+            // 
+            // pnlRSVHeader
+            // 
+            this.pnlRSVHeader.Controls.Add(this.btnAddReservation);
+            this.pnlRSVHeader.Controls.Add(this.lblRSVSubtitle);
+            this.pnlRSVHeader.Controls.Add(this.lblRSVTitle);
+            this.pnlRSVHeader.Controls.Add(this.lblRSVSection);
+            this.pnlRSVHeader.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlRSVHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlRSVHeader.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlRSVHeader.Name = "pnlRSVHeader";
+            this.pnlRSVHeader.Size = new System.Drawing.Size(1641, 135);
+            this.pnlRSVHeader.TabIndex = 0;
+            // 
+            // lblRSVSection
+            // 
+            this.lblRSVSection.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRSVSection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(105)))), ((int)(((byte)(82)))));
+            this.lblRSVSection.Location = new System.Drawing.Point(0, 5);
+            this.lblRSVSection.Name = "lblRSVSection";
+            this.lblRSVSection.Size = new System.Drawing.Size(300, 20);
+            this.lblRSVSection.TabIndex = 0;
+            this.lblRSVSection.Text = "— BOOKING && HOLD DESK";
+            // 
+            // lblRSVTitle
+            // 
+            this.lblRSVTitle.Font = new System.Drawing.Font("Georgia", 31.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRSVTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            this.lblRSVTitle.Location = new System.Drawing.Point(0, 28);
+            this.lblRSVTitle.Name = "lblRSVTitle";
+            this.lblRSVTitle.Size = new System.Drawing.Size(450, 55);
+            this.lblRSVTitle.TabIndex = 1;
+            this.lblRSVTitle.Text = "Reservations";
+            // 
+            // lblRSVSubtitle
+            // 
+            this.lblRSVSubtitle.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRSVSubtitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(110)))));
+            this.lblRSVSubtitle.Location = new System.Drawing.Point(0, 86);
+            this.lblRSVSubtitle.Name = "lblRSVSubtitle";
+            this.lblRSVSubtitle.Size = new System.Drawing.Size(850, 25);
+            this.lblRSVSubtitle.TabIndex = 2;
+            this.lblRSVSubtitle.Text = "Monitor plot reservations, track expiration dates, verify holding deposits, and c" +
+    "onfirm deeds.";
+            // 
+            // btnAddReservation
+            // 
+            this.btnAddReservation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(65)))), ((int)(((byte)(47)))));
+            this.btnAddReservation.FlatAppearance.BorderSize = 0;
+            this.btnAddReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddReservation.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddReservation.ForeColor = System.Drawing.Color.White;
+            this.btnAddReservation.Location = new System.Drawing.Point(1300, 33);
+            this.btnAddReservation.Name = "btnAddReservation";
+            this.btnAddReservation.Size = new System.Drawing.Size(228, 50);
+            this.btnAddReservation.TabIndex = 3;
+            this.btnAddReservation.Text = "+  Add Reservation";
+            this.btnAddReservation.UseVisualStyleBackColor = false;
+            // 
+            // tlpRSVStats
+            // 
+            this.tlpRSVStats.ColumnCount = 4;
+            this.tlpRSVStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpRSVStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpRSVStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpRSVStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpRSVStats.Controls.Add(this.pnlRSVTotal, 0, 0);
+            this.tlpRSVStats.Controls.Add(this.pnlRSVPending, 1, 0);
+            this.tlpRSVStats.Controls.Add(this.pnlRSVConfirmed, 2, 0);
+            this.tlpRSVStats.Controls.Add(this.pnlRSVCancelled, 3, 0);
+            this.tlpRSVStats.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpRSVStats.Location = new System.Drawing.Point(0, 135);
+            this.tlpRSVStats.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpRSVStats.Name = "tlpRSVStats";
+            this.tlpRSVStats.RowCount = 1;
+            this.tlpRSVStats.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpRSVStats.Size = new System.Drawing.Size(1641, 190);
+            this.tlpRSVStats.TabIndex = 1;
+            // 
+            // pnlRSVTotal
+            // 
+            this.pnlRSVTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.pnlRSVTotal.Controls.Add(this.lblRSVTotalDescription);
+            this.pnlRSVTotal.Controls.Add(this.lblRSVTotalValue);
+            this.pnlRSVTotal.Controls.Add(this.lblRSVTotalTitle);
+            this.pnlRSVTotal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlRSVTotal.Location = new System.Drawing.Point(8, 8);
+            this.pnlRSVTotal.Margin = new System.Windows.Forms.Padding(8);
+            this.pnlRSVTotal.Name = "pnlRSVTotal";
+            this.pnlRSVTotal.Padding = new System.Windows.Forms.Padding(20);
+            this.pnlRSVTotal.Size = new System.Drawing.Size(394, 174);
+            this.pnlRSVTotal.TabIndex = 0;
+            // 
+            // pnlRSVPending
+            // 
+            this.pnlRSVPending.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.pnlRSVPending.Controls.Add(this.lblRSVPendingDescription);
+            this.pnlRSVPending.Controls.Add(this.lblRSVPendingValue);
+            this.pnlRSVPending.Controls.Add(this.lblRSVPendingTitle);
+            this.pnlRSVPending.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlRSVPending.Location = new System.Drawing.Point(418, 8);
+            this.pnlRSVPending.Margin = new System.Windows.Forms.Padding(8);
+            this.pnlRSVPending.Name = "pnlRSVPending";
+            this.pnlRSVPending.Padding = new System.Windows.Forms.Padding(20);
+            this.pnlRSVPending.Size = new System.Drawing.Size(394, 174);
+            this.pnlRSVPending.TabIndex = 1;
+            // 
+            // pnlRSVConfirmed
+            // 
+            this.pnlRSVConfirmed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.pnlRSVConfirmed.Controls.Add(this.lblRSVConfirmedDescription);
+            this.pnlRSVConfirmed.Controls.Add(this.lblRSVConfirmedValue);
+            this.pnlRSVConfirmed.Controls.Add(this.lblRSVConfirmedTitle);
+            this.pnlRSVConfirmed.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlRSVConfirmed.Location = new System.Drawing.Point(828, 8);
+            this.pnlRSVConfirmed.Margin = new System.Windows.Forms.Padding(8);
+            this.pnlRSVConfirmed.Name = "pnlRSVConfirmed";
+            this.pnlRSVConfirmed.Padding = new System.Windows.Forms.Padding(20);
+            this.pnlRSVConfirmed.Size = new System.Drawing.Size(394, 174);
+            this.pnlRSVConfirmed.TabIndex = 2;
+            // 
+            // pnlRSVCancelled
+            // 
+            this.pnlRSVCancelled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.pnlRSVCancelled.Controls.Add(this.lblRSVCancelledDescription);
+            this.pnlRSVCancelled.Controls.Add(this.lblRSVCancelledValue);
+            this.pnlRSVCancelled.Controls.Add(this.lblRSVCancelledTitle);
+            this.pnlRSVCancelled.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlRSVCancelled.Location = new System.Drawing.Point(1238, 8);
+            this.pnlRSVCancelled.Margin = new System.Windows.Forms.Padding(8);
+            this.pnlRSVCancelled.Name = "pnlRSVCancelled";
+            this.pnlRSVCancelled.Padding = new System.Windows.Forms.Padding(20);
+            this.pnlRSVCancelled.Size = new System.Drawing.Size(395, 174);
+            this.pnlRSVCancelled.TabIndex = 3;
+            // 
+            // lblRSVTotalTitle
+            // 
+            this.lblRSVTotalTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRSVTotalTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(78)))), ((int)(((byte)(70)))));
+            this.lblRSVTotalTitle.Location = new System.Drawing.Point(20, 25);
+            this.lblRSVTotalTitle.Name = "lblRSVTotalTitle";
+            this.lblRSVTotalTitle.Size = new System.Drawing.Size(260, 24);
+            this.lblRSVTotalTitle.TabIndex = 0;
+            this.lblRSVTotalTitle.Text = "TOTAL BOOKINGS";
+            // 
+            // lblRSVTotalValue
+            // 
+            this.lblRSVTotalValue.Font = new System.Drawing.Font("Georgia", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRSVTotalValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            this.lblRSVTotalValue.Location = new System.Drawing.Point(20, 63);
+            this.lblRSVTotalValue.Name = "lblRSVTotalValue";
+            this.lblRSVTotalValue.Size = new System.Drawing.Size(150, 48);
+            this.lblRSVTotalValue.TabIndex = 1;
+            this.lblRSVTotalValue.Text = "0";
+            // 
+            // lblRSVTotalDescription
+            // 
+            this.lblRSVTotalDescription.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRSVTotalDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(139)))), ((int)(((byte)(124)))));
+            this.lblRSVTotalDescription.Location = new System.Drawing.Point(20, 123);
+            this.lblRSVTotalDescription.Name = "lblRSVTotalDescription";
+            this.lblRSVTotalDescription.Size = new System.Drawing.Size(260, 24);
+            this.lblRSVTotalDescription.TabIndex = 2;
+            this.lblRSVTotalDescription.Text = "Active, pending && completed";
+            // 
+            // lblRSVPendingTitle
+            // 
+            this.lblRSVPendingTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRSVPendingTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(78)))), ((int)(((byte)(70)))));
+            this.lblRSVPendingTitle.Location = new System.Drawing.Point(20, 25);
+            this.lblRSVPendingTitle.Name = "lblRSVPendingTitle";
+            this.lblRSVPendingTitle.Size = new System.Drawing.Size(260, 24);
+            this.lblRSVPendingTitle.TabIndex = 0;
+            this.lblRSVPendingTitle.Text = "PENDING CONFIRMATION";
+            // 
+            // lblRSVPendingValue
+            // 
+            this.lblRSVPendingValue.Font = new System.Drawing.Font("Georgia", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRSVPendingValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(81)))), ((int)(((byte)(11)))));
+            this.lblRSVPendingValue.Location = new System.Drawing.Point(20, 63);
+            this.lblRSVPendingValue.Name = "lblRSVPendingValue";
+            this.lblRSVPendingValue.Size = new System.Drawing.Size(150, 48);
+            this.lblRSVPendingValue.TabIndex = 1;
+            this.lblRSVPendingValue.Text = "0";
+            // 
+            // lblRSVPendingDescription
+            // 
+            this.lblRSVPendingDescription.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRSVPendingDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(139)))), ((int)(((byte)(124)))));
+            this.lblRSVPendingDescription.Location = new System.Drawing.Point(20, 123);
+            this.lblRSVPendingDescription.Name = "lblRSVPendingDescription";
+            this.lblRSVPendingDescription.Size = new System.Drawing.Size(260, 24);
+            this.lblRSVPendingDescription.TabIndex = 2;
+            this.lblRSVPendingDescription.Text = "Awaiting balance or docs";
+            // 
+            // lblRSVConfirmedTitle
+            // 
+            this.lblRSVConfirmedTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRSVConfirmedTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(78)))), ((int)(((byte)(70)))));
+            this.lblRSVConfirmedTitle.Location = new System.Drawing.Point(20, 25);
+            this.lblRSVConfirmedTitle.Name = "lblRSVConfirmedTitle";
+            this.lblRSVConfirmedTitle.Size = new System.Drawing.Size(260, 24);
+            this.lblRSVConfirmedTitle.TabIndex = 0;
+            this.lblRSVConfirmedTitle.Text = "CONFIRMED DEEDS";
+            // 
+            // lblRSVConfirmedValue
+            // 
+            this.lblRSVConfirmedValue.Font = new System.Drawing.Font("Georgia", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRSVConfirmedValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(77)))));
+            this.lblRSVConfirmedValue.Location = new System.Drawing.Point(20, 63);
+            this.lblRSVConfirmedValue.Name = "lblRSVConfirmedValue";
+            this.lblRSVConfirmedValue.Size = new System.Drawing.Size(150, 48);
+            this.lblRSVConfirmedValue.TabIndex = 1;
+            this.lblRSVConfirmedValue.Text = "0";
+            // 
+            // lblRSVConfirmedDescription
+            // 
+            this.lblRSVConfirmedDescription.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRSVConfirmedDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(139)))), ((int)(((byte)(124)))));
+            this.lblRSVConfirmedDescription.Location = new System.Drawing.Point(20, 123);
+            this.lblRSVConfirmedDescription.Name = "lblRSVConfirmedDescription";
+            this.lblRSVConfirmedDescription.Size = new System.Drawing.Size(260, 24);
+            this.lblRSVConfirmedDescription.TabIndex = 2;
+            this.lblRSVConfirmedDescription.Text = "Payment verified & locked";
+            // 
+            // lblRSVCancelledTitle
+            // 
+            this.lblRSVCancelledTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRSVCancelledTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(78)))), ((int)(((byte)(70)))));
+            this.lblRSVCancelledTitle.Location = new System.Drawing.Point(20, 25);
+            this.lblRSVCancelledTitle.Name = "lblRSVCancelledTitle";
+            this.lblRSVCancelledTitle.Size = new System.Drawing.Size(260, 24);
+            this.lblRSVCancelledTitle.TabIndex = 0;
+            this.lblRSVCancelledTitle.Text = "CANCELLED / EXPIRED";
+            // 
+            // lblRSVCancelledValue
+            // 
+            this.lblRSVCancelledValue.Font = new System.Drawing.Font("Georgia", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRSVCancelledValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(0)))), ((int)(((byte)(61)))));
+            this.lblRSVCancelledValue.Location = new System.Drawing.Point(20, 63);
+            this.lblRSVCancelledValue.Name = "lblRSVCancelledValue";
+            this.lblRSVCancelledValue.Size = new System.Drawing.Size(150, 48);
+            this.lblRSVCancelledValue.TabIndex = 1;
+            this.lblRSVCancelledValue.Text = "0";
+            // 
+            // lblRSVCancelledDescription
+            // 
+            this.lblRSVCancelledDescription.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRSVCancelledDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(139)))), ((int)(((byte)(124)))));
+            this.lblRSVCancelledDescription.Location = new System.Drawing.Point(20, 123);
+            this.lblRSVCancelledDescription.Name = "lblRSVCancelledDescription";
+            this.lblRSVCancelledDescription.Size = new System.Drawing.Size(260, 24);
+            this.lblRSVCancelledDescription.TabIndex = 2;
+            this.lblRSVCancelledDescription.Text = "Released back to inventory";
+            // 
+            // pnlRSVRegistry
+            // 
+            this.pnlRSVRegistry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.pnlRSVRegistry.Controls.Add(this.dgvReservations);
+            this.pnlRSVRegistry.Controls.Add(this.cmbReservationStatus);
+            this.pnlRSVRegistry.Controls.Add(this.txtReservationSearch);
+            this.pnlRSVRegistry.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlRSVRegistry.Location = new System.Drawing.Point(0, 333);
+            this.pnlRSVRegistry.Margin = new System.Windows.Forms.Padding(0, 8, 0, 0);
+            this.pnlRSVRegistry.Name = "pnlRSVRegistry";
+            this.pnlRSVRegistry.Padding = new System.Windows.Forms.Padding(20, 15, 20, 15);
+            this.pnlRSVRegistry.Size = new System.Drawing.Size(1641, 532);
+            this.pnlRSVRegistry.TabIndex = 2;
+            // 
+            // txtReservationSearch
+            // 
+            this.txtReservationSearch.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReservationSearch.Location = new System.Drawing.Point(30, 22);
+            this.txtReservationSearch.Name = "txtReservationSearch";
+            this.txtReservationSearch.Size = new System.Drawing.Size(560, 30);
+            this.txtReservationSearch.TabIndex = 0;
+            // 
+            // cmbReservationStatus
+            // 
+            this.cmbReservationStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbReservationStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbReservationStatus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbReservationStatus.FormattingEnabled = true;
+            this.cmbReservationStatus.Items.AddRange(new object[] {
+            "All Statuses",
+            "Pending",
+            "Confirmed",
+            "Cancelled",
+            "Expired"});
+            this.cmbReservationStatus.Location = new System.Drawing.Point(1300, 24);
+            this.cmbReservationStatus.Name = "cmbReservationStatus";
+            this.cmbReservationStatus.Size = new System.Drawing.Size(165, 28);
+            this.cmbReservationStatus.TabIndex = 1;
+            // 
+            // dgvReservations
+            // 
+            this.dgvReservations.AllowUserToAddRows = false;
+            this.dgvReservations.AllowUserToDeleteRows = false;
+            this.dgvReservations.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvReservations.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvReservations.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.dgvReservations.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(110)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReservations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvReservations.ColumnHeadersHeight = 38;
+            this.dgvReservations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvReservations.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colReservationID,
+            this.colApplicantName,
+            this.colReservedPlot,
+            this.colReservedOn,
+            this.colExpirationDate,
+            this.colReservationStatus,
+            this.colReservationActions});
+            this.dgvReservations.EnableHeadersVisualStyles = false;
+            this.dgvReservations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(220)))), ((int)(((byte)(209)))));
+            this.dgvReservations.Location = new System.Drawing.Point(30, 90);
+            this.dgvReservations.MultiSelect = false;
+            this.dgvReservations.Name = "dgvReservations";
+            this.dgvReservations.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(231)))), ((int)(((byte)(222)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReservations.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvReservations.RowHeadersVisible = false;
+            this.dgvReservations.RowHeadersWidth = 51;
+            this.dgvReservations.RowTemplate.Height = 65;
+            this.dgvReservations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvReservations.Size = new System.Drawing.Size(1400, 400);
+            this.dgvReservations.TabIndex = 2;
+            // 
+            // colReservationID
+            // 
+            this.colReservationID.FillWeight = 105F;
+            this.colReservationID.HeaderText = "Reservation ID";
+            this.colReservationID.MinimumWidth = 6;
+            this.colReservationID.Name = "colReservationID";
+            this.colReservationID.ReadOnly = true;
+            // 
+            // colApplicantName
+            // 
+            this.colApplicantName.FillWeight = 120F;
+            this.colApplicantName.HeaderText = "Applicant Name";
+            this.colApplicantName.MinimumWidth = 6;
+            this.colApplicantName.Name = "colApplicantName";
+            this.colApplicantName.ReadOnly = true;
+            // 
+            // colReservedPlot
+            // 
+            this.colReservedPlot.FillWeight = 120F;
+            this.colReservedPlot.HeaderText = "Plot ID & Section";
+            this.colReservedPlot.MinimumWidth = 6;
+            this.colReservedPlot.Name = "colReservedPlot";
+            this.colReservedPlot.ReadOnly = true;
+            // 
+            // colReservedOn
+            // 
+            this.colReservedOn.HeaderText = "Reserved On";
+            this.colReservedOn.MinimumWidth = 6;
+            this.colReservedOn.Name = "colReservedOn";
+            this.colReservedOn.ReadOnly = true;
+            // 
+            // colExpirationDate
+            // 
+            this.colExpirationDate.FillWeight = 115F;
+            this.colExpirationDate.HeaderText = "Expiration Date";
+            this.colExpirationDate.MinimumWidth = 6;
+            this.colExpirationDate.Name = "colExpirationDate";
+            this.colExpirationDate.ReadOnly = true;
+            // 
+            // colReservationStatus
+            // 
+            this.colReservationStatus.FillWeight = 90F;
+            this.colReservationStatus.HeaderText = "Status";
+            this.colReservationStatus.MinimumWidth = 6;
+            this.colReservationStatus.Name = "colReservationStatus";
+            this.colReservationStatus.ReadOnly = true;
+            // 
+            // colReservationActions
+            // 
+            this.colReservationActions.FillWeight = 145F;
+            this.colReservationActions.HeaderText = "Actions";
+            this.colReservationActions.MinimumWidth = 6;
+            this.colReservationActions.Name = "colReservationActions";
+            this.colReservationActions.ReadOnly = true;
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -2809,7 +3252,7 @@
             this.Controls.Add(this.tlpRoot);
             this.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(1024, 680);
+            this.MinimumSize = new System.Drawing.Size(1366, 768);
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TAHANAN";
@@ -2880,6 +3323,17 @@
             this.pnlCLS003Deed.ResumeLayout(false);
             this.pnlCLS003Deed.PerformLayout();
             this.pnlCLS003Status.ResumeLayout(false);
+            this.pnlReservationsPage.ResumeLayout(false);
+            this.tlpReservationsRoot.ResumeLayout(false);
+            this.pnlRSVHeader.ResumeLayout(false);
+            this.tlpRSVStats.ResumeLayout(false);
+            this.pnlRSVTotal.ResumeLayout(false);
+            this.pnlRSVPending.ResumeLayout(false);
+            this.pnlRSVConfirmed.ResumeLayout(false);
+            this.pnlRSVCancelled.ResumeLayout(false);
+            this.pnlRSVRegistry.ResumeLayout(false);
+            this.pnlRSVRegistry.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReservations)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -3079,6 +3533,41 @@
         private System.Windows.Forms.Label lblCLS003Description;
         private System.Windows.Forms.Label lblCLS003Title;
         private System.Windows.Forms.Label lblCLS003Code;
+        private System.Windows.Forms.Panel pnlReservationsPage;
+        private System.Windows.Forms.TableLayoutPanel tlpReservationsRoot;
+        private System.Windows.Forms.Panel pnlRSVHeader;
+        private System.Windows.Forms.Label lblRSVSubtitle;
+        private System.Windows.Forms.Label lblRSVTitle;
+        private System.Windows.Forms.Label lblRSVSection;
+        private System.Windows.Forms.Button btnAddReservation;
+        private System.Windows.Forms.TableLayoutPanel tlpRSVStats;
+        private System.Windows.Forms.Panel pnlRSVTotal;
+        private System.Windows.Forms.Panel pnlRSVPending;
+        private System.Windows.Forms.Panel pnlRSVConfirmed;
+        private System.Windows.Forms.Panel pnlRSVCancelled;
+        private System.Windows.Forms.Label lblRSVTotalDescription;
+        private System.Windows.Forms.Label lblRSVTotalValue;
+        private System.Windows.Forms.Label lblRSVTotalTitle;
+        private System.Windows.Forms.Label lblRSVPendingDescription;
+        private System.Windows.Forms.Label lblRSVPendingValue;
+        private System.Windows.Forms.Label lblRSVPendingTitle;
+        private System.Windows.Forms.Label lblRSVConfirmedDescription;
+        private System.Windows.Forms.Label lblRSVConfirmedValue;
+        private System.Windows.Forms.Label lblRSVConfirmedTitle;
+        private System.Windows.Forms.Label lblRSVCancelledDescription;
+        private System.Windows.Forms.Label lblRSVCancelledValue;
+        private System.Windows.Forms.Label lblRSVCancelledTitle;
+        private System.Windows.Forms.Panel pnlRSVRegistry;
+        private System.Windows.Forms.ComboBox cmbReservationStatus;
+        private System.Windows.Forms.TextBox txtReservationSearch;
+        private System.Windows.Forms.DataGridView dgvReservations;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colReservationID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colApplicantName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colReservedPlot;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colReservedOn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colExpirationDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colReservationStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colReservationActions;
     }
 }
 
