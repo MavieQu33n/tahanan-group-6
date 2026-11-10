@@ -1,6 +1,7 @@
 using System;
 using System.Diagnostics;
 using System.Net;
+using System.Net.Http;
 using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
@@ -9,13 +10,21 @@ namespace CMS_TAHANAN
 {
     internal sealed class TrustedClock : IDisposable
     {
-        private static readonly string[] Servers =
+        private static readonly string[] HttpServers =
+        {
+            "https://www.google.com/",
+            "https://www.cloudflare.com/",
+            "https://www.microsoft.com/"
+        };
+
+        private static readonly string[] NtpServers =
         {
             "time.cloudflare.com",
             "time.google.com",
             "pool.ntp.org"
         };
 
+        private static readonly HttpClient HttpClient = CreateHttpClient();
         private readonly object syncRoot = new object();
         private readonly Stopwatch stopwatch = new Stopwatch();
         private DateTime utcAtSynchronization;
@@ -50,29 +59,69 @@ namespace CMS_TAHANAN
 
         public async Task<bool> SynchronizeAsync(CancellationToken cancellationToken)
         {
-            foreach (string server in Servers)
+            foreach (string server in HttpServers)
             {
                 try
                 {
-                    DateTime utc = await QueryServerAsync(server, cancellationToken);
-                    lock (syncRoot)
-                    {
-                        utcAtSynchronization = utc;
-                        stopwatch.Restart();
-                        isSynchronized = true;
-                    }
+                    DateTime utc = await QueryHttpServerAsync(server, cancellationToken);
+                    SetSynchronizedTime(utc);
+                    return true;
+                }
+                catch (Exception ex) when (ex is HttpRequestException || ex is TaskCanceledException || ex is InvalidOperationException)
+                {
+                }
+            }
+
+            foreach (string server in NtpServers)
+            {
+                try
+                {
+                    DateTime utc = await QueryNtpServerAsync(server, cancellationToken);
+                    SetSynchronizedTime(utc);
                     return true;
                 }
                 catch (Exception ex) when (ex is SocketException || ex is TimeoutException || ex is InvalidOperationException)
                 {
-                    // Try the next time server when a server is unavailable.
                 }
             }
 
             return false;
         }
 
-        private static async Task<DateTime> QueryServerAsync(string server, CancellationToken cancellationToken)
+        private void SetSynchronizedTime(DateTime utc)
+        {
+            lock (syncRoot)
+            {
+                utcAtSynchronization = DateTime.SpecifyKind(utc, DateTimeKind.Utc);
+                stopwatch.Restart();
+                isSynchronized = true;
+            }
+        }
+
+        private static async Task<DateTime> QueryHttpServerAsync(string server, CancellationToken cancellationToken)
+        {
+            using (var request = new HttpRequestMessage(HttpMethod.Head, server))
+            using (HttpResponseMessage response = await HttpClient.SendAsync(request, HttpCompletionOption.ResponseHeadersRead, cancellationToken))
+            {
+                response.EnsureSuccessStatusCode();
+                if (!response.Headers.Date.HasValue)
+                {
+                    throw new InvalidOperationException("The server did not return an authoritative date.");
+                }
+
+                return response.Headers.Date.Value.UtcDateTime;
+            }
+        }
+
+        private static HttpClient CreateHttpClient()
+        {
+            var client = new HttpClient();
+            client.Timeout = TimeSpan.FromSeconds(5);
+            client.DefaultRequestHeaders.UserAgent.ParseAdd("TAHANAN-Cemetery-Management-System");
+            return client;
+        }
+
+        private static async Task<DateTime> QueryNtpServerAsync(string server, CancellationToken cancellationToken)
         {
             using (var udpClient = new UdpClient())
             {
@@ -91,9 +140,7 @@ namespace CMS_TAHANAN
                 ulong fraction = ReadUInt32(buffer, 44);
                 double milliseconds = (seconds * 1000.0) + ((fraction * 1000.0) / 4294967296.0);
 
-                return DateTime.SpecifyKind(
-                    new DateTime(1900, 1, 1).AddMilliseconds(milliseconds),
-                    DateTimeKind.Utc);
+                return DateTime.SpecifyKind(new DateTime(1900, 1, 1).AddMilliseconds(milliseconds), DateTimeKind.Utc);
             }
         }
 
