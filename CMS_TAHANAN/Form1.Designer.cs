@@ -28,9 +28,9 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpRoot = new System.Windows.Forms.TableLayoutPanel();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblSubtitle = new System.Windows.Forms.Label();
@@ -47,6 +47,47 @@
             this.btnBurialPlots = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.pnlDashboard = new System.Windows.Forms.Panel();
+            this.pnlGraveClassificationPage = new System.Windows.Forms.Panel();
+            this.tlpGCContent = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlGCHeader = new System.Windows.Forms.Panel();
+            this.btnAddClassification = new System.Windows.Forms.Button();
+            this.lblGCSubtitle = new System.Windows.Forms.Label();
+            this.lblGCTitle = new System.Windows.Forms.Label();
+            this.lblGCSection = new System.Windows.Forms.Label();
+            this.pnlGCLegalBanner = new System.Windows.Forms.Panel();
+            this.lblGCLegalBadge = new System.Windows.Forms.Label();
+            this.lblGCLegalDescription = new System.Windows.Forms.Label();
+            this.lblGCLegalTitle = new System.Windows.Forms.Label();
+            this.tlpGCCards = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlCLS001 = new System.Windows.Forms.Panel();
+            this.btnCLS001Delete = new System.Windows.Forms.Button();
+            this.btnCLS001Edit = new System.Windows.Forms.Button();
+            this.btnCLS001View = new System.Windows.Forms.Button();
+            this.btnCLS001Legal = new System.Windows.Forms.Button();
+            this.lblCLS001Price = new System.Windows.Forms.Label();
+            this.lblCLS001PriceHeading = new System.Windows.Forms.Label();
+            this.pnlCLS001Deed = new System.Windows.Forms.Panel();
+            this.lblCLS001Trust = new System.Windows.Forms.Label();
+            this.lblCLS001Cadastral = new System.Windows.Forms.Label();
+            this.lblCLS001DeedTitle = new System.Windows.Forms.Label();
+            this.lblCLS001ViewDocument = new System.Windows.Forms.Label();
+            this.lblCLS001DeedHeading = new System.Windows.Forms.Label();
+            this.pnlCLS001Divider1 = new System.Windows.Forms.Panel();
+            this.lblCLS001InventoryValue = new System.Windows.Forms.Label();
+            this.lblCLS001InventoryLabel = new System.Windows.Forms.Label();
+            this.lblCLS001CapacityValue = new System.Windows.Forms.Label();
+            this.lblCLS001CapacityLabel = new System.Windows.Forms.Label();
+            this.lblCLS001DimensionsValue = new System.Windows.Forms.Label();
+            this.lblCLS001DimensionsLabel = new System.Windows.Forms.Label();
+            this.lblCLS001Description = new System.Windows.Forms.Label();
+            this.lblCLS001Title = new System.Windows.Forms.Label();
+            this.pnlCLS001Status = new System.Windows.Forms.Panel();
+            this.lblCLS001Status = new System.Windows.Forms.Label();
+            this.lblCLS001Code = new System.Windows.Forms.Label();
+            this.pnlCLS002 = new System.Windows.Forms.Panel();
+            this.pnlCLS003 = new System.Windows.Forms.Panel();
+            this.pnlCLS004 = new System.Windows.Forms.Panel();
+            this.pnlCLS005 = new System.Windows.Forms.Panel();
             this.tlpDashboard = new System.Windows.Forms.TableLayoutPanel();
             this.pnlWelcome = new System.Windows.Forms.Panel();
             this.lblWelcomeSubtitle = new System.Windows.Forms.Label();
@@ -135,11 +176,69 @@
             this.colActions = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.lblFooter = new System.Windows.Forms.Label();
+            this.lblCLS002InventoryValue = new System.Windows.Forms.Label();
+            this.lblCLS002InventoryLabel = new System.Windows.Forms.Label();
+            this.lblCLS002CapacityValue = new System.Windows.Forms.Label();
+            this.lblCLS002CapacityLabel = new System.Windows.Forms.Label();
+            this.lblCLS002DimensionsValue = new System.Windows.Forms.Label();
+            this.lblCLS002DimensionsLabel = new System.Windows.Forms.Label();
+            this.lblCLS002Description = new System.Windows.Forms.Label();
+            this.lblCLS002Title = new System.Windows.Forms.Label();
+            this.pnlCLS002Status = new System.Windows.Forms.Panel();
+            this.lblCLS002Status = new System.Windows.Forms.Label();
+            this.lblCLS002Code = new System.Windows.Forms.Label();
+            this.pnlCLS002Divider1 = new System.Windows.Forms.Panel();
+            this.pnlCLS002Deed = new System.Windows.Forms.Panel();
+            this.lblCLS002Trust = new System.Windows.Forms.Label();
+            this.lblCLS002Cadastral = new System.Windows.Forms.Label();
+            this.lblCLS002DeedTitle = new System.Windows.Forms.Label();
+            this.lblCLS002ViewDocument = new System.Windows.Forms.Label();
+            this.lblCLS002DeedHeading = new System.Windows.Forms.Label();
+            this.btnCLS002Delete = new System.Windows.Forms.Button();
+            this.btnCLS002Edit = new System.Windows.Forms.Button();
+            this.btnCLS002View = new System.Windows.Forms.Button();
+            this.btnCLS002Legal = new System.Windows.Forms.Button();
+            this.lblCLS002Price = new System.Windows.Forms.Label();
+            this.lblCLS002PriceHeading = new System.Windows.Forms.Label();
+            this.btnCLS003Delete = new System.Windows.Forms.Button();
+            this.btnCLS003Edit = new System.Windows.Forms.Button();
+            this.btnCLS003View = new System.Windows.Forms.Button();
+            this.btnCLS003Legal = new System.Windows.Forms.Button();
+            this.lblCLS003Price = new System.Windows.Forms.Label();
+            this.lblCLS003PriceHeading = new System.Windows.Forms.Label();
+            this.pnlCLS003Deed = new System.Windows.Forms.Panel();
+            this.lblCLS003Trust = new System.Windows.Forms.Label();
+            this.lblCLS003Cadastral = new System.Windows.Forms.Label();
+            this.lblCLS003DeedTitle = new System.Windows.Forms.Label();
+            this.lblCLS003ViewDocument = new System.Windows.Forms.Label();
+            this.lblCLS003DeedHeading = new System.Windows.Forms.Label();
+            this.pnlCLS003Divider1 = new System.Windows.Forms.Panel();
+            this.lblCLS003InventoryValue = new System.Windows.Forms.Label();
+            this.lblCLS003InventoryLabel = new System.Windows.Forms.Label();
+            this.lblCLS003CapacityValue = new System.Windows.Forms.Label();
+            this.lblCLS003CapacityLabel = new System.Windows.Forms.Label();
+            this.lblCLS003DimensionsValue = new System.Windows.Forms.Label();
+            this.lblCLS003DimensionsLabel = new System.Windows.Forms.Label();
+            this.lblCLS003Description = new System.Windows.Forms.Label();
+            this.lblCLS003Title = new System.Windows.Forms.Label();
+            this.lblCLS003Code = new System.Windows.Forms.Label();
+            this.pnlCLS003Status = new System.Windows.Forms.Panel();
+            this.lblCLS003Status = new System.Windows.Forms.Label();
             this.tlpRoot.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.tlpWorkspace.SuspendLayout();
             this.pnlSidebar.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
+            this.pnlGraveClassificationPage.SuspendLayout();
+            this.tlpGCContent.SuspendLayout();
+            this.pnlGCHeader.SuspendLayout();
+            this.pnlGCLegalBanner.SuspendLayout();
+            this.tlpGCCards.SuspendLayout();
+            this.pnlCLS001.SuspendLayout();
+            this.pnlCLS001Deed.SuspendLayout();
+            this.pnlCLS001Status.SuspendLayout();
+            this.pnlCLS002.SuspendLayout();
+            this.pnlCLS003.SuspendLayout();
             this.tlpDashboard.SuspendLayout();
             this.pnlWelcome.SuspendLayout();
             this.tlpStats.SuspendLayout();
@@ -167,6 +266,10 @@
             this.pnlBPRegistry.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBurialPlots)).BeginInit();
             this.pnlFooter.SuspendLayout();
+            this.pnlCLS002Status.SuspendLayout();
+            this.pnlCLS002Deed.SuspendLayout();
+            this.pnlCLS003Deed.SuspendLayout();
+            this.pnlCLS003Status.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpRoot
@@ -184,7 +287,7 @@
             this.tlpRoot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpRoot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpRoot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tlpRoot.Size = new System.Drawing.Size(1006, 633);
+            this.tlpRoot.Size = new System.Drawing.Size(1924, 752);
             this.tlpRoot.TabIndex = 0;
             // 
             // pnlHeader
@@ -197,7 +300,7 @@
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(0);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.pnlHeader.Size = new System.Drawing.Size(1006, 60);
+            this.pnlHeader.Size = new System.Drawing.Size(1924, 60);
             this.pnlHeader.TabIndex = 0;
             // 
             // lblSubtitle
@@ -235,7 +338,7 @@
             this.tlpWorkspace.Name = "tlpWorkspace";
             this.tlpWorkspace.RowCount = 1;
             this.tlpWorkspace.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpWorkspace.Size = new System.Drawing.Size(1006, 543);
+            this.tlpWorkspace.Size = new System.Drawing.Size(1924, 662);
             this.tlpWorkspace.TabIndex = 1;
             // 
             // pnlSidebar
@@ -255,7 +358,7 @@
             this.pnlSidebar.Margin = new System.Windows.Forms.Padding(0);
             this.pnlSidebar.Name = "pnlSidebar";
             this.pnlSidebar.Padding = new System.Windows.Forms.Padding(12, 20, 10, 10);
-            this.pnlSidebar.Size = new System.Drawing.Size(190, 543);
+            this.pnlSidebar.Size = new System.Drawing.Size(190, 662);
             this.pnlSidebar.TabIndex = 0;
             // 
             // btnSettings
@@ -369,6 +472,7 @@
             this.btnClassification.Text = "Grave Classification";
             this.btnClassification.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClassification.UseVisualStyleBackColor = false;
+            this.btnClassification.Click += new System.EventHandler(this.btnClassification_Click);
             // 
             // btnBurialPlots
             // 
@@ -406,16 +510,576 @@
             // 
             // pnlDashboard
             // 
-            this.pnlDashboard.Controls.Add(this.tlpDashboard);
+            this.pnlDashboard.Controls.Add(this.pnlGraveClassificationPage);
             this.pnlDashboard.Controls.Add(this.pnlBurialPlotsPage);
+            this.pnlDashboard.Controls.Add(this.tlpDashboard);
             this.pnlDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDashboard.Location = new System.Drawing.Point(190, 0);
             this.pnlDashboard.Margin = new System.Windows.Forms.Padding(0);
             this.pnlDashboard.Name = "pnlDashboard";
             this.pnlDashboard.Padding = new System.Windows.Forms.Padding(16);
-            this.pnlDashboard.Size = new System.Drawing.Size(816, 543);
+            this.pnlDashboard.Size = new System.Drawing.Size(1734, 662);
             this.pnlDashboard.TabIndex = 1;
             this.pnlDashboard.Visible = false;
+            // 
+            // pnlGraveClassificationPage
+            // 
+            this.pnlGraveClassificationPage.AutoScroll = true;
+            this.pnlGraveClassificationPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(234)))));
+            this.pnlGraveClassificationPage.Controls.Add(this.tlpGCContent);
+            this.pnlGraveClassificationPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlGraveClassificationPage.Location = new System.Drawing.Point(16, 16);
+            this.pnlGraveClassificationPage.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlGraveClassificationPage.Name = "pnlGraveClassificationPage";
+            this.pnlGraveClassificationPage.Padding = new System.Windows.Forms.Padding(20);
+            this.pnlGraveClassificationPage.Size = new System.Drawing.Size(1702, 630);
+            this.pnlGraveClassificationPage.TabIndex = 2;
+            this.pnlGraveClassificationPage.Visible = false;
+            // 
+            // tlpGCContent
+            // 
+            this.tlpGCContent.ColumnCount = 1;
+            this.tlpGCContent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpGCContent.Controls.Add(this.pnlGCHeader, 0, 0);
+            this.tlpGCContent.Controls.Add(this.pnlGCLegalBanner, 0, 1);
+            this.tlpGCContent.Controls.Add(this.tlpGCCards, 0, 2);
+            this.tlpGCContent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlpGCContent.Location = new System.Drawing.Point(20, 20);
+            this.tlpGCContent.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpGCContent.Name = "tlpGCContent";
+            this.tlpGCContent.RowCount = 3;
+            this.tlpGCContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 130F));
+            this.tlpGCContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 128F));
+            this.tlpGCContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1120F));
+            this.tlpGCContent.Size = new System.Drawing.Size(1641, 1378);
+            this.tlpGCContent.TabIndex = 0;
+            // 
+            // pnlGCHeader
+            // 
+            this.pnlGCHeader.Controls.Add(this.btnAddClassification);
+            this.pnlGCHeader.Controls.Add(this.lblGCSubtitle);
+            this.pnlGCHeader.Controls.Add(this.lblGCTitle);
+            this.pnlGCHeader.Controls.Add(this.lblGCSection);
+            this.pnlGCHeader.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlGCHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlGCHeader.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.pnlGCHeader.Name = "pnlGCHeader";
+            this.pnlGCHeader.Size = new System.Drawing.Size(1641, 120);
+            this.pnlGCHeader.TabIndex = 0;
+            // 
+            // btnAddClassification
+            // 
+            this.btnAddClassification.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddClassification.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(48)))), ((int)(((byte)(37)))));
+            this.btnAddClassification.FlatAppearance.BorderSize = 0;
+            this.btnAddClassification.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddClassification.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddClassification.ForeColor = System.Drawing.Color.White;
+            this.btnAddClassification.Location = new System.Drawing.Point(1107, 35);
+            this.btnAddClassification.Name = "btnAddClassification";
+            this.btnAddClassification.Size = new System.Drawing.Size(190, 48);
+            this.btnAddClassification.TabIndex = 3;
+            this.btnAddClassification.Text = "+ Add Classification";
+            this.btnAddClassification.UseVisualStyleBackColor = false;
+            // 
+            // lblGCSubtitle
+            // 
+            this.lblGCSubtitle.AutoSize = true;
+            this.lblGCSubtitle.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGCSubtitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(110)))));
+            this.lblGCSubtitle.Location = new System.Drawing.Point(0, 91);
+            this.lblGCSubtitle.Name = "lblGCSubtitle";
+            this.lblGCSubtitle.Size = new System.Drawing.Size(788, 23);
+            this.lblGCSubtitle.TabIndex = 2;
+            this.lblGCSubtitle.Text = "Manage cemetery plot classifications, specifications, dimensions, and correspondi" +
+    "ng deed information.";
+            // 
+            // lblGCTitle
+            // 
+            this.lblGCTitle.AutoSize = true;
+            this.lblGCTitle.Font = new System.Drawing.Font("Georgia", 31.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGCTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            this.lblGCTitle.Location = new System.Drawing.Point(0, 30);
+            this.lblGCTitle.Name = "lblGCTitle";
+            this.lblGCTitle.Size = new System.Drawing.Size(495, 61);
+            this.lblGCTitle.TabIndex = 1;
+            this.lblGCTitle.Text = "Grave Classification";
+            // 
+            // lblGCSection
+            // 
+            this.lblGCSection.AutoSize = true;
+            this.lblGCSection.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGCSection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(105)))), ((int)(((byte)(82)))));
+            this.lblGCSection.Location = new System.Drawing.Point(0, 5);
+            this.lblGCSection.Name = "lblGCSection";
+            this.lblGCSection.Size = new System.Drawing.Size(234, 20);
+            this.lblGCSection.TabIndex = 0;
+            this.lblGCSection.Text = "— LAND TENURE, TIERS & DEEDS";
+            // 
+            // pnlGCLegalBanner
+            // 
+            this.pnlGCLegalBanner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
+            this.pnlGCLegalBanner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlGCLegalBanner.Controls.Add(this.lblGCLegalBadge);
+            this.pnlGCLegalBanner.Controls.Add(this.lblGCLegalDescription);
+            this.pnlGCLegalBanner.Controls.Add(this.lblGCLegalTitle);
+            this.pnlGCLegalBanner.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlGCLegalBanner.Location = new System.Drawing.Point(0, 135);
+            this.pnlGCLegalBanner.Margin = new System.Windows.Forms.Padding(0, 5, 0, 10);
+            this.pnlGCLegalBanner.Name = "pnlGCLegalBanner";
+            this.pnlGCLegalBanner.Padding = new System.Windows.Forms.Padding(20);
+            this.pnlGCLegalBanner.Size = new System.Drawing.Size(1641, 113);
+            this.pnlGCLegalBanner.TabIndex = 1;
+            // 
+            // lblGCLegalBadge
+            // 
+            this.lblGCLegalBadge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.lblGCLegalBadge.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGCLegalBadge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(76)))), ((int)(((byte)(56)))));
+            this.lblGCLegalBadge.Location = new System.Drawing.Point(850, 45);
+            this.lblGCLegalBadge.Name = "lblGCLegalBadge";
+            this.lblGCLegalBadge.Size = new System.Drawing.Size(300, 36);
+            this.lblGCLegalBadge.TabIndex = 2;
+            this.lblGCLegalBadge.Text = "Deed && Documentation Records";
+            this.lblGCLegalBadge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblGCLegalDescription
+            // 
+            this.lblGCLegalDescription.BackColor = System.Drawing.Color.Transparent;
+            this.lblGCLegalDescription.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGCLegalDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(102)))), ((int)(((byte)(91)))));
+            this.lblGCLegalDescription.Location = new System.Drawing.Point(75, 52);
+            this.lblGCLegalDescription.Name = "lblGCLegalDescription";
+            this.lblGCLegalDescription.Size = new System.Drawing.Size(900, 45);
+            this.lblGCLegalDescription.TabIndex = 1;
+            this.lblGCLegalDescription.Text = "Cemetery classification records contain the specifications, ownership references," +
+    " and applicable deed information for each plot category.";
+            this.lblGCLegalDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblGCLegalTitle
+            // 
+            this.lblGCLegalTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblGCLegalTitle.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGCLegalTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            this.lblGCLegalTitle.Location = new System.Drawing.Point(75, 20);
+            this.lblGCLegalTitle.Name = "lblGCLegalTitle";
+            this.lblGCLegalTitle.Size = new System.Drawing.Size(850, 28);
+            this.lblGCLegalTitle.TabIndex = 0;
+            this.lblGCLegalTitle.Text = "Philippine Land Law & Usufructuary Cemetery Deeds";
+            this.lblGCLegalTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tlpGCCards
+            // 
+            this.tlpGCCards.ColumnCount = 3;
+            this.tlpGCCards.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.tlpGCCards.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.tlpGCCards.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
+            this.tlpGCCards.Controls.Add(this.pnlCLS001, 0, 0);
+            this.tlpGCCards.Controls.Add(this.pnlCLS002, 1, 0);
+            this.tlpGCCards.Controls.Add(this.pnlCLS003, 2, 0);
+            this.tlpGCCards.Controls.Add(this.pnlCLS004, 0, 1);
+            this.tlpGCCards.Controls.Add(this.pnlCLS005, 1, 1);
+            this.tlpGCCards.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpGCCards.Location = new System.Drawing.Point(0, 258);
+            this.tlpGCCards.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpGCCards.Name = "tlpGCCards";
+            this.tlpGCCards.RowCount = 2;
+            this.tlpGCCards.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 550F));
+            this.tlpGCCards.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 550F));
+            this.tlpGCCards.Size = new System.Drawing.Size(1641, 1120);
+            this.tlpGCCards.TabIndex = 2;
+            // 
+            // pnlCLS001
+            // 
+            this.pnlCLS001.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.pnlCLS001.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCLS001.Controls.Add(this.btnCLS001Delete);
+            this.pnlCLS001.Controls.Add(this.btnCLS001Edit);
+            this.pnlCLS001.Controls.Add(this.btnCLS001View);
+            this.pnlCLS001.Controls.Add(this.btnCLS001Legal);
+            this.pnlCLS001.Controls.Add(this.lblCLS001Price);
+            this.pnlCLS001.Controls.Add(this.lblCLS001PriceHeading);
+            this.pnlCLS001.Controls.Add(this.pnlCLS001Deed);
+            this.pnlCLS001.Controls.Add(this.pnlCLS001Divider1);
+            this.pnlCLS001.Controls.Add(this.lblCLS001InventoryValue);
+            this.pnlCLS001.Controls.Add(this.lblCLS001InventoryLabel);
+            this.pnlCLS001.Controls.Add(this.lblCLS001CapacityValue);
+            this.pnlCLS001.Controls.Add(this.lblCLS001CapacityLabel);
+            this.pnlCLS001.Controls.Add(this.lblCLS001DimensionsValue);
+            this.pnlCLS001.Controls.Add(this.lblCLS001DimensionsLabel);
+            this.pnlCLS001.Controls.Add(this.lblCLS001Description);
+            this.pnlCLS001.Controls.Add(this.lblCLS001Title);
+            this.pnlCLS001.Controls.Add(this.pnlCLS001Status);
+            this.pnlCLS001.Controls.Add(this.lblCLS001Code);
+            this.pnlCLS001.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCLS001.Location = new System.Drawing.Point(10, 10);
+            this.pnlCLS001.Margin = new System.Windows.Forms.Padding(10);
+            this.pnlCLS001.Name = "pnlCLS001";
+            this.pnlCLS001.Size = new System.Drawing.Size(526, 530);
+            this.pnlCLS001.TabIndex = 0;
+            // 
+            // btnCLS001Delete
+            // 
+            this.btnCLS001Delete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCLS001Delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCLS001Delete.FlatAppearance.BorderSize = 0;
+            this.btnCLS001Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCLS001Delete.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCLS001Delete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(78)))));
+            this.btnCLS001Delete.Location = new System.Drawing.Point(430, 470);
+            this.btnCLS001Delete.Name = "btnCLS001Delete";
+            this.btnCLS001Delete.Size = new System.Drawing.Size(28, 36);
+            this.btnCLS001Delete.TabIndex = 17;
+            this.btnCLS001Delete.Text = "▤";
+            this.btnCLS001Delete.UseVisualStyleBackColor = true;
+            // 
+            // btnCLS001Edit
+            // 
+            this.btnCLS001Edit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCLS001Edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.btnCLS001Edit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCLS001Edit.FlatAppearance.BorderSize = 0;
+            this.btnCLS001Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCLS001Edit.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCLS001Edit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(78)))));
+            this.btnCLS001Edit.Location = new System.Drawing.Point(400, 470);
+            this.btnCLS001Edit.Name = "btnCLS001Edit";
+            this.btnCLS001Edit.Size = new System.Drawing.Size(28, 36);
+            this.btnCLS001Edit.TabIndex = 16;
+            this.btnCLS001Edit.Text = "✎";
+            this.btnCLS001Edit.UseVisualStyleBackColor = false;
+            // 
+            // btnCLS001View
+            // 
+            this.btnCLS001View.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCLS001View.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCLS001View.FlatAppearance.BorderSize = 0;
+            this.btnCLS001View.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCLS001View.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCLS001View.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(78)))));
+            this.btnCLS001View.Location = new System.Drawing.Point(370, 470);
+            this.btnCLS001View.Name = "btnCLS001View";
+            this.btnCLS001View.Size = new System.Drawing.Size(28, 36);
+            this.btnCLS001View.TabIndex = 15;
+            this.btnCLS001View.Text = "◉";
+            this.btnCLS001View.UseVisualStyleBackColor = true;
+            // 
+            // btnCLS001Legal
+            // 
+            this.btnCLS001Legal.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCLS001Legal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.btnCLS001Legal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCLS001Legal.FlatAppearance.BorderSize = 0;
+            this.btnCLS001Legal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCLS001Legal.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCLS001Legal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(77)))));
+            this.btnCLS001Legal.Location = new System.Drawing.Point(340, 470);
+            this.btnCLS001Legal.Name = "btnCLS001Legal";
+            this.btnCLS001Legal.Size = new System.Drawing.Size(28, 36);
+            this.btnCLS001Legal.TabIndex = 14;
+            this.btnCLS001Legal.Text = "⚖";
+            this.btnCLS001Legal.UseVisualStyleBackColor = false;
+            // 
+            // lblCLS001Price
+            // 
+            this.lblCLS001Price.BackColor = System.Drawing.Color.Transparent;
+            this.lblCLS001Price.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS001Price.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(72)))), ((int)(((byte)(52)))));
+            this.lblCLS001Price.Location = new System.Drawing.Point(28, 490);
+            this.lblCLS001Price.Name = "lblCLS001Price";
+            this.lblCLS001Price.Size = new System.Drawing.Size(180, 38);
+            this.lblCLS001Price.TabIndex = 13;
+            this.lblCLS001Price.Text = "₱65,000";
+            // 
+            // lblCLS001PriceHeading
+            // 
+            this.lblCLS001PriceHeading.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS001PriceHeading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(110)))));
+            this.lblCLS001PriceHeading.Location = new System.Drawing.Point(30, 470);
+            this.lblCLS001PriceHeading.Name = "lblCLS001PriceHeading";
+            this.lblCLS001PriceHeading.Size = new System.Drawing.Size(220, 20);
+            this.lblCLS001PriceHeading.TabIndex = 12;
+            this.lblCLS001PriceHeading.Text = "GROUND VALUATION PRICE";
+            // 
+            // pnlCLS001Deed
+            // 
+            this.pnlCLS001Deed.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlCLS001Deed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
+            this.pnlCLS001Deed.Controls.Add(this.lblCLS001Trust);
+            this.pnlCLS001Deed.Controls.Add(this.lblCLS001Cadastral);
+            this.pnlCLS001Deed.Controls.Add(this.lblCLS001DeedTitle);
+            this.pnlCLS001Deed.Controls.Add(this.lblCLS001ViewDocument);
+            this.pnlCLS001Deed.Controls.Add(this.lblCLS001DeedHeading);
+            this.pnlCLS001Deed.Location = new System.Drawing.Point(30, 335);
+            this.pnlCLS001Deed.Name = "pnlCLS001Deed";
+            this.pnlCLS001Deed.Size = new System.Drawing.Size(466, 112);
+            this.pnlCLS001Deed.TabIndex = 11;
+            // 
+            // lblCLS001Trust
+            // 
+            this.lblCLS001Trust.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS001Trust.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(77)))));
+            this.lblCLS001Trust.Location = new System.Drawing.Point(220, 78);
+            this.lblCLS001Trust.Name = "lblCLS001Trust";
+            this.lblCLS001Trust.Size = new System.Drawing.Size(115, 20);
+            this.lblCLS001Trust.TabIndex = 4;
+            this.lblCLS001Trust.Text = "Trust Protected";
+            this.lblCLS001Trust.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblCLS001Cadastral
+            // 
+            this.lblCLS001Cadastral.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS001Cadastral.Location = new System.Drawing.Point(12, 78);
+            this.lblCLS001Cadastral.Name = "lblCLS001Cadastral";
+            this.lblCLS001Cadastral.Size = new System.Drawing.Size(225, 20);
+            this.lblCLS001Cadastral.TabIndex = 3;
+            this.lblCLS001Cadastral.Text = "Cadastral: Subdivided Memorial Ground Plot (Perpetual Usufruct)";
+            // 
+            // lblCLS001DeedTitle
+            // 
+            this.lblCLS001DeedTitle.AutoSize = true;
+            this.lblCLS001DeedTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS001DeedTitle.Location = new System.Drawing.Point(12, 38);
+            this.lblCLS001DeedTitle.Name = "lblCLS001DeedTitle";
+            this.lblCLS001DeedTitle.Size = new System.Drawing.Size(298, 40);
+            this.lblCLS001DeedTitle.TabIndex = 2;
+            this.lblCLS001DeedTitle.Text = "Deed of Perpetual Sepulture && Memorial \r\nRights (Lawn Lot)";
+            // 
+            // lblCLS001ViewDocument
+            // 
+            this.lblCLS001ViewDocument.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS001ViewDocument.Location = new System.Drawing.Point(235, 10);
+            this.lblCLS001ViewDocument.Name = "lblCLS001ViewDocument";
+            this.lblCLS001ViewDocument.Size = new System.Drawing.Size(110, 20);
+            this.lblCLS001ViewDocument.TabIndex = 1;
+            this.lblCLS001ViewDocument.Text = "View Document →";
+            // 
+            // lblCLS001DeedHeading
+            // 
+            this.lblCLS001DeedHeading.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS001DeedHeading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(110)))));
+            this.lblCLS001DeedHeading.Location = new System.Drawing.Point(12, 10);
+            this.lblCLS001DeedHeading.Name = "lblCLS001DeedHeading";
+            this.lblCLS001DeedHeading.Size = new System.Drawing.Size(150, 20);
+            this.lblCLS001DeedHeading.TabIndex = 0;
+            this.lblCLS001DeedHeading.Text = "Legal Deed Title:";
+            // 
+            // pnlCLS001Divider1
+            // 
+            this.pnlCLS001Divider1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlCLS001Divider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(215)))), ((int)(((byte)(201)))));
+            this.pnlCLS001Divider1.Location = new System.Drawing.Point(30, 315);
+            this.pnlCLS001Divider1.Name = "pnlCLS001Divider1";
+            this.pnlCLS001Divider1.Size = new System.Drawing.Size(673, 1);
+            this.pnlCLS001Divider1.TabIndex = 10;
+            // 
+            // lblCLS001InventoryValue
+            // 
+            this.lblCLS001InventoryValue.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS001InventoryValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            this.lblCLS001InventoryValue.Location = new System.Drawing.Point(145, 280);
+            this.lblCLS001InventoryValue.Name = "lblCLS001InventoryValue";
+            this.lblCLS001InventoryValue.Size = new System.Drawing.Size(245, 24);
+            this.lblCLS001InventoryValue.TabIndex = 9;
+            this.lblCLS001InventoryValue.Text = "12 available / 65 total";
+            this.lblCLS001InventoryValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblCLS001InventoryLabel
+            // 
+            this.lblCLS001InventoryLabel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS001InventoryLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(139)))), ((int)(((byte)(124)))));
+            this.lblCLS001InventoryLabel.Location = new System.Drawing.Point(30, 280);
+            this.lblCLS001InventoryLabel.Name = "lblCLS001InventoryLabel";
+            this.lblCLS001InventoryLabel.Size = new System.Drawing.Size(115, 24);
+            this.lblCLS001InventoryLabel.TabIndex = 8;
+            this.lblCLS001InventoryLabel.Text = "Active Inventory:";
+            // 
+            // lblCLS001CapacityValue
+            // 
+            this.lblCLS001CapacityValue.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS001CapacityValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            this.lblCLS001CapacityValue.Location = new System.Drawing.Point(145, 238);
+            this.lblCLS001CapacityValue.Name = "lblCLS001CapacityValue";
+            this.lblCLS001CapacityValue.Size = new System.Drawing.Size(245, 38);
+            this.lblCLS001CapacityValue.TabIndex = 7;
+            this.lblCLS001CapacityValue.Text = "Up to 2 underground vaults (double depth)";
+            this.lblCLS001CapacityValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblCLS001CapacityLabel
+            // 
+            this.lblCLS001CapacityLabel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS001CapacityLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(139)))), ((int)(((byte)(124)))));
+            this.lblCLS001CapacityLabel.Location = new System.Drawing.Point(30, 238);
+            this.lblCLS001CapacityLabel.Name = "lblCLS001CapacityLabel";
+            this.lblCLS001CapacityLabel.Size = new System.Drawing.Size(110, 24);
+            this.lblCLS001CapacityLabel.TabIndex = 6;
+            this.lblCLS001CapacityLabel.Text = "Capacity:";
+            // 
+            // lblCLS001DimensionsValue
+            // 
+            this.lblCLS001DimensionsValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCLS001DimensionsValue.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS001DimensionsValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            this.lblCLS001DimensionsValue.Location = new System.Drawing.Point(267, 205);
+            this.lblCLS001DimensionsValue.Name = "lblCLS001DimensionsValue";
+            this.lblCLS001DimensionsValue.Size = new System.Drawing.Size(245, 24);
+            this.lblCLS001DimensionsValue.TabIndex = 5;
+            this.lblCLS001DimensionsValue.Text = "1.0m x 2.4m (2.4 sq.m)";
+            this.lblCLS001DimensionsValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblCLS001DimensionsLabel
+            // 
+            this.lblCLS001DimensionsLabel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS001DimensionsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(139)))), ((int)(((byte)(124)))));
+            this.lblCLS001DimensionsLabel.Location = new System.Drawing.Point(30, 205);
+            this.lblCLS001DimensionsLabel.Name = "lblCLS001DimensionsLabel";
+            this.lblCLS001DimensionsLabel.Size = new System.Drawing.Size(110, 24);
+            this.lblCLS001DimensionsLabel.TabIndex = 4;
+            this.lblCLS001DimensionsLabel.Text = "Dimensions:";
+            // 
+            // lblCLS001Description
+            // 
+            this.lblCLS001Description.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCLS001Description.BackColor = System.Drawing.Color.Transparent;
+            this.lblCLS001Description.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS001Description.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(78)))), ((int)(((byte)(69)))));
+            this.lblCLS001Description.Location = new System.Drawing.Point(30, 120);
+            this.lblCLS001Description.Name = "lblCLS001Description";
+            this.lblCLS001Description.Size = new System.Drawing.Size(495, 48);
+            this.lblCLS001Description.TabIndex = 3;
+            this.lblCLS001Description.Text = "Single underground interment ground lot with flat bronze \r\nor granite marker at l" +
+    "awn level.";
+            // 
+            // lblCLS001Title
+            // 
+            this.lblCLS001Title.BackColor = System.Drawing.Color.Transparent;
+            this.lblCLS001Title.Font = new System.Drawing.Font("Georgia", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS001Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            this.lblCLS001Title.Location = new System.Drawing.Point(30, 78);
+            this.lblCLS001Title.Name = "lblCLS001Title";
+            this.lblCLS001Title.Size = new System.Drawing.Size(367, 32);
+            this.lblCLS001Title.TabIndex = 2;
+            this.lblCLS001Title.Text = "Standard Plot (Lawn Lot)";
+            // 
+            // pnlCLS001Status
+            // 
+            this.pnlCLS001Status.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlCLS001Status.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(247)))), ((int)(((byte)(230)))));
+            this.pnlCLS001Status.Controls.Add(this.lblCLS001Status);
+            this.pnlCLS001Status.Location = new System.Drawing.Point(442, 25);
+            this.pnlCLS001Status.Name = "pnlCLS001Status";
+            this.pnlCLS001Status.Size = new System.Drawing.Size(78, 26);
+            this.pnlCLS001Status.TabIndex = 1;
+            // 
+            // lblCLS001Status
+            // 
+            this.lblCLS001Status.BackColor = System.Drawing.Color.Transparent;
+            this.lblCLS001Status.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS001Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(77)))));
+            this.lblCLS001Status.Location = new System.Drawing.Point(0, 0);
+            this.lblCLS001Status.Name = "lblCLS001Status";
+            this.lblCLS001Status.Size = new System.Drawing.Size(78, 26);
+            this.lblCLS001Status.TabIndex = 0;
+            this.lblCLS001Status.Text = "● Active";
+            this.lblCLS001Status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblCLS001Code
+            // 
+            this.lblCLS001Code.BackColor = System.Drawing.Color.Transparent;
+            this.lblCLS001Code.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS001Code.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(110)))));
+            this.lblCLS001Code.Location = new System.Drawing.Point(30, 30);
+            this.lblCLS001Code.Name = "lblCLS001Code";
+            this.lblCLS001Code.Size = new System.Drawing.Size(100, 20);
+            this.lblCLS001Code.TabIndex = 0;
+            this.lblCLS001Code.Text = "CLS-001";
+            // 
+            // pnlCLS002
+            // 
+            this.pnlCLS002.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.pnlCLS002.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCLS002.Controls.Add(this.btnCLS002Delete);
+            this.pnlCLS002.Controls.Add(this.btnCLS002Edit);
+            this.pnlCLS002.Controls.Add(this.btnCLS002View);
+            this.pnlCLS002.Controls.Add(this.btnCLS002Legal);
+            this.pnlCLS002.Controls.Add(this.lblCLS002Price);
+            this.pnlCLS002.Controls.Add(this.lblCLS002PriceHeading);
+            this.pnlCLS002.Controls.Add(this.pnlCLS002Deed);
+            this.pnlCLS002.Controls.Add(this.pnlCLS002Divider1);
+            this.pnlCLS002.Controls.Add(this.lblCLS002InventoryValue);
+            this.pnlCLS002.Controls.Add(this.lblCLS002InventoryLabel);
+            this.pnlCLS002.Controls.Add(this.lblCLS002CapacityValue);
+            this.pnlCLS002.Controls.Add(this.lblCLS002CapacityLabel);
+            this.pnlCLS002.Controls.Add(this.lblCLS002DimensionsValue);
+            this.pnlCLS002.Controls.Add(this.lblCLS002DimensionsLabel);
+            this.pnlCLS002.Controls.Add(this.lblCLS002Description);
+            this.pnlCLS002.Controls.Add(this.lblCLS002Title);
+            this.pnlCLS002.Controls.Add(this.pnlCLS002Status);
+            this.pnlCLS002.Controls.Add(this.lblCLS002Code);
+            this.pnlCLS002.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCLS002.Location = new System.Drawing.Point(556, 10);
+            this.pnlCLS002.Margin = new System.Windows.Forms.Padding(10);
+            this.pnlCLS002.Name = "pnlCLS002";
+            this.pnlCLS002.Padding = new System.Windows.Forms.Padding(20);
+            this.pnlCLS002.Size = new System.Drawing.Size(526, 530);
+            this.pnlCLS002.TabIndex = 1;
+            // 
+            // pnlCLS003
+            // 
+            this.pnlCLS003.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.pnlCLS003.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCLS003.Controls.Add(this.pnlCLS003Status);
+            this.pnlCLS003.Controls.Add(this.btnCLS003Delete);
+            this.pnlCLS003.Controls.Add(this.btnCLS003Edit);
+            this.pnlCLS003.Controls.Add(this.btnCLS003View);
+            this.pnlCLS003.Controls.Add(this.btnCLS003Legal);
+            this.pnlCLS003.Controls.Add(this.lblCLS003Price);
+            this.pnlCLS003.Controls.Add(this.lblCLS003PriceHeading);
+            this.pnlCLS003.Controls.Add(this.pnlCLS003Deed);
+            this.pnlCLS003.Controls.Add(this.pnlCLS003Divider1);
+            this.pnlCLS003.Controls.Add(this.lblCLS003InventoryValue);
+            this.pnlCLS003.Controls.Add(this.lblCLS003InventoryLabel);
+            this.pnlCLS003.Controls.Add(this.lblCLS003CapacityValue);
+            this.pnlCLS003.Controls.Add(this.lblCLS003CapacityLabel);
+            this.pnlCLS003.Controls.Add(this.lblCLS003DimensionsValue);
+            this.pnlCLS003.Controls.Add(this.lblCLS003DimensionsLabel);
+            this.pnlCLS003.Controls.Add(this.lblCLS003Description);
+            this.pnlCLS003.Controls.Add(this.lblCLS003Title);
+            this.pnlCLS003.Controls.Add(this.lblCLS003Code);
+            this.pnlCLS003.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCLS003.Location = new System.Drawing.Point(1102, 10);
+            this.pnlCLS003.Margin = new System.Windows.Forms.Padding(10);
+            this.pnlCLS003.Name = "pnlCLS003";
+            this.pnlCLS003.Padding = new System.Windows.Forms.Padding(20);
+            this.pnlCLS003.Size = new System.Drawing.Size(529, 530);
+            this.pnlCLS003.TabIndex = 2;
+            // 
+            // pnlCLS004
+            // 
+            this.pnlCLS004.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.pnlCLS004.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCLS004.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCLS004.Location = new System.Drawing.Point(10, 560);
+            this.pnlCLS004.Margin = new System.Windows.Forms.Padding(10);
+            this.pnlCLS004.Name = "pnlCLS004";
+            this.pnlCLS004.Padding = new System.Windows.Forms.Padding(20);
+            this.pnlCLS004.Size = new System.Drawing.Size(526, 550);
+            this.pnlCLS004.TabIndex = 3;
+            // 
+            // pnlCLS005
+            // 
+            this.pnlCLS005.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.pnlCLS005.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCLS005.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCLS005.Location = new System.Drawing.Point(556, 560);
+            this.pnlCLS005.Margin = new System.Windows.Forms.Padding(10);
+            this.pnlCLS005.Name = "pnlCLS005";
+            this.pnlCLS005.Padding = new System.Windows.Forms.Padding(20);
+            this.pnlCLS005.Size = new System.Drawing.Size(526, 550);
+            this.pnlCLS005.TabIndex = 4;
             // 
             // tlpDashboard
             // 
@@ -433,7 +1097,7 @@
             this.tlpDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 105F));
             this.tlpDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 135F));
             this.tlpDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpDashboard.Size = new System.Drawing.Size(784, 511);
+            this.tlpDashboard.Size = new System.Drawing.Size(1702, 630);
             this.tlpDashboard.TabIndex = 0;
             // 
             // pnlWelcome
@@ -445,7 +1109,7 @@
             this.pnlWelcome.Location = new System.Drawing.Point(20, 16);
             this.pnlWelcome.Margin = new System.Windows.Forms.Padding(0);
             this.pnlWelcome.Name = "pnlWelcome";
-            this.pnlWelcome.Size = new System.Drawing.Size(744, 105);
+            this.pnlWelcome.Size = new System.Drawing.Size(1662, 105);
             this.pnlWelcome.TabIndex = 0;
             // 
             // lblWelcomeSubtitle
@@ -501,7 +1165,7 @@
             this.tlpStats.Name = "tlpStats";
             this.tlpStats.RowCount = 1;
             this.tlpStats.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpStats.Size = new System.Drawing.Size(744, 135);
+            this.tlpStats.Size = new System.Drawing.Size(1662, 135);
             this.tlpStats.TabIndex = 1;
             // 
             // pnlTransactions
@@ -512,10 +1176,10 @@
             this.pnlTransactions.Controls.Add(this.lbltransactionValue);
             this.pnlTransactions.Controls.Add(this.pnlTransaction);
             this.pnlTransactions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTransactions.Location = new System.Drawing.Point(563, 4);
+            this.pnlTransactions.Location = new System.Drawing.Point(1250, 4);
             this.pnlTransactions.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pnlTransactions.Name = "pnlTransactions";
-            this.pnlTransactions.Size = new System.Drawing.Size(176, 127);
+            this.pnlTransactions.Size = new System.Drawing.Size(407, 127);
             this.pnlTransactions.TabIndex = 3;
             // 
             // lblTransactionsDescription
@@ -559,10 +1223,10 @@
             this.pnlReservations.Controls.Add(this.lblReservationValue);
             this.pnlReservations.Controls.Add(this.pnlReservation);
             this.pnlReservations.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlReservations.Location = new System.Drawing.Point(377, 4);
+            this.pnlReservations.Location = new System.Drawing.Point(835, 4);
             this.pnlReservations.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pnlReservations.Name = "pnlReservations";
-            this.pnlReservations.Size = new System.Drawing.Size(176, 127);
+            this.pnlReservations.Size = new System.Drawing.Size(405, 127);
             this.pnlReservations.TabIndex = 2;
             // 
             // lblReservationsDescription
@@ -606,10 +1270,10 @@
             this.pnlOccupiedPlots.Controls.Add(this.lblTotalOccupeidPlotsValue);
             this.pnlOccupiedPlots.Controls.Add(this.lblOccupiedPlots);
             this.pnlOccupiedPlots.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlOccupiedPlots.Location = new System.Drawing.Point(191, 4);
+            this.pnlOccupiedPlots.Location = new System.Drawing.Point(420, 4);
             this.pnlOccupiedPlots.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pnlOccupiedPlots.Name = "pnlOccupiedPlots";
-            this.pnlOccupiedPlots.Size = new System.Drawing.Size(176, 127);
+            this.pnlOccupiedPlots.Size = new System.Drawing.Size(405, 127);
             this.pnlOccupiedPlots.TabIndex = 1;
             // 
             // lblOccupiedDescription
@@ -657,7 +1321,7 @@
             this.pnlTotalPlots.Location = new System.Drawing.Point(5, 4);
             this.pnlTotalPlots.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pnlTotalPlots.Name = "pnlTotalPlots";
-            this.pnlTotalPlots.Size = new System.Drawing.Size(176, 127);
+            this.pnlTotalPlots.Size = new System.Drawing.Size(405, 127);
             this.pnlTotalPlots.TabIndex = 0;
             // 
             // lblTotalPlotsDescription
@@ -708,7 +1372,7 @@
             this.tlpLowerDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpLowerDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 243F));
             this.tlpLowerDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 243F));
-            this.tlpLowerDashboard.Size = new System.Drawing.Size(744, 243);
+            this.tlpLowerDashboard.Size = new System.Drawing.Size(1662, 362);
             this.tlpLowerDashboard.TabIndex = 2;
             // 
             // pnlRecentRecords
@@ -723,7 +1387,7 @@
             this.pnlRecentRecords.Margin = new System.Windows.Forms.Padding(0, 8, 8, 0);
             this.pnlRecentRecords.Name = "pnlRecentRecords";
             this.pnlRecentRecords.Padding = new System.Windows.Forms.Padding(12);
-            this.pnlRecentRecords.Size = new System.Drawing.Size(497, 235);
+            this.pnlRecentRecords.Size = new System.Drawing.Size(1122, 354);
             this.pnlRecentRecords.TabIndex = 0;
             // 
             // dgvRecentRecords
@@ -735,14 +1399,14 @@
             this.dgvRecentRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRecentRecords.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
             this.dgvRecentRecords.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRecentRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(55)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRecentRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvRecentRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRecentRecords.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colDate,
@@ -758,7 +1422,7 @@
             this.dgvRecentRecords.RowHeadersWidth = 51;
             this.dgvRecentRecords.RowTemplate.Height = 24;
             this.dgvRecentRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRecentRecords.Size = new System.Drawing.Size(520, 340);
+            this.dgvRecentRecords.Size = new System.Drawing.Size(1145, 459);
             this.dgvRecentRecords.TabIndex = 4;
             // 
             // colDate
@@ -857,12 +1521,12 @@
             this.tlpRightColumn.Controls.Add(this.pnlMemorialCard, 0, 0);
             this.tlpRightColumn.Controls.Add(this.pnlQuickActions, 0, 1);
             this.tlpRightColumn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpRightColumn.Location = new System.Drawing.Point(508, 3);
+            this.tlpRightColumn.Location = new System.Drawing.Point(1133, 3);
             this.tlpRightColumn.Name = "tlpRightColumn";
             this.tlpRightColumn.RowCount = 2;
             this.tlpRightColumn.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tlpRightColumn.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tlpRightColumn.Size = new System.Drawing.Size(233, 237);
+            this.tlpRightColumn.Size = new System.Drawing.Size(526, 356);
             this.tlpRightColumn.TabIndex = 1;
             // 
             // pnlMemorialCard
@@ -871,7 +1535,7 @@
             this.pnlMemorialCard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMemorialCard.Location = new System.Drawing.Point(3, 3);
             this.pnlMemorialCard.Name = "pnlMemorialCard";
-            this.pnlMemorialCard.Size = new System.Drawing.Size(227, 136);
+            this.pnlMemorialCard.Size = new System.Drawing.Size(520, 207);
             this.pnlMemorialCard.TabIndex = 0;
             // 
             // tlpMemorialContent
@@ -886,7 +1550,7 @@
             this.tlpMemorialContent.RowCount = 2;
             this.tlpMemorialContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
             this.tlpMemorialContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpMemorialContent.Size = new System.Drawing.Size(227, 136);
+            this.tlpMemorialContent.Size = new System.Drawing.Size(520, 207);
             this.tlpMemorialContent.TabIndex = 0;
             // 
             // picMemorial
@@ -897,7 +1561,7 @@
             this.picMemorial.Location = new System.Drawing.Point(0, 85);
             this.picMemorial.Margin = new System.Windows.Forms.Padding(0);
             this.picMemorial.Name = "picMemorial";
-            this.picMemorial.Size = new System.Drawing.Size(227, 51);
+            this.picMemorial.Size = new System.Drawing.Size(520, 122);
             this.picMemorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picMemorial.TabIndex = 2;
             this.picMemorial.TabStop = false;
@@ -913,7 +1577,7 @@
             this.pnlMemorialInfo.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMemorialInfo.Name = "pnlMemorialInfo";
             this.pnlMemorialInfo.Padding = new System.Windows.Forms.Padding(12, 4, 8, 4);
-            this.pnlMemorialInfo.Size = new System.Drawing.Size(227, 85);
+            this.pnlMemorialInfo.Size = new System.Drawing.Size(520, 85);
             this.pnlMemorialInfo.TabIndex = 0;
             // 
             // lblMemorialTime
@@ -955,9 +1619,9 @@
             // pnlQuickActions
             // 
             this.pnlQuickActions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlQuickActions.Location = new System.Drawing.Point(3, 145);
+            this.pnlQuickActions.Location = new System.Drawing.Point(3, 216);
             this.pnlQuickActions.Name = "pnlQuickActions";
-            this.pnlQuickActions.Size = new System.Drawing.Size(227, 89);
+            this.pnlQuickActions.Size = new System.Drawing.Size(520, 137);
             this.pnlQuickActions.TabIndex = 1;
             // 
             // pnlBurialPlotsPage
@@ -968,7 +1632,7 @@
             this.pnlBurialPlotsPage.Location = new System.Drawing.Point(16, 16);
             this.pnlBurialPlotsPage.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBurialPlotsPage.Name = "pnlBurialPlotsPage";
-            this.pnlBurialPlotsPage.Size = new System.Drawing.Size(784, 511);
+            this.pnlBurialPlotsPage.Size = new System.Drawing.Size(1702, 630);
             this.pnlBurialPlotsPage.TabIndex = 1;
             this.pnlBurialPlotsPage.Visible = false;
             // 
@@ -989,7 +1653,7 @@
             this.tlpBurialRoot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 92F));
             this.tlpBurialRoot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 94F));
             this.tlpBurialRoot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpBurialRoot.Size = new System.Drawing.Size(784, 511);
+            this.tlpBurialRoot.Size = new System.Drawing.Size(1702, 630);
             this.tlpBurialRoot.TabIndex = 0;
             // 
             // pnlBPHeader
@@ -1002,7 +1666,7 @@
             this.pnlBPHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlBPHeader.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBPHeader.Name = "pnlBPHeader";
-            this.pnlBPHeader.Size = new System.Drawing.Size(784, 92);
+            this.pnlBPHeader.Size = new System.Drawing.Size(1702, 92);
             this.pnlBPHeader.TabIndex = 0;
             // 
             // lblBPSubtitle
@@ -1025,7 +1689,7 @@
             this.btnAddBurialPlot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddBurialPlot.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddBurialPlot.ForeColor = System.Drawing.Color.White;
-            this.btnAddBurialPlot.Location = new System.Drawing.Point(661, 16);
+            this.btnAddBurialPlot.Location = new System.Drawing.Point(1579, 16);
             this.btnAddBurialPlot.Name = "btnAddBurialPlot";
             this.btnAddBurialPlot.Size = new System.Drawing.Size(120, 34);
             this.btnAddBurialPlot.TabIndex = 1;
@@ -1071,7 +1735,8 @@
             this.tlpBPStats.Name = "tlpBPStats";
             this.tlpBPStats.RowCount = 1;
             this.tlpBPStats.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpBPStats.Size = new System.Drawing.Size(784, 92);
+            this.tlpBPStats.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpBPStats.Size = new System.Drawing.Size(1702, 92);
             this.tlpBPStats.TabIndex = 1;
             // 
             // pnlBPTotal
@@ -1086,7 +1751,7 @@
             this.pnlBPTotal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pnlBPTotal.Name = "pnlBPTotal";
             this.pnlBPTotal.Padding = new System.Windows.Forms.Padding(10, 8, 8, 5);
-            this.pnlBPTotal.Size = new System.Drawing.Size(188, 86);
+            this.pnlBPTotal.Size = new System.Drawing.Size(417, 86);
             this.pnlBPTotal.TabIndex = 0;
             // 
             // lblBPTotalDescription
@@ -1130,11 +1795,11 @@
             this.pnlBPAvailable.Controls.Add(this.lblBPAvailableValue);
             this.pnlBPAvailable.Controls.Add(this.lblBPAvailableTitle);
             this.pnlBPAvailable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBPAvailable.Location = new System.Drawing.Point(200, 3);
+            this.pnlBPAvailable.Location = new System.Drawing.Point(429, 3);
             this.pnlBPAvailable.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pnlBPAvailable.Name = "pnlBPAvailable";
             this.pnlBPAvailable.Padding = new System.Windows.Forms.Padding(10, 8, 8, 5);
-            this.pnlBPAvailable.Size = new System.Drawing.Size(188, 86);
+            this.pnlBPAvailable.Size = new System.Drawing.Size(417, 86);
             this.pnlBPAvailable.TabIndex = 1;
             // 
             // lblBPAvailableDescription
@@ -1178,11 +1843,11 @@
             this.pnlBPOccupied.Controls.Add(this.lblBPOccupiedValue);
             this.pnlBPOccupied.Controls.Add(this.lblBPOccupiedTitle);
             this.pnlBPOccupied.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBPOccupied.Location = new System.Drawing.Point(396, 3);
+            this.pnlBPOccupied.Location = new System.Drawing.Point(854, 3);
             this.pnlBPOccupied.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pnlBPOccupied.Name = "pnlBPOccupied";
             this.pnlBPOccupied.Padding = new System.Windows.Forms.Padding(10, 8, 8, 5);
-            this.pnlBPOccupied.Size = new System.Drawing.Size(188, 86);
+            this.pnlBPOccupied.Size = new System.Drawing.Size(417, 86);
             this.pnlBPOccupied.TabIndex = 2;
             // 
             // lblBPOccupiedDescription
@@ -1226,11 +1891,11 @@
             this.pnlBPReserved.Controls.Add(this.lblBPReservedValue);
             this.pnlBPReserved.Controls.Add(this.lblBPReservedTitle);
             this.pnlBPReserved.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBPReserved.Location = new System.Drawing.Point(592, 3);
+            this.pnlBPReserved.Location = new System.Drawing.Point(1279, 3);
             this.pnlBPReserved.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pnlBPReserved.Name = "pnlBPReserved";
             this.pnlBPReserved.Padding = new System.Windows.Forms.Padding(10, 8, 8, 5);
-            this.pnlBPReserved.Size = new System.Drawing.Size(188, 86);
+            this.pnlBPReserved.Size = new System.Drawing.Size(419, 86);
             this.pnlBPReserved.TabIndex = 3;
             // 
             // lblBPReservedDescription
@@ -1284,7 +1949,7 @@
             this.pnlBPFilters.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlBPFilters.Name = "pnlBPFilters";
             this.pnlBPFilters.Padding = new System.Windows.Forms.Padding(10);
-            this.pnlBPFilters.Size = new System.Drawing.Size(776, 84);
+            this.pnlBPFilters.Size = new System.Drawing.Size(1694, 84);
             this.pnlBPFilters.TabIndex = 2;
             // 
             // cmbPlotSection
@@ -1371,7 +2036,7 @@
             this.btnReservedFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReservedFilter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnReservedFilter.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReservedFilter.Location = new System.Drawing.Point(80, 18);
+            this.btnReservedFilter.Location = new System.Drawing.Point(1304, 18);
             this.btnReservedFilter.Name = "btnReservedFilter";
             this.btnReservedFilter.Size = new System.Drawing.Size(80, 26);
             this.btnReservedFilter.TabIndex = 5;
@@ -1383,7 +2048,7 @@
             this.btnOccupiedFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOccupiedFilter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOccupiedFilter.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOccupiedFilter.Location = new System.Drawing.Point(168, 18);
+            this.btnOccupiedFilter.Location = new System.Drawing.Point(1480, 18);
             this.btnOccupiedFilter.Name = "btnOccupiedFilter";
             this.btnOccupiedFilter.Size = new System.Drawing.Size(80, 26);
             this.btnOccupiedFilter.TabIndex = 4;
@@ -1395,7 +2060,7 @@
             this.btnAvailableFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAvailableFilter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAvailableFilter.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAvailableFilter.Location = new System.Drawing.Point(256, 18);
+            this.btnAvailableFilter.Location = new System.Drawing.Point(1392, 18);
             this.btnAvailableFilter.Name = "btnAvailableFilter";
             this.btnAvailableFilter.Size = new System.Drawing.Size(80, 26);
             this.btnAvailableFilter.TabIndex = 3;
@@ -1407,7 +2072,7 @@
             this.btnAllStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAllStatus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAllStatus.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAllStatus.Location = new System.Drawing.Point(340, 18);
+            this.btnAllStatus.Location = new System.Drawing.Point(1568, 18);
             this.btnAllStatus.Name = "btnAllStatus";
             this.btnAllStatus.Size = new System.Drawing.Size(76, 26);
             this.btnAllStatus.TabIndex = 2;
@@ -1420,7 +2085,7 @@
             this.lblStatusFilter.AutoSize = true;
             this.lblStatusFilter.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatusFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(110)))));
-            this.lblStatusFilter.Location = new System.Drawing.Point(596, 4);
+            this.lblStatusFilter.Location = new System.Drawing.Point(1514, 4);
             this.lblStatusFilter.Name = "lblStatusFilter";
             this.lblStatusFilter.Size = new System.Drawing.Size(164, 15);
             this.lblStatusFilter.TabIndex = 1;
@@ -1441,7 +2106,7 @@
             this.pnlBPRegistry.Location = new System.Drawing.Point(4, 283);
             this.pnlBPRegistry.Margin = new System.Windows.Forms.Padding(4, 5, 4, 0);
             this.pnlBPRegistry.Name = "pnlBPRegistry";
-            this.pnlBPRegistry.Size = new System.Drawing.Size(776, 228);
+            this.pnlBPRegistry.Size = new System.Drawing.Size(1694, 347);
             this.pnlBPRegistry.TabIndex = 3;
             // 
             // dgvBurialPlots
@@ -1451,14 +2116,14 @@
             this.dgvBurialPlots.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBurialPlots.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
             this.dgvBurialPlots.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(111)))), ((int)(((byte)(99)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBurialPlots.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(111)))), ((int)(((byte)(99)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBurialPlots.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBurialPlots.ColumnHeadersHeight = 32;
             this.dgvBurialPlots.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvBurialPlots.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1477,19 +2142,19 @@
             this.dgvBurialPlots.MultiSelect = false;
             this.dgvBurialPlots.Name = "dgvBurialPlots";
             this.dgvBurialPlots.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(231)))), ((int)(((byte)(222)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(223)))), ((int)(((byte)(222)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBurialPlots.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(231)))), ((int)(((byte)(222)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(223)))), ((int)(((byte)(222)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBurialPlots.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBurialPlots.RowHeadersVisible = false;
             this.dgvBurialPlots.RowHeadersWidth = 51;
             this.dgvBurialPlots.RowTemplate.Height = 42;
             this.dgvBurialPlots.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBurialPlots.Size = new System.Drawing.Size(776, 228);
+            this.dgvBurialPlots.Size = new System.Drawing.Size(1694, 347);
             this.dgvBurialPlots.TabIndex = 0;
             // 
             // colPlotID
@@ -1558,11 +2223,11 @@
             // 
             this.pnlFooter.Controls.Add(this.lblFooter);
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlFooter.Location = new System.Drawing.Point(0, 603);
+            this.pnlFooter.Location = new System.Drawing.Point(0, 722);
             this.pnlFooter.Margin = new System.Windows.Forms.Padding(0);
             this.pnlFooter.Name = "pnlFooter";
             this.pnlFooter.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.pnlFooter.Size = new System.Drawing.Size(1006, 30);
+            this.pnlFooter.Size = new System.Drawing.Size(1924, 30);
             this.pnlFooter.TabIndex = 2;
             // 
             // lblFooter
@@ -1577,12 +2242,570 @@
             this.lblFooter.TabIndex = 0;
             this.lblFooter.Text = "© 2026 TAHANAN - Cemetery Management System";
             // 
+            // lblCLS002InventoryValue
+            // 
+            this.lblCLS002InventoryValue.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS002InventoryValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            this.lblCLS002InventoryValue.Location = new System.Drawing.Point(145, 280);
+            this.lblCLS002InventoryValue.Name = "lblCLS002InventoryValue";
+            this.lblCLS002InventoryValue.Size = new System.Drawing.Size(245, 24);
+            this.lblCLS002InventoryValue.TabIndex = 19;
+            this.lblCLS002InventoryValue.Text = "4 available / 20 total";
+            this.lblCLS002InventoryValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblCLS002InventoryLabel
+            // 
+            this.lblCLS002InventoryLabel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS002InventoryLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(139)))), ((int)(((byte)(124)))));
+            this.lblCLS002InventoryLabel.Location = new System.Drawing.Point(30, 280);
+            this.lblCLS002InventoryLabel.Name = "lblCLS002InventoryLabel";
+            this.lblCLS002InventoryLabel.Size = new System.Drawing.Size(115, 24);
+            this.lblCLS002InventoryLabel.TabIndex = 18;
+            this.lblCLS002InventoryLabel.Text = "Active Inventory:";
+            // 
+            // lblCLS002CapacityValue
+            // 
+            this.lblCLS002CapacityValue.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS002CapacityValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            this.lblCLS002CapacityValue.Location = new System.Drawing.Point(145, 238);
+            this.lblCLS002CapacityValue.Name = "lblCLS002CapacityValue";
+            this.lblCLS002CapacityValue.Size = new System.Drawing.Size(245, 38);
+            this.lblCLS002CapacityValue.TabIndex = 17;
+            this.lblCLS002CapacityValue.Text = "8 underground interments + above-ground\r\nmemorial monument";
+            this.lblCLS002CapacityValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblCLS002CapacityLabel
+            // 
+            this.lblCLS002CapacityLabel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS002CapacityLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(139)))), ((int)(((byte)(124)))));
+            this.lblCLS002CapacityLabel.Location = new System.Drawing.Point(30, 238);
+            this.lblCLS002CapacityLabel.Name = "lblCLS002CapacityLabel";
+            this.lblCLS002CapacityLabel.Size = new System.Drawing.Size(110, 24);
+            this.lblCLS002CapacityLabel.TabIndex = 16;
+            this.lblCLS002CapacityLabel.Text = "Capacity:";
+            // 
+            // lblCLS002DimensionsValue
+            // 
+            this.lblCLS002DimensionsValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCLS002DimensionsValue.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS002DimensionsValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            this.lblCLS002DimensionsValue.Location = new System.Drawing.Point(267, 207);
+            this.lblCLS002DimensionsValue.Name = "lblCLS002DimensionsValue";
+            this.lblCLS002DimensionsValue.Size = new System.Drawing.Size(245, 24);
+            this.lblCLS002DimensionsValue.TabIndex = 15;
+            this.lblCLS002DimensionsValue.Text = "3.6m x 3.6m (12.96 sq.m)";
+            this.lblCLS002DimensionsValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblCLS002DimensionsLabel
+            // 
+            this.lblCLS002DimensionsLabel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS002DimensionsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(139)))), ((int)(((byte)(124)))));
+            this.lblCLS002DimensionsLabel.Location = new System.Drawing.Point(30, 205);
+            this.lblCLS002DimensionsLabel.Name = "lblCLS002DimensionsLabel";
+            this.lblCLS002DimensionsLabel.Size = new System.Drawing.Size(110, 24);
+            this.lblCLS002DimensionsLabel.TabIndex = 14;
+            this.lblCLS002DimensionsLabel.Text = "Dimensions:";
+            // 
+            // lblCLS002Description
+            // 
+            this.lblCLS002Description.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCLS002Description.BackColor = System.Drawing.Color.Transparent;
+            this.lblCLS002Description.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS002Description.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(78)))), ((int)(((byte)(69)))));
+            this.lblCLS002Description.Location = new System.Drawing.Point(30, 120);
+            this.lblCLS002Description.Name = "lblCLS002Description";
+            this.lblCLS002Description.Size = new System.Drawing.Size(673, 48);
+            this.lblCLS002Description.TabIndex = 13;
+            this.lblCLS002Description.Text = "Contiguous multi-lot perimeter surrounded by decorative\r\nstone curb, accommodatin" +
+    "g multiple family members.";
+            // 
+            // lblCLS002Title
+            // 
+            this.lblCLS002Title.BackColor = System.Drawing.Color.Transparent;
+            this.lblCLS002Title.Font = new System.Drawing.Font("Georgia", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS002Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            this.lblCLS002Title.Location = new System.Drawing.Point(30, 78);
+            this.lblCLS002Title.Name = "lblCLS002Title";
+            this.lblCLS002Title.Size = new System.Drawing.Size(367, 32);
+            this.lblCLS002Title.TabIndex = 12;
+            this.lblCLS002Title.Text = "Family Plot (Estate Lot)";
+            // 
+            // pnlCLS002Status
+            // 
+            this.pnlCLS002Status.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlCLS002Status.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(247)))), ((int)(((byte)(230)))));
+            this.pnlCLS002Status.Controls.Add(this.lblCLS002Status);
+            this.pnlCLS002Status.Location = new System.Drawing.Point(442, 25);
+            this.pnlCLS002Status.Name = "pnlCLS002Status";
+            this.pnlCLS002Status.Size = new System.Drawing.Size(78, 26);
+            this.pnlCLS002Status.TabIndex = 11;
+            // 
+            // lblCLS002Status
+            // 
+            this.lblCLS002Status.BackColor = System.Drawing.Color.Transparent;
+            this.lblCLS002Status.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS002Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(77)))));
+            this.lblCLS002Status.Location = new System.Drawing.Point(0, 0);
+            this.lblCLS002Status.Name = "lblCLS002Status";
+            this.lblCLS002Status.Size = new System.Drawing.Size(78, 26);
+            this.lblCLS002Status.TabIndex = 0;
+            this.lblCLS002Status.Text = "● Active";
+            this.lblCLS002Status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblCLS002Code
+            // 
+            this.lblCLS002Code.BackColor = System.Drawing.Color.Transparent;
+            this.lblCLS002Code.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS002Code.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(110)))));
+            this.lblCLS002Code.Location = new System.Drawing.Point(30, 30);
+            this.lblCLS002Code.Name = "lblCLS002Code";
+            this.lblCLS002Code.Size = new System.Drawing.Size(100, 20);
+            this.lblCLS002Code.TabIndex = 10;
+            this.lblCLS002Code.Text = "CLS-002";
+            // 
+            // pnlCLS002Divider1
+            // 
+            this.pnlCLS002Divider1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlCLS002Divider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(215)))), ((int)(((byte)(201)))));
+            this.pnlCLS002Divider1.Location = new System.Drawing.Point(30, 315);
+            this.pnlCLS002Divider1.Name = "pnlCLS002Divider1";
+            this.pnlCLS002Divider1.Size = new System.Drawing.Size(673, 1);
+            this.pnlCLS002Divider1.TabIndex = 20;
+            // 
+            // pnlCLS002Deed
+            // 
+            this.pnlCLS002Deed.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlCLS002Deed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
+            this.pnlCLS002Deed.Controls.Add(this.lblCLS002Trust);
+            this.pnlCLS002Deed.Controls.Add(this.lblCLS002Cadastral);
+            this.pnlCLS002Deed.Controls.Add(this.lblCLS002DeedTitle);
+            this.pnlCLS002Deed.Controls.Add(this.lblCLS002ViewDocument);
+            this.pnlCLS002Deed.Controls.Add(this.lblCLS002DeedHeading);
+            this.pnlCLS002Deed.Location = new System.Drawing.Point(30, 335);
+            this.pnlCLS002Deed.Name = "pnlCLS002Deed";
+            this.pnlCLS002Deed.Size = new System.Drawing.Size(466, 112);
+            this.pnlCLS002Deed.TabIndex = 21;
+            // 
+            // lblCLS002Trust
+            // 
+            this.lblCLS002Trust.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS002Trust.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(77)))));
+            this.lblCLS002Trust.Location = new System.Drawing.Point(220, 78);
+            this.lblCLS002Trust.Name = "lblCLS002Trust";
+            this.lblCLS002Trust.Size = new System.Drawing.Size(115, 20);
+            this.lblCLS002Trust.TabIndex = 4;
+            this.lblCLS002Trust.Text = "Trust Protected";
+            this.lblCLS002Trust.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblCLS002Cadastral
+            // 
+            this.lblCLS002Cadastral.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS002Cadastral.Location = new System.Drawing.Point(12, 78);
+            this.lblCLS002Cadastral.Name = "lblCLS002Cadastral";
+            this.lblCLS002Cadastral.Size = new System.Drawing.Size(225, 20);
+            this.lblCLS002Cadastral.TabIndex = 3;
+            this.lblCLS002Cadastral.Text = "Cadastral: Multi-Lot Memorial Estate Parcel (Registered Cadastral Survey)";
+            // 
+            // lblCLS002DeedTitle
+            // 
+            this.lblCLS002DeedTitle.AutoSize = true;
+            this.lblCLS002DeedTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS002DeedTitle.Location = new System.Drawing.Point(12, 38);
+            this.lblCLS002DeedTitle.Name = "lblCLS002DeedTitle";
+            this.lblCLS002DeedTitle.Size = new System.Drawing.Size(288, 40);
+            this.lblCLS002DeedTitle.TabIndex = 2;
+            this.lblCLS002DeedTitle.Text = "Perpetual Family Memorial Estate Deed \r\nof Grant & Land Title";
+            // 
+            // lblCLS002ViewDocument
+            // 
+            this.lblCLS002ViewDocument.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS002ViewDocument.Location = new System.Drawing.Point(235, 10);
+            this.lblCLS002ViewDocument.Name = "lblCLS002ViewDocument";
+            this.lblCLS002ViewDocument.Size = new System.Drawing.Size(110, 20);
+            this.lblCLS002ViewDocument.TabIndex = 1;
+            this.lblCLS002ViewDocument.Text = "View Document →";
+            // 
+            // lblCLS002DeedHeading
+            // 
+            this.lblCLS002DeedHeading.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS002DeedHeading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(110)))));
+            this.lblCLS002DeedHeading.Location = new System.Drawing.Point(12, 10);
+            this.lblCLS002DeedHeading.Name = "lblCLS002DeedHeading";
+            this.lblCLS002DeedHeading.Size = new System.Drawing.Size(150, 20);
+            this.lblCLS002DeedHeading.TabIndex = 0;
+            this.lblCLS002DeedHeading.Text = "Legal Deed Title:";
+            // 
+            // btnCLS002Delete
+            // 
+            this.btnCLS002Delete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCLS002Delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCLS002Delete.FlatAppearance.BorderSize = 0;
+            this.btnCLS002Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCLS002Delete.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCLS002Delete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(78)))));
+            this.btnCLS002Delete.Location = new System.Drawing.Point(430, 470);
+            this.btnCLS002Delete.Name = "btnCLS002Delete";
+            this.btnCLS002Delete.Size = new System.Drawing.Size(28, 36);
+            this.btnCLS002Delete.TabIndex = 27;
+            this.btnCLS002Delete.Text = "▤";
+            this.btnCLS002Delete.UseVisualStyleBackColor = true;
+            // 
+            // btnCLS002Edit
+            // 
+            this.btnCLS002Edit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCLS002Edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.btnCLS002Edit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCLS002Edit.FlatAppearance.BorderSize = 0;
+            this.btnCLS002Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCLS002Edit.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCLS002Edit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(78)))));
+            this.btnCLS002Edit.Location = new System.Drawing.Point(400, 470);
+            this.btnCLS002Edit.Name = "btnCLS002Edit";
+            this.btnCLS002Edit.Size = new System.Drawing.Size(28, 36);
+            this.btnCLS002Edit.TabIndex = 26;
+            this.btnCLS002Edit.Text = "✎";
+            this.btnCLS002Edit.UseVisualStyleBackColor = false;
+            // 
+            // btnCLS002View
+            // 
+            this.btnCLS002View.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCLS002View.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCLS002View.FlatAppearance.BorderSize = 0;
+            this.btnCLS002View.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCLS002View.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCLS002View.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(78)))));
+            this.btnCLS002View.Location = new System.Drawing.Point(370, 470);
+            this.btnCLS002View.Name = "btnCLS002View";
+            this.btnCLS002View.Size = new System.Drawing.Size(28, 36);
+            this.btnCLS002View.TabIndex = 25;
+            this.btnCLS002View.Text = "◉";
+            this.btnCLS002View.UseVisualStyleBackColor = true;
+            // 
+            // btnCLS002Legal
+            // 
+            this.btnCLS002Legal.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCLS002Legal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.btnCLS002Legal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCLS002Legal.FlatAppearance.BorderSize = 0;
+            this.btnCLS002Legal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCLS002Legal.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCLS002Legal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(77)))));
+            this.btnCLS002Legal.Location = new System.Drawing.Point(340, 470);
+            this.btnCLS002Legal.Name = "btnCLS002Legal";
+            this.btnCLS002Legal.Size = new System.Drawing.Size(28, 36);
+            this.btnCLS002Legal.TabIndex = 24;
+            this.btnCLS002Legal.Text = "⚖";
+            this.btnCLS002Legal.UseVisualStyleBackColor = false;
+            // 
+            // lblCLS002Price
+            // 
+            this.lblCLS002Price.BackColor = System.Drawing.Color.Transparent;
+            this.lblCLS002Price.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS002Price.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(72)))), ((int)(((byte)(52)))));
+            this.lblCLS002Price.Location = new System.Drawing.Point(28, 490);
+            this.lblCLS002Price.Name = "lblCLS002Price";
+            this.lblCLS002Price.Size = new System.Drawing.Size(180, 38);
+            this.lblCLS002Price.TabIndex = 23;
+            this.lblCLS002Price.Text = "₱280,000";
+            // 
+            // lblCLS002PriceHeading
+            // 
+            this.lblCLS002PriceHeading.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS002PriceHeading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(110)))));
+            this.lblCLS002PriceHeading.Location = new System.Drawing.Point(30, 470);
+            this.lblCLS002PriceHeading.Name = "lblCLS002PriceHeading";
+            this.lblCLS002PriceHeading.Size = new System.Drawing.Size(220, 20);
+            this.lblCLS002PriceHeading.TabIndex = 22;
+            this.lblCLS002PriceHeading.Text = "GROUND VALUATION PRICE";
+            // 
+            // btnCLS003Delete
+            // 
+            this.btnCLS003Delete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCLS003Delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCLS003Delete.FlatAppearance.BorderSize = 0;
+            this.btnCLS003Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCLS003Delete.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCLS003Delete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(78)))));
+            this.btnCLS003Delete.Location = new System.Drawing.Point(430, 470);
+            this.btnCLS003Delete.Name = "btnCLS003Delete";
+            this.btnCLS003Delete.Size = new System.Drawing.Size(28, 36);
+            this.btnCLS003Delete.TabIndex = 44;
+            this.btnCLS003Delete.Text = "▤";
+            this.btnCLS003Delete.UseVisualStyleBackColor = true;
+            // 
+            // btnCLS003Edit
+            // 
+            this.btnCLS003Edit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCLS003Edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.btnCLS003Edit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCLS003Edit.FlatAppearance.BorderSize = 0;
+            this.btnCLS003Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCLS003Edit.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCLS003Edit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(78)))));
+            this.btnCLS003Edit.Location = new System.Drawing.Point(400, 470);
+            this.btnCLS003Edit.Name = "btnCLS003Edit";
+            this.btnCLS003Edit.Size = new System.Drawing.Size(28, 36);
+            this.btnCLS003Edit.TabIndex = 43;
+            this.btnCLS003Edit.Text = "✎";
+            this.btnCLS003Edit.UseVisualStyleBackColor = false;
+            // 
+            // btnCLS003View
+            // 
+            this.btnCLS003View.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCLS003View.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCLS003View.FlatAppearance.BorderSize = 0;
+            this.btnCLS003View.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCLS003View.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCLS003View.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(78)))));
+            this.btnCLS003View.Location = new System.Drawing.Point(370, 470);
+            this.btnCLS003View.Name = "btnCLS003View";
+            this.btnCLS003View.Size = new System.Drawing.Size(28, 36);
+            this.btnCLS003View.TabIndex = 42;
+            this.btnCLS003View.Text = "◉";
+            this.btnCLS003View.UseVisualStyleBackColor = true;
+            // 
+            // btnCLS003Legal
+            // 
+            this.btnCLS003Legal.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCLS003Legal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
+            this.btnCLS003Legal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCLS003Legal.FlatAppearance.BorderSize = 0;
+            this.btnCLS003Legal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCLS003Legal.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCLS003Legal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(77)))));
+            this.btnCLS003Legal.Location = new System.Drawing.Point(340, 470);
+            this.btnCLS003Legal.Name = "btnCLS003Legal";
+            this.btnCLS003Legal.Size = new System.Drawing.Size(28, 36);
+            this.btnCLS003Legal.TabIndex = 41;
+            this.btnCLS003Legal.Text = "⚖";
+            this.btnCLS003Legal.UseVisualStyleBackColor = false;
+            // 
+            // lblCLS003Price
+            // 
+            this.lblCLS003Price.BackColor = System.Drawing.Color.Transparent;
+            this.lblCLS003Price.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS003Price.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(72)))), ((int)(((byte)(52)))));
+            this.lblCLS003Price.Location = new System.Drawing.Point(28, 490);
+            this.lblCLS003Price.Name = "lblCLS003Price";
+            this.lblCLS003Price.Size = new System.Drawing.Size(180, 38);
+            this.lblCLS003Price.TabIndex = 40;
+            this.lblCLS003Price.Text = "₱145,000";
+            // 
+            // lblCLS003PriceHeading
+            // 
+            this.lblCLS003PriceHeading.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS003PriceHeading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(110)))));
+            this.lblCLS003PriceHeading.Location = new System.Drawing.Point(30, 470);
+            this.lblCLS003PriceHeading.Name = "lblCLS003PriceHeading";
+            this.lblCLS003PriceHeading.Size = new System.Drawing.Size(220, 20);
+            this.lblCLS003PriceHeading.TabIndex = 39;
+            this.lblCLS003PriceHeading.Text = "GROUND VALUATION PRICE";
+            // 
+            // pnlCLS003Deed
+            // 
+            this.pnlCLS003Deed.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlCLS003Deed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
+            this.pnlCLS003Deed.Controls.Add(this.lblCLS003Trust);
+            this.pnlCLS003Deed.Controls.Add(this.lblCLS003Cadastral);
+            this.pnlCLS003Deed.Controls.Add(this.lblCLS003DeedTitle);
+            this.pnlCLS003Deed.Controls.Add(this.lblCLS003ViewDocument);
+            this.pnlCLS003Deed.Controls.Add(this.lblCLS003DeedHeading);
+            this.pnlCLS003Deed.Location = new System.Drawing.Point(30, 335);
+            this.pnlCLS003Deed.Name = "pnlCLS003Deed";
+            this.pnlCLS003Deed.Size = new System.Drawing.Size(466, 112);
+            this.pnlCLS003Deed.TabIndex = 38;
+            // 
+            // lblCLS003Trust
+            // 
+            this.lblCLS003Trust.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS003Trust.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(77)))));
+            this.lblCLS003Trust.Location = new System.Drawing.Point(220, 78);
+            this.lblCLS003Trust.Name = "lblCLS003Trust";
+            this.lblCLS003Trust.Size = new System.Drawing.Size(115, 20);
+            this.lblCLS003Trust.TabIndex = 4;
+            this.lblCLS003Trust.Text = "Trust Protected";
+            this.lblCLS003Trust.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblCLS003Cadastral
+            // 
+            this.lblCLS003Cadastral.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS003Cadastral.Location = new System.Drawing.Point(12, 78);
+            this.lblCLS003Cadastral.Name = "lblCLS003Cadastral";
+            this.lblCLS003Cadastral.Size = new System.Drawing.Size(225, 20);
+            this.lblCLS003Cadastral.TabIndex = 3;
+            this.lblCLS003Cadastral.Text = "Cadastral: Garden Walkway Cluster Parcel (Designated Eco-Heritage Lot)";
+            // 
+            // lblCLS003DeedTitle
+            // 
+            this.lblCLS003DeedTitle.AutoSize = true;
+            this.lblCLS003DeedTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS003DeedTitle.Location = new System.Drawing.Point(12, 38);
+            this.lblCLS003DeedTitle.Name = "lblCLS003DeedTitle";
+            this.lblCLS003DeedTitle.Size = new System.Drawing.Size(396, 20);
+            this.lblCLS003DeedTitle.TabIndex = 2;
+            this.lblCLS003DeedTitle.Text = "Perpetual Garden Heritage Sepulture Certificate of Title";
+            // 
+            // lblCLS003ViewDocument
+            // 
+            this.lblCLS003ViewDocument.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS003ViewDocument.Location = new System.Drawing.Point(235, 10);
+            this.lblCLS003ViewDocument.Name = "lblCLS003ViewDocument";
+            this.lblCLS003ViewDocument.Size = new System.Drawing.Size(110, 20);
+            this.lblCLS003ViewDocument.TabIndex = 1;
+            this.lblCLS003ViewDocument.Text = "View Document →";
+            // 
+            // lblCLS003DeedHeading
+            // 
+            this.lblCLS003DeedHeading.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS003DeedHeading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(110)))));
+            this.lblCLS003DeedHeading.Location = new System.Drawing.Point(12, 10);
+            this.lblCLS003DeedHeading.Name = "lblCLS003DeedHeading";
+            this.lblCLS003DeedHeading.Size = new System.Drawing.Size(150, 20);
+            this.lblCLS003DeedHeading.TabIndex = 0;
+            this.lblCLS003DeedHeading.Text = "Legal Deed Title:";
+            // 
+            // pnlCLS003Divider1
+            // 
+            this.pnlCLS003Divider1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlCLS003Divider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(215)))), ((int)(((byte)(201)))));
+            this.pnlCLS003Divider1.Location = new System.Drawing.Point(23, 312);
+            this.pnlCLS003Divider1.Name = "pnlCLS003Divider1";
+            this.pnlCLS003Divider1.Size = new System.Drawing.Size(673, 1);
+            this.pnlCLS003Divider1.TabIndex = 37;
+            // 
+            // lblCLS003InventoryValue
+            // 
+            this.lblCLS003InventoryValue.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS003InventoryValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            this.lblCLS003InventoryValue.Location = new System.Drawing.Point(145, 280);
+            this.lblCLS003InventoryValue.Name = "lblCLS003InventoryValue";
+            this.lblCLS003InventoryValue.Size = new System.Drawing.Size(245, 24);
+            this.lblCLS003InventoryValue.TabIndex = 36;
+            this.lblCLS003InventoryValue.Text = "3 available / 15 total";
+            this.lblCLS003InventoryValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblCLS003InventoryLabel
+            // 
+            this.lblCLS003InventoryLabel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS003InventoryLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(139)))), ((int)(((byte)(124)))));
+            this.lblCLS003InventoryLabel.Location = new System.Drawing.Point(30, 280);
+            this.lblCLS003InventoryLabel.Name = "lblCLS003InventoryLabel";
+            this.lblCLS003InventoryLabel.Size = new System.Drawing.Size(115, 24);
+            this.lblCLS003InventoryLabel.TabIndex = 35;
+            this.lblCLS003InventoryLabel.Text = "Active Inventory:";
+            // 
+            // lblCLS003CapacityValue
+            // 
+            this.lblCLS003CapacityValue.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS003CapacityValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            this.lblCLS003CapacityValue.Location = new System.Drawing.Point(145, 238);
+            this.lblCLS003CapacityValue.Name = "lblCLS003CapacityValue";
+            this.lblCLS003CapacityValue.Size = new System.Drawing.Size(245, 38);
+            this.lblCLS003CapacityValue.TabIndex = 34;
+            this.lblCLS003CapacityValue.Text = "4 interments + personal granite ledger";
+            this.lblCLS003CapacityValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblCLS003CapacityLabel
+            // 
+            this.lblCLS003CapacityLabel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS003CapacityLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(139)))), ((int)(((byte)(124)))));
+            this.lblCLS003CapacityLabel.Location = new System.Drawing.Point(30, 238);
+            this.lblCLS003CapacityLabel.Name = "lblCLS003CapacityLabel";
+            this.lblCLS003CapacityLabel.Size = new System.Drawing.Size(110, 24);
+            this.lblCLS003CapacityLabel.TabIndex = 33;
+            this.lblCLS003CapacityLabel.Text = "Capacity:";
+            // 
+            // lblCLS003DimensionsValue
+            // 
+            this.lblCLS003DimensionsValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCLS003DimensionsValue.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS003DimensionsValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            this.lblCLS003DimensionsValue.Location = new System.Drawing.Point(267, 207);
+            this.lblCLS003DimensionsValue.Name = "lblCLS003DimensionsValue";
+            this.lblCLS003DimensionsValue.Size = new System.Drawing.Size(245, 24);
+            this.lblCLS003DimensionsValue.TabIndex = 32;
+            this.lblCLS003DimensionsValue.Text = "2.5m x 3.0m (7.5 sq.m)";
+            this.lblCLS003DimensionsValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblCLS003DimensionsLabel
+            // 
+            this.lblCLS003DimensionsLabel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS003DimensionsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(139)))), ((int)(((byte)(124)))));
+            this.lblCLS003DimensionsLabel.Location = new System.Drawing.Point(30, 205);
+            this.lblCLS003DimensionsLabel.Name = "lblCLS003DimensionsLabel";
+            this.lblCLS003DimensionsLabel.Size = new System.Drawing.Size(110, 24);
+            this.lblCLS003DimensionsLabel.TabIndex = 31;
+            this.lblCLS003DimensionsLabel.Text = "Dimensions:";
+            // 
+            // lblCLS003Description
+            // 
+            this.lblCLS003Description.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCLS003Description.BackColor = System.Drawing.Color.Transparent;
+            this.lblCLS003Description.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS003Description.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(78)))), ((int)(((byte)(69)))));
+            this.lblCLS003Description.Location = new System.Drawing.Point(30, 120);
+            this.lblCLS003Description.Name = "lblCLS003Description";
+            this.lblCLS003Description.Size = new System.Drawing.Size(673, 48);
+            this.lblCLS003Description.TabIndex = 30;
+            this.lblCLS003Description.Text = "Prominently landscaped plots nestled along tranquil paved\r\npathways with dedicate" +
+    "d flora and memorial bench.";
+            // 
+            // lblCLS003Title
+            // 
+            this.lblCLS003Title.BackColor = System.Drawing.Color.Transparent;
+            this.lblCLS003Title.Font = new System.Drawing.Font("Georgia", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS003Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(40)))));
+            this.lblCLS003Title.Location = new System.Drawing.Point(30, 78);
+            this.lblCLS003Title.Name = "lblCLS003Title";
+            this.lblCLS003Title.Size = new System.Drawing.Size(367, 32);
+            this.lblCLS003Title.TabIndex = 29;
+            this.lblCLS003Title.Text = "Premium Garden Plot";
+            // 
+            // lblCLS003Code
+            // 
+            this.lblCLS003Code.BackColor = System.Drawing.Color.Transparent;
+            this.lblCLS003Code.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS003Code.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(110)))));
+            this.lblCLS003Code.Location = new System.Drawing.Point(30, 30);
+            this.lblCLS003Code.Name = "lblCLS003Code";
+            this.lblCLS003Code.Size = new System.Drawing.Size(100, 20);
+            this.lblCLS003Code.TabIndex = 28;
+            this.lblCLS003Code.Text = "CLS-003";
+            // 
+            // pnlCLS003Status
+            // 
+            this.pnlCLS003Status.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlCLS003Status.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(247)))), ((int)(((byte)(230)))));
+            this.pnlCLS003Status.Controls.Add(this.lblCLS003Status);
+            this.pnlCLS003Status.Location = new System.Drawing.Point(442, 25);
+            this.pnlCLS003Status.Name = "pnlCLS003Status";
+            this.pnlCLS003Status.Size = new System.Drawing.Size(78, 26);
+            this.pnlCLS003Status.TabIndex = 45;
+            // 
+            // lblCLS003Status
+            // 
+            this.lblCLS003Status.BackColor = System.Drawing.Color.Transparent;
+            this.lblCLS003Status.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCLS003Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(77)))));
+            this.lblCLS003Status.Location = new System.Drawing.Point(0, 0);
+            this.lblCLS003Status.Name = "lblCLS003Status";
+            this.lblCLS003Status.Size = new System.Drawing.Size(78, 26);
+            this.lblCLS003Status.TabIndex = 0;
+            this.lblCLS003Status.Text = "● Active";
+            this.lblCLS003Status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(1006, 633);
+            this.ClientSize = new System.Drawing.Size(1924, 752);
             this.Controls.Add(this.tlpRoot);
             this.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -1591,12 +2814,25 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TAHANAN";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.tlpRoot.ResumeLayout(false);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             this.tlpWorkspace.ResumeLayout(false);
             this.pnlSidebar.ResumeLayout(false);
             this.pnlDashboard.ResumeLayout(false);
+            this.pnlGraveClassificationPage.ResumeLayout(false);
+            this.tlpGCContent.ResumeLayout(false);
+            this.pnlGCHeader.ResumeLayout(false);
+            this.pnlGCHeader.PerformLayout();
+            this.pnlGCLegalBanner.ResumeLayout(false);
+            this.tlpGCCards.ResumeLayout(false);
+            this.pnlCLS001.ResumeLayout(false);
+            this.pnlCLS001Deed.ResumeLayout(false);
+            this.pnlCLS001Deed.PerformLayout();
+            this.pnlCLS001Status.ResumeLayout(false);
+            this.pnlCLS002.ResumeLayout(false);
+            this.pnlCLS003.ResumeLayout(false);
             this.tlpDashboard.ResumeLayout(false);
             this.pnlWelcome.ResumeLayout(false);
             this.pnlWelcome.PerformLayout();
@@ -1638,6 +2874,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvBurialPlots)).EndInit();
             this.pnlFooter.ResumeLayout(false);
             this.pnlFooter.PerformLayout();
+            this.pnlCLS002Status.ResumeLayout(false);
+            this.pnlCLS002Deed.ResumeLayout(false);
+            this.pnlCLS002Deed.PerformLayout();
+            this.pnlCLS003Deed.ResumeLayout(false);
+            this.pnlCLS003Deed.PerformLayout();
+            this.pnlCLS003Status.ResumeLayout(false);
             this.ResumeLayout(false);
 
 		}
@@ -1748,6 +2990,95 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colOccupant;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDateRegistered;
         private System.Windows.Forms.DataGridViewTextBoxColumn colActions;
+        private System.Windows.Forms.Panel pnlGraveClassificationPage;
+        private System.Windows.Forms.TableLayoutPanel tlpGCContent;
+        private System.Windows.Forms.Panel pnlGCHeader;
+        private System.Windows.Forms.Label lblGCSection;
+        private System.Windows.Forms.Label lblGCTitle;
+        private System.Windows.Forms.Button btnAddClassification;
+        private System.Windows.Forms.Label lblGCSubtitle;
+        private System.Windows.Forms.Panel pnlGCLegalBanner;
+        private System.Windows.Forms.Label lblGCLegalBadge;
+        private System.Windows.Forms.Label lblGCLegalDescription;
+        private System.Windows.Forms.Label lblGCLegalTitle;
+        private System.Windows.Forms.TableLayoutPanel tlpGCCards;
+        private System.Windows.Forms.Panel pnlCLS001;
+        private System.Windows.Forms.Panel pnlCLS002;
+        private System.Windows.Forms.Panel pnlCLS003;
+        private System.Windows.Forms.Panel pnlCLS004;
+        private System.Windows.Forms.Panel pnlCLS005;
+        private System.Windows.Forms.Panel pnlCLS001Status;
+        private System.Windows.Forms.Label lblCLS001Code;
+        private System.Windows.Forms.Label lblCLS001Title;
+        private System.Windows.Forms.Label lblCLS001Status;
+        private System.Windows.Forms.Label lblCLS001Description;
+        private System.Windows.Forms.Label lblCLS001DimensionsValue;
+        private System.Windows.Forms.Label lblCLS001DimensionsLabel;
+        private System.Windows.Forms.Panel pnlCLS001Divider1;
+        private System.Windows.Forms.Label lblCLS001InventoryValue;
+        private System.Windows.Forms.Label lblCLS001InventoryLabel;
+        private System.Windows.Forms.Label lblCLS001CapacityValue;
+        private System.Windows.Forms.Label lblCLS001CapacityLabel;
+        private System.Windows.Forms.Panel pnlCLS001Deed;
+        private System.Windows.Forms.Label lblCLS001DeedHeading;
+        private System.Windows.Forms.Label lblCLS001ViewDocument;
+        private System.Windows.Forms.Label lblCLS001DeedTitle;
+        private System.Windows.Forms.Label lblCLS001Trust;
+        private System.Windows.Forms.Label lblCLS001Cadastral;
+        private System.Windows.Forms.Button btnCLS001Delete;
+        private System.Windows.Forms.Button btnCLS001Edit;
+        private System.Windows.Forms.Button btnCLS001View;
+        private System.Windows.Forms.Button btnCLS001Legal;
+        private System.Windows.Forms.Label lblCLS001Price;
+        private System.Windows.Forms.Label lblCLS001PriceHeading;
+        private System.Windows.Forms.Panel pnlCLS002Deed;
+        private System.Windows.Forms.Label lblCLS002Trust;
+        private System.Windows.Forms.Label lblCLS002Cadastral;
+        private System.Windows.Forms.Label lblCLS002DeedTitle;
+        private System.Windows.Forms.Label lblCLS002ViewDocument;
+        private System.Windows.Forms.Label lblCLS002DeedHeading;
+        private System.Windows.Forms.Panel pnlCLS002Divider1;
+        private System.Windows.Forms.Label lblCLS002InventoryValue;
+        private System.Windows.Forms.Label lblCLS002InventoryLabel;
+        private System.Windows.Forms.Label lblCLS002CapacityValue;
+        private System.Windows.Forms.Label lblCLS002CapacityLabel;
+        private System.Windows.Forms.Label lblCLS002DimensionsValue;
+        private System.Windows.Forms.Label lblCLS002DimensionsLabel;
+        private System.Windows.Forms.Label lblCLS002Description;
+        private System.Windows.Forms.Label lblCLS002Title;
+        private System.Windows.Forms.Panel pnlCLS002Status;
+        private System.Windows.Forms.Label lblCLS002Status;
+        private System.Windows.Forms.Label lblCLS002Code;
+        private System.Windows.Forms.Button btnCLS002Delete;
+        private System.Windows.Forms.Button btnCLS002Edit;
+        private System.Windows.Forms.Button btnCLS002View;
+        private System.Windows.Forms.Button btnCLS002Legal;
+        private System.Windows.Forms.Label lblCLS002Price;
+        private System.Windows.Forms.Label lblCLS002PriceHeading;
+        private System.Windows.Forms.Panel pnlCLS003Status;
+        private System.Windows.Forms.Label lblCLS003Status;
+        private System.Windows.Forms.Button btnCLS003Delete;
+        private System.Windows.Forms.Button btnCLS003Edit;
+        private System.Windows.Forms.Button btnCLS003View;
+        private System.Windows.Forms.Button btnCLS003Legal;
+        private System.Windows.Forms.Label lblCLS003Price;
+        private System.Windows.Forms.Label lblCLS003PriceHeading;
+        private System.Windows.Forms.Panel pnlCLS003Deed;
+        private System.Windows.Forms.Label lblCLS003Trust;
+        private System.Windows.Forms.Label lblCLS003Cadastral;
+        private System.Windows.Forms.Label lblCLS003DeedTitle;
+        private System.Windows.Forms.Label lblCLS003ViewDocument;
+        private System.Windows.Forms.Label lblCLS003DeedHeading;
+        private System.Windows.Forms.Panel pnlCLS003Divider1;
+        private System.Windows.Forms.Label lblCLS003InventoryValue;
+        private System.Windows.Forms.Label lblCLS003InventoryLabel;
+        private System.Windows.Forms.Label lblCLS003CapacityValue;
+        private System.Windows.Forms.Label lblCLS003CapacityLabel;
+        private System.Windows.Forms.Label lblCLS003DimensionsValue;
+        private System.Windows.Forms.Label lblCLS003DimensionsLabel;
+        private System.Windows.Forms.Label lblCLS003Description;
+        private System.Windows.Forms.Label lblCLS003Title;
+        private System.Windows.Forms.Label lblCLS003Code;
     }
 }
 

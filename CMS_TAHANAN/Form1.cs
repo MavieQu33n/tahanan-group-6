@@ -20,6 +20,7 @@ namespace CMS_TAHANAN
             FormClosed += frmDashboard_FormClosed;
             btnDashboard.Click += btnDashboard_Click;
             btnBurialPlots.Click += btnBurialPlots_Click;
+            btnClassification.Click += btnClassification_Click;
             ShowPage(tlpDashboard);
         }
         private void ShowPage(Control selectedPage)
@@ -27,6 +28,7 @@ namespace CMS_TAHANAN
             pnlDashboard.Visible = true;
             tlpDashboard.Visible = false;
             pnlBurialPlotsPage.Visible = false;
+            pnlGraveClassificationPage.Visible = false;
 
             selectedPage.Dock = DockStyle.Fill;
             selectedPage.Visible = true;
@@ -63,6 +65,10 @@ namespace CMS_TAHANAN
         private void btnBurialPlots_Click(object sender, EventArgs e)
         {
             ShowPage(pnlBurialPlotsPage);
+        }
+        private void btnClassification_Click(object sender, EventArgs e)
+        {
+            ShowPage(pnlGraveClassificationPage);
         }
 
         private void UpdateClockDisplay()
